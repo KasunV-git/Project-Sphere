@@ -2,7 +2,10 @@ const express = require("express");
 
 const {
   createService,
-  getServices
+  getServices,
+  getServiceById,
+  updateService,
+  deleteService
 } = require("../controllers/serviceController");
 
 const {
@@ -22,6 +25,22 @@ router.post(
 router.get(
   "/",
   getServices
+);
+
+router.get("/:id", getServiceById);
+
+router.put(
+  "/:id",
+  protect,
+  isAdmin,
+  updateService
+);
+
+router.delete(
+  "/:id",
+  protect,
+  isAdmin,
+  deleteService
 );
 
 module.exports = router;
