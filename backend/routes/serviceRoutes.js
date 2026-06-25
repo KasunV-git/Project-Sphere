@@ -9,8 +9,9 @@ const {
 } = require("../controllers/serviceController");
 
 const {
-    validateService,
-    handleValidationErrors
+  validateCreateService,
+  validateUpdateService,
+  handleValidationErrors
 } = require("../validation/serviceValidation");
 
 const {
@@ -24,7 +25,7 @@ router.post(
     "/",
     protect,
     isAdmin,
-    validateService,
+    validateCreateService,
     handleValidationErrors,
     createService
 );
@@ -39,7 +40,7 @@ router.put(
     "/:id",
     protect,
     isAdmin,
-    validateService,
+    validateUpdateService,
     handleValidationErrors,
     updateService
 );

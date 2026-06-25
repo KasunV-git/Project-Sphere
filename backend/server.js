@@ -29,3 +29,8 @@ app.use("/api/services", require("./routes/serviceRoutes"));
 app.use("/api/categories", require("./routes/categoryRoutes"));
 
 app.use("/api/favorites", require("./routes/favoriteRoutes"));
+
+const errorHandler =
+require("./middleware/errorMiddleware");
+
+app.use(errorHandler);

@@ -1,6 +1,6 @@
 const { body, validationResult } = require("express-validator");
 
-const validateService = [
+const validateCreateService = [
 
   body("name")
     .trim()
@@ -18,6 +18,33 @@ const validateService = [
     .withMessage("Description is required"),
 
   body("category")
+    .isMongoId()
+    .withMessage("Invalid category id")
+
+];
+
+const validateUpdateService = [
+
+  body("name")
+    .optional()
+    .trim()
+    .notEmpty()
+    .withMessage("Service name cannot be empty"),
+
+  body("slug")
+    .optional()
+    .trim()
+    .notEmpty()
+    .withMessage("Slug cannot be empty"),
+
+  body("description")
+    .optional()
+    .trim()
+    .notEmpty()
+    .withMessage("Description cannot be empty"),
+
+  body("category")
+    .optional()
     .isMongoId()
     .withMessage("Invalid category id")
 
@@ -41,6 +68,7 @@ const handleValidationErrors = (req, res, next) => {
 };
 
 module.exports = {
-  validateService,
+  validateCreateService,
+  validateUpdateService,
   handleValidationErrors
 };
