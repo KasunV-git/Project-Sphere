@@ -9,6 +9,11 @@ const {
 } = require("../controllers/serviceController");
 
 const {
+    validateService,
+    handleValidationErrors
+} = require("../validation/serviceValidation");
+
+const {
   protect,
   isAdmin
 } = require("../middleware/authMiddleware");
@@ -16,12 +21,13 @@ const {
 const router = express.Router();
 
 router.post(
-  "/",
-  protect,
-  isAdmin,
-  createService
+    "/",
+    protect,
+    isAdmin,
+    validateService,
+    handleValidationErrors,
+    createService
 );
-
 router.get(
   "/",
   getServices
@@ -30,10 +36,12 @@ router.get(
 router.get("/:id", getServiceById);
 
 router.put(
-  "/:id",
-  protect,
-  isAdmin,
-  updateService
+    "/:id",
+    protect,
+    isAdmin,
+    validateService,
+    handleValidationErrors,
+    updateService
 );
 
 router.delete(

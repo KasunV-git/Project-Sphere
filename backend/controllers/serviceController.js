@@ -1,4 +1,5 @@
 const Service = require("../models/service");
+const Category = require("../models/category");
 
 console.log("===== SERVICE SCHEMA =====");
 console.log(Service.schema.paths);
@@ -6,7 +7,31 @@ console.log(Service.schema.paths);
 const createService = async (req, res) => {
   try {
 
-    const service = await Service.create(req.body);
+    const {
+      name,
+      slug,
+      description,
+      category,
+      icon
+    } = req.body;
+
+    // Check whether category exists
+    const existingCategory = await Category.findById(category);
+
+    if (!existingCategory) {
+      return res.status(404).json({
+        success: false,
+        message: "Category not found"
+      });
+    }
+
+    const service = await Service.create({
+      name,
+      slug,
+      description,
+      category,
+      icon
+    });
 
     res.status(201).json({
       success: true,
@@ -15,15 +40,12 @@ const createService = async (req, res) => {
 
   } catch (error) {
 
-      console.error("FULL ERROR:");
-      console.error(error);
-
-      res.status(500).json({
-        success: false,
-        message: error.message
+    res.status(500).json({
+      success: false,
+      message: error.message
     });
 
-}
+  }
 };
 
 const getServices = async (req, res) => {
