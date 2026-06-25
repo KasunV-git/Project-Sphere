@@ -1,5 +1,8 @@
 const Service = require("../models/service");
 
+console.log("===== SERVICE SCHEMA =====");
+console.log(Service.schema.paths);
+
 const createService = async (req, res) => {
   try {
 
@@ -12,18 +15,21 @@ const createService = async (req, res) => {
 
   } catch (error) {
 
-    res.status(500).json({
-      success: false,
-      message: error.message
+      console.error("FULL ERROR:");
+      console.error(error);
+
+      res.status(500).json({
+        success: false,
+        message: error.message
     });
 
-  }
+}
 };
 
 const getServices = async (req, res) => {
   try {
 
-    const services = await Service.find();
+    const services = await Service.find().populate("category");
 
     res.status(200).json({
       success: true,
@@ -44,9 +50,8 @@ const getServices = async (req, res) => {
 const getServiceById = async (req, res) => {
   try {
 
-    const service = await Service.findById(
-      req.params.id
-    );
+    const service = await Service.findById(req.params.id)
+    .populate("category");
 
     if (!service) {
       return res.status(404).json({
