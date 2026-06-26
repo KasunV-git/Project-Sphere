@@ -84,14 +84,26 @@ if (req.query.category) {
   filter.category = req.query.category;
 }
 
+// Filter by active status
+if (req.query.isActive !== undefined) {
+  filter.isActive = req.query.isActive === "true";
+}
+
 // -----------------------------
 // Query database
 // -----------------------------
 
-    const services = await Service.find(filter)
-      .populate("category")
-      .skip(skip)
-      .limit(limit);
+// -----------------------------
+// Sorting
+// -----------------------------
+
+const sort = req.query.sort || "-createdAt";
+
+const services = await Service.find(filter)
+  .populate("category")
+  .sort(sort)
+  .skip(skip)
+  .limit(limit);
 
     const total = await Service.countDocuments(filter);
 
