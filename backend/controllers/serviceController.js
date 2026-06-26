@@ -71,11 +71,17 @@ const getServices = async (req, res) => {
 
 const filter = {};
 
+// Search by name
 if (req.query.search) {
   filter.name = {
     $regex: req.query.search,
     $options: "i"
   };
+}
+
+// Filter by category ID
+if (req.query.category) {
+  filter.category = req.query.category;
 }
 
 // -----------------------------
