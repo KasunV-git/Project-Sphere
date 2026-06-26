@@ -1,19 +1,25 @@
 const express = require("express");
 
 const {
-  recordUsage
+  recordUsage,
+  getMyHistory,
+  getAllHistory,
+  deleteHistory
 } = require("../controllers/usageHistoryController");
 
 const {
-  protect
+  protect,
+  isAdmin
 } = require("../middleware/authMiddleware");
 
 const router = express.Router();
 
-router.post(
-  "/",
-  protect,
-  recordUsage
-);
+// User
+router.post("/", protect, recordUsage);
+router.get("/me", protect, getMyHistory);
+
+// Admin
+router.get("/", protect, isAdmin, getAllHistory);
+router.delete("/:id", protect, isAdmin, deleteHistory);
 
 module.exports = router;
