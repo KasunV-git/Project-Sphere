@@ -2,6 +2,7 @@ require("dotenv").config();
 
 const express = require("express");
 const connectDB = require("./config/database");
+const usageHistoryRoutes = require("./routes/usageHistoryRoutes");
 
 const app = express();
 
@@ -29,6 +30,8 @@ app.use("/api/services", require("./routes/serviceRoutes"));
 app.use("/api/categories", require("./routes/categoryRoutes"));
 
 app.use("/api/favorites", require("./routes/favoriteRoutes"));
+
+app.use("/api/usage", usageHistoryRoutes);
 
 const errorHandler =
 require("./middleware/errorMiddleware");
