@@ -33,7 +33,18 @@ const serviceSchema = new mongoose.Schema(
     isActive: {
       type: Boolean,
       default: true
-    }
+    },
+
+    averageRating: {
+    type: Number,
+    default: 0
+    },
+
+    reviewCount: {
+    type: Number,
+    default: 0
+    },
+    
   },
   {
     timestamps: true
