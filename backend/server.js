@@ -5,6 +5,7 @@ const connectDB = require("./config/database");
 const usageHistoryRoutes = require("./routes/usageHistoryRoutes");
 const reviewRoutes = require("./routes/reviewRoutes");
 const dashboardRoutes = require("./routes/dashboardRoutes");
+const analyticsRoutes = require("./routes/analyticsRoutes");
 
 const app = express();
 
@@ -38,6 +39,8 @@ app.use("/api/usage", usageHistoryRoutes);
 app.use("/api/reviews", reviewRoutes);
 
 app.use("/api/dashboard", dashboardRoutes);
+
+app.use("/api/analytics", analyticsRoutes);
 
 const errorHandler =
 require("./middleware/errorMiddleware");
