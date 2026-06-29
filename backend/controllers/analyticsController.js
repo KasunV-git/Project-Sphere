@@ -134,8 +134,53 @@ const getMostFavoritedServices = async (req, res) => {
 
 };
 
+const getUsageTrends = async (req, res) => {
+
+    try {
+
+        const trends = await UsageHistory.aggregate([
+
+            {
+                $group: {
+                    _id: {
+                        $dateToString: {
+                            format: "%Y-%m-%d",
+                            date: "$createdAt"
+                        }
+                    },
+                    totalUsage: {
+                        $sum: 1
+                    }
+                }
+            },
+
+            {
+                $sort: {
+                    "_id": 1
+                }
+            }
+
+        ]);
+
+        res.status(200).json({
+            success: true,
+            trends
+        });
+
+    } catch (error) {
+
+        res.status(500).json({
+            success: false,
+            message: error.message
+        });
+
+    }
+
+};
+
 module.exports = {
   getTopServices,
   getTopRatedServices,
-  getMostFavoritedServices
+  getMostFavoritedServices,
+  getUsageTrends
 };

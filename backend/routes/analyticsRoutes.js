@@ -3,7 +3,8 @@ const express = require("express");
 const {
     getTopServices,
     getTopRatedServices,
-    getMostFavoritedServices
+    getMostFavoritedServices,
+    getUsageTrends
 } = require("../controllers/analyticsController");
 
 const {
@@ -35,6 +36,13 @@ router.get(
     protect,
     isAdmin,
     getMostFavoritedServices
+);
+
+router.get(
+    "/usage-trends",
+    protect,
+    isAdmin,
+    getUsageTrends
 );
 
 module.exports = router;
