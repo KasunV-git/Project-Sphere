@@ -1,3 +1,9 @@
+const swaggerUi = require("swagger-ui-express");
+const swaggerSpec = require("./config/swagger");
+
+console.log("Swagger paths:");
+console.log(swaggerSpec.paths);
+
 require("dotenv").config();
 
 const express = require("express");
@@ -46,3 +52,9 @@ const errorHandler =
 require("./middleware/errorMiddleware");
 
 app.use(errorHandler);
+
+app.use(
+    "/api-docs",
+    swaggerUi.serve,
+    swaggerUi.setup(swaggerSpec)
+);
