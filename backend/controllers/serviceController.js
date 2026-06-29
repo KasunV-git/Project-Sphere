@@ -1,9 +1,6 @@
 const Service = require("../models/service");
 const Category = require("../models/category");
 
-console.log("===== SERVICE SCHEMA =====");
-console.log(Service.schema.paths);
-
 const createService = async (req, res) => {
   try {
 
