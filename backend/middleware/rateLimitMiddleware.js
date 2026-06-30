@@ -3,9 +3,12 @@ const rateLimit = require("express-rate-limit");
 // General API limiter
 const apiLimiter = rateLimit({
 
-  windowMs: 15 * 60 * 1000,
+  windowMs:
+  Number(process.env.RATE_LIMIT_WINDOW_MINUTES) *
+  60 *
+  1000,
 
-  max: 100,
+  max: Number(process.env.API_RATE_LIMIT_MAX),
 
   standardHeaders: true,
 
@@ -22,9 +25,12 @@ const apiLimiter = rateLimit({
 // Login limiter
 const loginLimiter = rateLimit({
 
-  windowMs: 15 * 60 * 1000,
+  windowMs:
+  Number(process.env.RATE_LIMIT_WINDOW_MINUTES) *
+  60 *
+  1000,
 
-  max: 5,
+  max: Number(process.env.LOGIN_RATE_LIMIT_MAX),
 
   standardHeaders: true,
 

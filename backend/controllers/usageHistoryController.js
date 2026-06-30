@@ -1,7 +1,7 @@
 const UsageHistory = require("../models/usageHistory");
 
 // Record service usage
-const recordUsage = async (req, res) => {
+const recordUsage = async (req, res, next) => {
   try {
 
     const usage = await UsageHistory.create({
@@ -16,16 +16,13 @@ const recordUsage = async (req, res) => {
 
   } catch (error) {
 
-    res.status(500).json({
-      success: false,
-      message: error.message
-    });
+    next(error);
 
   }
 };
 
 // Get logged in user's history
-const getMyHistory = async (req, res) => {
+const getMyHistory = async (req, res, next) => {
   try {
 
     const history = await UsageHistory.find({
@@ -42,16 +39,13 @@ const getMyHistory = async (req, res) => {
 
   } catch (error) {
 
-    res.status(500).json({
-      success: false,
-      message: error.message
-    });
+    next(error);
 
   }
 };
 
 // Admin - Get all history
-const getAllHistory = async (req, res) => {
+const getAllHistory = async (req, res, next) => {
   try {
 
     const history = await UsageHistory.find()
@@ -67,16 +61,13 @@ const getAllHistory = async (req, res) => {
 
   } catch (error) {
 
-    res.status(500).json({
-      success: false,
-      message: error.message
-    });
+    next(error);
 
   }
 };
 
 // Admin - Delete usage
-const deleteHistory = async (req, res) => {
+const deleteHistory = async (req, res, next) => {
   try {
 
     const history = await UsageHistory.findByIdAndDelete(
@@ -97,10 +88,7 @@ const deleteHistory = async (req, res) => {
 
   } catch (error) {
 
-    res.status(500).json({
-      success: false,
-      message: error.message
-    });
+    next(error);
 
   }
 };

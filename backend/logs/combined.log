@@ -47,3 +47,99 @@
     at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
     at async getServiceById (D:\Project Sphere\Project-Sphere\backend\controllers\serviceController.js:128:21)
 [2026-06-30 10:14:48] INFO: GET /api/services/123 400 11.836 ms - 49 bytes
+[2026-06-30 10:57:33] INFO: Server running on port 5000
+[2026-06-30 10:58:12] INFO: Server running on port 5000
+[2026-06-30 10:58:21] INFO: Server running on port 5000
+[2026-06-30 10:58:25] INFO: Server running on port 5000
+[2026-06-30 10:58:29] INFO: Server running on port 5000
+[2026-06-30 10:58:32] INFO: Server running on port 5000
+[2026-06-30 11:01:12] INFO: Server running on port 5000
+[2026-06-30 11:03:53] INFO: Server running on port 5000
+[2026-06-30 11:11:38] INFO: Server running on port 5000
+[2026-06-30 11:12:17] INFO: Server running on port 5000
+[2026-06-30 11:12:22] INFO: Server running on port 5000
+[2026-06-30 11:12:27] INFO: Server running on port 5000
+[2026-06-30 11:12:39] INFO: Server running on port 5000
+[2026-06-30 11:12:45] INFO: Server running on port 5000
+[2026-06-30 11:13:07] INFO: Server running on port 5000
+[2026-06-30 11:14:14] INFO: Server running on port 5000
+[2026-06-30 11:14:25] INFO: Server running on port 5000
+[2026-06-30 11:14:47] INFO: Server running on port 5000
+[2026-06-30 11:14:54] INFO: Server running on port 5000
+[2026-06-30 11:15:01] INFO: Server running on port 5000
+[2026-06-30 11:15:16] INFO: Server running on port 5000
+[2026-06-30 11:15:24] INFO: Server running on port 5000
+[2026-06-30 11:15:38] INFO: Server running on port 5000
+[2026-06-30 11:22:34] INFO: Server running on port 5000
+[2026-06-30 11:22:53] INFO: Server running on port 5000
+[2026-06-30 11:23:02] INFO: Server running on port 5000
+[2026-06-30 11:23:07] INFO: Server running on port 5000
+[2026-06-30 11:25:14] INFO: Server running on port 5000
+[2026-06-30 11:25:18] INFO: Server running on port 5000
+[2026-06-30 11:27:45] INFO: Server running on port 5000
+[2026-06-30 11:29:51] INFO: Server running on port 5000
+[2026-06-30 11:30:03] INFO: Server running on port 5000
+[2026-06-30 11:30:11] INFO: Server running on port 5000
+[2026-06-30 11:30:22] INFO: Server running on port 5000
+[2026-06-30 11:30:27] INFO: Server running on port 5000
+[2026-06-30 11:30:38] INFO: Server running on port 5000
+[2026-06-30 11:30:46] INFO: Server running on port 5000
+[2026-06-30 11:30:54] INFO: Server running on port 5000
+[2026-06-30 11:31:35] INFO: Server running on port 5000
+[2026-06-30 11:31:46] INFO: Server running on port 5000
+[2026-06-30 11:36:26] INFO: Server running on port 5000
+[2026-06-30 11:36:29] INFO: Server running on port 5000
+[2026-06-30 11:36:33] INFO: Server running on port 5000
+[2026-06-30 11:39:47] INFO: Server running on port 5000
+[2026-06-30 11:40:46] INFO: Server running on port 5000
+[2026-06-30 11:40:52] INFO: Server running on port 5000
+[2026-06-30 11:41:00] INFO: Server running on port 5000
+[2026-06-30 11:41:05] INFO: Server running on port 5000
+[2026-06-30 11:41:22] INFO: Server running on port 5000
+[2026-06-30 11:41:29] INFO: Server running on port 5000
+[2026-06-30 11:41:33] INFO: Server running on port 5000
+[2026-06-30 11:41:45] INFO: Server running on port 5000
+[2026-06-30 11:44:10] INFO: Server running on port 5000
+[2026-06-30 11:44:17] INFO: Server running on port 5000
+[2026-06-30 11:44:25] INFO: Server running on port 5000
+[2026-06-30 11:44:35] INFO: Server running on port 5000
+[2026-06-30 11:44:42] INFO: Server running on port 5000
+[2026-06-30 11:44:51] INFO: Server running on port 5000
+[2026-06-30 11:44:58] INFO: Server running on port 5000
+[2026-06-30 11:45:07] INFO: Server running on port 5000
+[2026-06-30 11:53:19] INFO: Server running on port 5000
+[2026-06-30 11:53:23] INFO: Server running on port 5000
+[2026-06-30 11:53:29] INFO: Server running on port 5000
+[2026-06-30 11:53:39] INFO: Server running on port 5000
+[2026-06-30 11:53:43] INFO: Server running on port 5000
+[2026-06-30 11:54:31] INFO: Server running on port 5000
+[2026-06-30 11:56:12] INFO: Server running on port 5000
+[2026-06-30 11:56:35] INFO: Server running on port 5000
+[2026-06-30 11:57:01] INFO: Server running on port 5000
+[2026-06-30 11:57:15] INFO: Server running on port 5000
+[2026-06-30 11:57:42] INFO: Server running on port 5000
+[2026-06-30 12:06:51] INFO: Server running on port 5000
+[2026-06-30 12:07:21] INFO: Server running on port 5000
+[2026-06-30 12:11:15] INFO: Server running on port 5000
+[2026-06-30 12:12:13] INFO: POST /api/auth/login 200 434.667 ms - 216 bytes
+[2026-06-30 12:17:20] INFO: Server running on port 5000
+[2026-06-30 12:17:34] INFO: Server running on port 5000
+[2026-06-30 12:18:35] INFO: Server running on port 5000
+[2026-06-30 12:18:50] INFO: Server running on port 5000
+[2026-06-30 12:18:58] INFO: Server running on port 5000
+[2026-06-30 12:20:02] INFO: Server running on port 5000
+[2026-06-30 12:21:00] INFO: Server running on port 5000
+[2026-06-30 12:21:32] INFO: POST /api/auth/login 200 414.919 ms - 216 bytes
+[2026-06-30 12:21:42] INFO: GET /api-docs 301 9.044 ms - 158 bytes
+[2026-06-30 12:21:42] INFO: GET /api-docs/ 304 9.437 ms - - bytes
+[2026-06-30 12:21:43] INFO: GET /api-docs/swagger-ui.css 304 3.887 ms - - bytes
+[2026-06-30 12:21:43] INFO: GET /api-docs/swagger-ui-init.js 304 0.874 ms - - bytes
+[2026-06-30 12:21:43] INFO: GET /api-docs/swagger-ui-standalone-preset.js 304 7.086 ms - - bytes
+[2026-06-30 12:21:43] INFO: GET /api-docs/swagger-ui-bundle.js 304 6.919 ms - - bytes
+[2026-06-30 12:21:49] INFO: GET /api-docs/ 304 3.552 ms - - bytes
+[2026-06-30 12:21:49] INFO: GET /api-docs/swagger-ui.css 304 2.092 ms - - bytes
+[2026-06-30 12:21:49] INFO: GET /api-docs/swagger-ui-bundle.js 304 3.838 ms - - bytes
+[2026-06-30 12:21:49] INFO: GET /api-docs/swagger-ui-init.js 304 1.061 ms - - bytes
+[2026-06-30 12:21:49] INFO: GET /api-docs/swagger-ui-standalone-preset.js 304 6.424 ms - - bytes
+[2026-06-30 12:21:50] INFO: GET /api-docs/favicon-32x32.png 304 2.480 ms - - bytes
+[2026-06-30 12:22:17] INFO: GET /api/services 200 603.554 ms - 5076 bytes

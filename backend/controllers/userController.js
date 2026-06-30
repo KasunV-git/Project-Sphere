@@ -1,6 +1,6 @@
 const User = require("../models/user");
 
-const getUsers = async (req, res) => {
+const getUsers = async (req, res, next) => {
   try {
 
     const users = await User.find().select("-password");
@@ -13,16 +13,13 @@ const getUsers = async (req, res) => {
 
   } catch (error) {
 
-    res.status(500).json({
-      success: false,
-      message: error.message
-    });
+    next(error);
 
   }
 };
 
 /* ---------------------------------------- */
-const getUserById = async (req, res) => {
+const getUserById = async (req, res, next) => {
 
   try {
 
@@ -43,17 +40,14 @@ const getUserById = async (req, res) => {
 
   } catch (error) {
 
-    res.status(500).json({
-      success: false,
-      message: error.message
-    });
+    next(error);
 
   }
 
 };
 
 /* ---------------------------------------- */
-const updateUser = async (req, res) => {
+const updateUser = async (req, res, next) => {
 
   try {
 
@@ -80,17 +74,14 @@ const updateUser = async (req, res) => {
 
   } catch (error) {
 
-    res.status(500).json({
-      success: false,
-      message: error.message
-    });
+    next(error);
 
   }
 
 };
 
 /* ---------------------------------------- */
-const deleteUser = async (req, res) => {
+const deleteUser = async (req, res, next) => {
 
   try {
 
@@ -112,10 +103,7 @@ const deleteUser = async (req, res) => {
 
   } catch (error) {
 
-    res.status(500).json({
-      success: false,
-      message: error.message
-    });
+    next(error);
 
   }
 
