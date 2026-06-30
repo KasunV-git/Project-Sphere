@@ -1,6 +1,11 @@
 const helmet = require("helmet");
 const cors = require("cors");
 
+const logger = require("./services/logger");
+
+const loggerMiddleware =
+require("./middleware/loggerMiddleware");
+
 const swaggerUi = require("swagger-ui-express");
 const swaggerSpec = require("./config/swagger");
 
@@ -44,8 +49,7 @@ app.use(
 );
 
 app.use(express.json());
-
-
+app.use(loggerMiddleware);
 
 app.get("/", (req, res) => {
   res.send("Sphere API Running");
@@ -54,7 +58,7 @@ app.get("/", (req, res) => {
 const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
+  logger.info(`Server running on port ${PORT}`);
 });
 
 app.use(

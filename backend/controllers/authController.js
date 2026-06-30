@@ -27,8 +27,6 @@ const loginUser = async (req, res) => {
       });
     }
 
-    console.log("LOGIN SECRET:", process.env.JWT_SECRET);
-
     const token = jwt.sign(
       {
         id: user._id,

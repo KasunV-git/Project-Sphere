@@ -1,0 +1,49 @@
+[2026-06-30 08:07:08] INFO: Server running on port 5000
+[2026-06-30 08:10:44] INFO: Server running on port 5000
+[2026-06-30 08:10:59] INFO: Server running on port 5000
+[2026-06-30 08:11:52] INFO: Server running on port 5000
+[2026-06-30 08:12:15] INFO: Server running on port 5000
+[2026-06-30 08:12:19] INFO: Server running on port 5000
+[2026-06-30 08:15:11] INFO: GET /api/services 200 536.504 ms - 5076 bytes
+[2026-06-30 08:15:25] INFO: GET /api/categories 200 151.278 ms - 1145 bytes
+[2026-06-30 08:15:44] INFO: POST /api/auth/login 200 436.714 ms - 216 bytes
+[2026-06-30 08:16:09] INFO: POST /api/auth/login 200 378.426 ms - 216 bytes
+[2026-06-30 09:36:26] INFO: Server running on port 5000
+[2026-06-30 09:37:13] INFO: Server running on port 5000
+[2026-06-30 09:39:54] INFO: Server running on port 5000
+[2026-06-30 09:44:42] INFO: Server running on port 5000
+[2026-06-30 09:46:17] INFO: Server running on port 5000
+[2026-06-30 09:46:43] INFO: GET /api/services/123 500 25.501 ms - 123 bytes
+[2026-06-30 10:07:12] INFO: Server running on port 5000
+[2026-06-30 10:09:09] INFO: Server running on port 5000
+[2026-06-30 10:09:29] INFO: Server running on port 5000
+[2026-06-30 10:09:46] INFO: Server running on port 5000
+[2026-06-30 10:09:55] INFO: Server running on port 5000
+[2026-06-30 10:10:08] INFO: Server running on port 5000
+[2026-06-30 10:11:44] INFO: Server running on port 5000
+[2026-06-30 10:11:54] INFO: Server running on port 5000
+[2026-06-30 10:11:56] INFO: Server running on port 5000
+[2026-06-30 10:12:28] INFO: Server running on port 5000
+[2026-06-30 10:12:34] INFO: Server running on port 5000
+[2026-06-30 10:12:56] INFO: Server running on port 5000
+[2026-06-30 10:13:01] INFO: Server running on port 5000
+[2026-06-30 10:13:09] INFO: Server running on port 5000
+[2026-06-30 10:13:18] INFO: Server running on port 5000
+[2026-06-30 10:13:24] INFO: Server running on port 5000
+[2026-06-30 10:13:32] INFO: Server running on port 5000
+[2026-06-30 10:13:40] INFO: Server running on port 5000
+[2026-06-30 10:13:56] INFO: Server running on port 5000
+[2026-06-30 10:13:59] INFO: Server running on port 5000
+[2026-06-30 10:14:39] INFO: GET /api/services 200 571.653 ms - 5076 bytes
+[2026-06-30 10:14:48] ERROR: CastError: Cast to ObjectId failed for value "123" (type string) at path "_id" for model "Service"
+    at SchemaObjectId.cast (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\schema\objectId.js:252:11)
+    at SchemaType.applySetters (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\schemaType.js:1373:12)
+    at SchemaType.castForQuery (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\schemaType.js:1793:17)
+    at cast (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\cast.js:386:32)
+    at Query.cast (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\query.js:5228:12)
+    at Query._castConditions (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\query.js:2411:10)
+    at model.Query._findOne (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\query.js:2758:8)
+    at maybeTracedQueryExec (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\query.js:4801:83)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async getServiceById (D:\Project Sphere\Project-Sphere\backend\controllers\serviceController.js:128:21)
+[2026-06-30 10:14:48] INFO: GET /api/services/123 400 11.836 ms - 49 bytes

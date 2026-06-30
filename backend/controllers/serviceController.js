@@ -1,7 +1,7 @@
 const Service = require("../models/service");
 const Category = require("../models/category");
 
-const createService = async (req, res) => {
+const createService = async (req, res, next) => {
   try {
 
     const {
@@ -37,15 +37,12 @@ const createService = async (req, res) => {
 
   } catch (error) {
 
-    res.status(500).json({
-      success: false,
-      message: error.message
-    });
+      next(error);
 
   }
 };
 
-const getServices = async (req, res) => {
+const getServices = async (req, res, next) => {
   try {
 
     // -----------------------------
@@ -120,15 +117,12 @@ const services = await Service.find(filter)
 
   } catch (error) {
 
-    res.status(500).json({
-      success: false,
-      message: error.message
-    });
+      next(error);
 
   }
 };
 
-const getServiceById = async (req, res) => {
+const getServiceById = async (req, res, next) => {
   try {
 
     const service = await Service.findById(req.params.id)
@@ -148,15 +142,12 @@ const getServiceById = async (req, res) => {
 
   } catch (error) {
 
-    res.status(500).json({
-      success: false,
-      message: error.message
-    });
+   next(error);
 
-  }
+}
 };
 
-const updateService = async (req, res) => {
+const updateService = async (req, res, next) => {
   try {
 
     const service = await Service.findByIdAndUpdate(
@@ -182,15 +173,13 @@ const updateService = async (req, res) => {
 
   } catch (error) {
 
-    res.status(500).json({
-      success: false,
-      message: error.message
-    });
+      next(error);
 
   }
+
 };
 
-const deleteService = async (req, res) => {
+const deleteService = async (req, res, next) => {
   try {
 
     const service = await Service.findByIdAndDelete(
@@ -211,10 +200,7 @@ const deleteService = async (req, res) => {
 
   } catch (error) {
 
-    res.status(500).json({
-      success: false,
-      message: error.message
-    });
+      next(error);
 
   }
 };
