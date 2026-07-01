@@ -11,17 +11,20 @@ const categorySchema = new mongoose.Schema(
 
     description: {
       type: String,
-      default: ""
+      default: "",
+      trim: true
     },
 
     icon: {
       type: String,
-      default: ""
+      default: "",
+      trim: true
     },
 
     isActive: {
       type: Boolean,
-      default: true
+      default: true,
+      index: true
     }
   },
   {

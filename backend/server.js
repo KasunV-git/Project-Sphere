@@ -1,6 +1,8 @@
 const helmet = require("helmet");
 const cors = require("cors");
 
+const compression = require("compression");
+
 const logger = require("./services/logger");
 
 const loggerMiddleware =
@@ -46,6 +48,8 @@ app.use(
   })
 );
 
+app.use(compression({threshold: 0}));
+
 app.use(express.json());
 app.use(loggerMiddleware);
 
@@ -55,8 +59,11 @@ app.get("/", (req, res) => {
 
 const PORT = process.env.PORT || 5000;
 
+const NODE_ENV =
+  process.env.NODE_ENV || "development";
+
 app.listen(PORT, () => {
-  logger.info(`Server running on port ${PORT}`);
+  logger.info(`Server running on port ${PORT} (${NODE_ENV})`);
 });
 
 app.use(

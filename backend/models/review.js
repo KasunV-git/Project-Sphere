@@ -43,6 +43,15 @@ reviewSchema.index(
   }
 );
 
+/* --------------------------------- */
+reviewSchema.index({
+    service:1
+});
+
+reviewSchema.index({
+    createdAt:-1
+});
+
 module.exports = mongoose.model(
   "Review",
   reviewSchema

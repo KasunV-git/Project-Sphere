@@ -143,3 +143,75 @@
 [2026-06-30 12:21:49] INFO: GET /api-docs/swagger-ui-standalone-preset.js 304 6.424 ms - - bytes
 [2026-06-30 12:21:50] INFO: GET /api-docs/favicon-32x32.png 304 2.480 ms - - bytes
 [2026-06-30 12:22:17] INFO: GET /api/services 200 603.554 ms - 5076 bytes
+[2026-07-01 08:42:42] INFO: Server running on port 5000
+[2026-07-01 09:10:07] INFO: Server running on port 5000
+[2026-07-01 09:18:55] INFO: Server running on port 5000 (development)
+[2026-07-01 09:21:03] INFO: POST /api/auth/login 200 479.077 ms - 216 bytes
+[2026-07-01 09:21:17] INFO: GET /api/services 200 484.154 ms - 5076 bytes
+[2026-07-01 09:21:30] INFO: GET /api/categories 200 163.583 ms - 1145 bytes
+[2026-07-01 09:21:51] INFO: GET /api-docs/ 304 16.287 ms - - bytes
+[2026-07-01 09:21:51] INFO: GET /api-docs/swagger-ui.css 304 7.852 ms - - bytes
+[2026-07-01 09:21:51] INFO: GET /api-docs/swagger-ui-bundle.js 304 13.860 ms - - bytes
+[2026-07-01 09:21:51] INFO: GET /api-docs/swagger-ui-standalone-preset.js 304 6.050 ms - - bytes
+[2026-07-01 09:21:51] INFO: GET /api-docs/swagger-ui-init.js 304 1.228 ms - - bytes
+[2026-07-01 09:28:09] INFO: Server running on port 5000 (development)
+[2026-07-01 09:29:09] INFO: GET /api/services 200 533.163 ms - 5076 bytes
+[2026-07-01 09:30:22] INFO: GET /api-docs/swagger-ui.css 304 6.869 ms - - bytes
+[2026-07-01 09:30:22] INFO: GET /.well-known/appspecific/com.chrome.devtools.json 404 3.136 ms - 187 bytes
+[2026-07-01 09:30:24] INFO: GET /api-docs/swagger-ui.css.map 200 77.790 ms - 279978 bytes
+[2026-07-01 09:30:39] INFO: GET /api-docs/ 304 4.669 ms - - bytes
+[2026-07-01 09:30:39] INFO: GET /api-docs/swagger-ui.css 304 6.897 ms - - bytes
+[2026-07-01 09:30:39] INFO: GET /api-docs/swagger-ui-bundle.js 304 9.431 ms - - bytes
+[2026-07-01 09:30:39] INFO: GET /api-docs/swagger-ui-standalone-preset.js 304 2.172 ms - - bytes
+[2026-07-01 09:30:39] INFO: GET /api-docs/swagger-ui-init.js 304 0.970 ms - - bytes
+[2026-07-01 09:30:39] INFO: GET /.well-known/appspecific/com.chrome.devtools.json 404 1.135 ms - 187 bytes
+[2026-07-01 09:30:40] INFO: GET /api-docs/swagger-ui.css.map 304 1.450 ms - - bytes
+[2026-07-01 09:30:42] INFO: GET /api-docs/favicon-32x32.png 304 3.803 ms - - bytes
+[2026-07-01 09:35:44] INFO: GET /api/services 200 462.174 ms - 5076 bytes
+[2026-07-01 09:35:45] INFO: GET /favicon.ico 404 4.711 ms - 150 bytes
+[2026-07-01 09:36:05] INFO: GET /.well-known/appspecific/com.chrome.devtools.json 404 0.906 ms - 187 bytes
+[2026-07-01 09:36:11] INFO: GET /api/services 304 473.370 ms - - bytes
+[2026-07-01 09:36:11] INFO: GET /.well-known/appspecific/com.chrome.devtools.json 404 1.750 ms - 187 bytes
+[2026-07-01 10:11:05] INFO: Server running on port 5000 (development)
+[2026-07-01 10:11:21] INFO: Server running on port 5000 (development)
+[2026-07-01 10:18:55] INFO: Server running on port 5000 (development)
+[2026-07-01 10:19:23] INFO: GET /api/services 304 556.340 ms - - bytes
+[2026-07-01 10:19:34] INFO: GET /.well-known/appspecific/com.chrome.devtools.json 404 5.260 ms - 187 bytes
+[2026-07-01 10:19:36] INFO: GET /api/services 304 464.121 ms - - bytes
+[2026-07-01 10:19:36] INFO: GET /.well-known/appspecific/com.chrome.devtools.json 404 1.243 ms - 187 bytes
+[2026-07-01 10:21:06] INFO: Server running on port 5000 (development)
+[2026-07-01 10:24:26] INFO: GET /api/services 200 586.642 ms - - bytes
+[2026-07-01 10:24:26] INFO: GET /.well-known/appspecific/com.chrome.devtools.json 404 4.238 ms - - bytes
+[2026-07-01 10:24:26] INFO: GET /favicon.ico 404 2.733 ms - - bytes
+[2026-07-01 10:25:14] INFO: GET /api/services 200 599.821 ms - - bytes
+[2026-07-01 10:46:02] INFO: Server running on port 5000 (development)
+[2026-07-01 10:49:43] INFO: Server running on port 5000 (development)
+[2026-07-01 10:49:52] INFO: Server running on port 5000 (development)
+[2026-07-01 10:50:29] INFO: Server running on port 5000 (development)
+[2026-07-01 10:50:44] INFO: Server running on port 5000 (development)
+[2026-07-01 10:50:48] INFO: Server running on port 5000 (development)
+[2026-07-01 10:51:11] INFO: Server running on port 5000 (development)
+[2026-07-01 10:51:26] INFO: Server running on port 5000 (development)
+[2026-07-01 10:51:32] INFO: Server running on port 5000 (development)
+[2026-07-01 10:51:37] INFO: Server running on port 5000 (development)
+[2026-07-01 10:51:40] INFO: Server running on port 5000 (development)
+[2026-07-01 10:52:49] INFO: Server running on port 5000 (development)
+[2026-07-01 10:52:57] INFO: Server running on port 5000 (development)
+[2026-07-01 10:53:02] INFO: Server running on port 5000 (development)
+[2026-07-01 10:56:45] INFO: Server running on port 5000 (development)
+[2026-07-01 10:57:03] INFO: Server running on port 5000 (development)
+[2026-07-01 10:57:19] INFO: Server running on port 5000 (development)
+[2026-07-01 10:57:28] INFO: Server running on port 5000 (development)
+[2026-07-01 10:57:36] INFO: Server running on port 5000 (development)
+[2026-07-01 10:57:45] INFO: Server running on port 5000 (development)
+[2026-07-01 10:57:53] INFO: Server running on port 5000 (development)
+[2026-07-01 10:57:57] INFO: Server running on port 5000 (development)
+[2026-07-01 10:58:03] INFO: Server running on port 5000 (development)
+[2026-07-01 10:58:10] INFO: Server running on port 5000 (development)
+[2026-07-01 11:01:08] INFO: Server running on port 5000 (development)
+[2026-07-01 11:01:12] INFO: Server running on port 5000 (development)
+[2026-07-01 11:02:42] INFO: Server running on port 5000 (development)
+[2026-07-01 11:10:21] INFO: Server running on port 5000 (development)
+[2026-07-01 11:13:26] INFO: Server running on port 5000 (development)
+[2026-07-01 11:16:23] INFO: Server running on port 5000 (development)
+[2026-07-01 11:17:11] INFO: Server running on port 5000 (development)

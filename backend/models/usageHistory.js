@@ -24,6 +24,22 @@ const usageHistorySchema = new mongoose.Schema(
   }
 );
 
+// Faster lookup by service
+usageHistorySchema.index({
+  service: 1
+});
+
+// Faster sorting by usage date
+usageHistorySchema.index({
+  usedAt: -1
+});
+
+// Faster user history retrieval
+usageHistorySchema.index({
+  user: 1,
+  usedAt: -1
+});
+
 module.exports = mongoose.model(
   "UsageHistory",
   usageHistorySchema

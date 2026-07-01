@@ -30,6 +30,11 @@ favoriteSchema.index(
   }
 );
 
+// Faster analytics by service
+favoriteSchema.index({
+  service: 1
+});
+
 module.exports = mongoose.model(
   "Favorite",
   favoriteSchema
