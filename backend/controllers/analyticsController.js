@@ -56,12 +56,16 @@ const getTopRatedServices = async (req, res, next) => {
     try {
 
         const services = await Service.find()
+            .select(
+                "name slug icon averageRating reviewCount category"
+            )    
             .sort({
                 averageRating: -1,
                 reviewCount: -1
             })
             .limit(10)
-            .populate("category", "name");
+            .populate("category", "name")
+            .lean();
 
         res.status(200).json({
             success: true,

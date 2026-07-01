@@ -28,8 +28,9 @@ const getMyHistory = async (req, res, next) => {
     const history = await UsageHistory.find({
       user: req.user.id
     })
-      .populate("service")
-      .sort({ usedAt: -1 });
+      .populate("service", "name slug icon averageRating")
+      .sort({ usedAt: -1 })
+      .lean();
 
     res.status(200).json({
       success: true,
@@ -51,7 +52,8 @@ const getAllHistory = async (req, res, next) => {
     const history = await UsageHistory.find()
       .populate("user", "name email role")
       .populate("service", "name slug")
-      .sort({ usedAt: -1 });
+      .sort({ usedAt: -1 })
+      .lean();
 
     res.status(200).json({
       success: true,

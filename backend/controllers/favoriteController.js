@@ -7,7 +7,9 @@ const addFavorite = async (req, res, next) => {
 
     const { service } = req.body;
 
-    const existingService = await Service.findById(service);
+    const existingService = await Service.findById(service)
+      .select("_id")
+      .lean();
 
     if (!existingService) {
       return res.status(404).json({
@@ -51,7 +53,12 @@ const getMyFavorites = async (req, res, next) => {
 
     const favorites = await Favorite.find({
       user: req.user.id
-    }).populate("service");
+    })
+    .populate(
+      "service",
+      "name slug icon averageRating reviewCount"
+    )
+    .lean();
 
     res.status(200).json({
       success: true,

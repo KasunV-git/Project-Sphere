@@ -3,7 +3,7 @@ const User = require("../models/user");
 const getUsers = async (req, res, next) => {
   try {
 
-    const users = await User.find().select("-password");
+    const users = await User.find().select("-password").lean();
 
     res.status(200).json({
       success: true,
@@ -24,7 +24,7 @@ const getUserById = async (req, res, next) => {
   try {
 
     const user = await User.findById(req.params.id)
-      .select("-password");
+      .select("-password").lean();
 
     if (!user) {
       return res.status(404).json({

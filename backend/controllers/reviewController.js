@@ -36,7 +36,8 @@ const getServiceReviews = async (req, res, next) => {
       service: req.params.serviceId
     })
       .populate("user", "name")
-      .sort({ createdAt: -1 });
+      .sort({ createdAt: -1 })
+      .lean();
 
     res.status(200).json({
       success: true,
@@ -141,7 +142,9 @@ const deleteReview = async (req, res, next) => {
 const updateServiceRating = async (serviceId) => {
     const reviews = await Review.find({
         service: serviceId
-    });
+    })
+    .select("rating")
+    .lean();
 
     let average = 0;
 

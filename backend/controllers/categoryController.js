@@ -22,7 +22,7 @@ const createCategory = async (req, res, next) => {
 const getCategories = async (req, res, next) => {
   try {
 
-    const categories = await Category.find();
+    const categories = await Category.find().lean();
 
     res.status(200).json({
       success: true,
@@ -42,7 +42,7 @@ const getCategoryById = async (req, res, next) => {
   try {
 
     const category =
-      await Category.findById(req.params.id);
+      await Category.findById(req.params.id).lean();
 
     if (!category) {
 

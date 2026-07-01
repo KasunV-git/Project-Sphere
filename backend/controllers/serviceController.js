@@ -94,10 +94,11 @@ if (req.query.isActive !== undefined) {
 const sort = req.query.sort || "-createdAt";
 
 const services = await Service.find(filter)
-  .populate("category")
+  .populate("category", "name icon")
   .sort(sort)
   .skip(skip)
-  .limit(limit);
+  .limit(limit)
+  .lean();
 
     const total = await Service.countDocuments(filter);
 
@@ -126,7 +127,8 @@ const getServiceById = async (req, res, next) => {
   try {
 
     const service = await Service.findById(req.params.id)
-    .populate("category");
+    .populate("category", "name icon")
+    .lean();
 
     if (!service) {
       return res.status(404).json({
