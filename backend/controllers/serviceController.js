@@ -1,6 +1,11 @@
 const Service = require("../models/service");
 const Category = require("../models/category");
 
+const {
+    sendSuccess,
+    sendError
+} = require("../services/responseService");
+
 const createService = async (req, res, next) => {
   try {
 
@@ -30,10 +35,13 @@ const createService = async (req, res, next) => {
       icon
     });
 
-    res.status(201).json({
-      success: true,
-      service
-    });
+    sendSuccess(
+      res,
+      201,
+      {
+        service
+      }
+    );
 
   } catch (error) {
 
@@ -94,6 +102,7 @@ if (req.query.isActive !== undefined) {
 const sort = req.query.sort || "-createdAt";
 
 const services = await Service.find(filter)
+  .select("-createdAT -updatedAt")
   .populate("category", "name icon")
   .sort(sort)
   .skip(skip)
@@ -131,16 +140,20 @@ const getServiceById = async (req, res, next) => {
     .lean();
 
     if (!service) {
-      return res.status(404).json({
-        success: false,
-        message: "Service not found"
-      });
+      return sendError(
+        res,
+        404,
+        "Service not found"
+    );
     }
 
-    res.status(200).json({
-      success: true,
-      service
-    });
+    sendSuccess(
+      res,
+      200,
+      {
+        service
+      }
+    );
 
   } catch (error) {
 
@@ -162,10 +175,12 @@ const updateService = async (req, res, next) => {
     );
 
     if (!service) {
-      return res.status(404).json({
-        success: false,
-        message: "Service not found"
-      });
+      sendSuccess(
+        res,
+        200,
+        {},
+        "Service not found"
+      );
     }
 
     res.status(200).json({

@@ -22,7 +22,9 @@ const createCategory = async (req, res, next) => {
 const getCategories = async (req, res, next) => {
   try {
 
-    const categories = await Category.find().lean();
+    const categories = await Category
+    .select("-createdAt -updatedAt")
+    .find().lean();
 
     res.status(200).json({
       success: true,

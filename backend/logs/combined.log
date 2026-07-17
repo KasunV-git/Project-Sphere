@@ -272,3 +272,71 @@
 [2026-07-02 23:52:21] INFO: POST /api/auth/login 200 463.576 ms - - bytes
 [2026-07-02 23:53:30] INFO: GET /api/categories 304 205.631 ms - - bytes
 [2026-07-02 23:54:09] INFO: POST /api/services 201 458.618 ms - - bytes
+[2026-07-03 00:01:32] INFO: Server running on port 5000 (development)
+[2026-07-03 00:01:54] INFO: Server running on port 5000 (development)
+[2026-07-03 00:02:00] INFO: Server running on port 5000 (development)
+[2026-07-03 00:02:04] INFO: Server running on port 5000 (development)
+[2026-07-03 00:02:08] INFO: Server running on port 5000 (development)
+[2026-07-03 00:02:13] INFO: Server running on port 5000 (development)
+[2026-07-03 00:03:34] INFO: Server running on port 5000 (development)
+[2026-07-03 00:03:39] INFO: Server running on port 5000 (development)
+[2026-07-03 00:03:44] INFO: Server running on port 5000 (development)
+[2026-07-03 00:11:15] INFO: Server running on port 5000 (development)
+[2026-07-03 00:11:30] INFO: Server running on port 5000 (development)
+[2026-07-03 00:11:34] INFO: Server running on port 5000 (development)
+[2026-07-03 00:27:23] INFO: Server running on port 5000 (development)
+[2026-07-03 00:28:03] INFO: Server running on port 5000 (development)
+[2026-07-03 00:30:30] INFO: Server running on port 5000 (development)
+[2026-07-03 00:30:34] INFO: Server running on port 5000 (development)
+[2026-07-03 00:30:44] INFO: Server running on port 5000 (development)
+[2026-07-03 00:30:48] INFO: Server running on port 5000 (development)
+[2026-07-03 00:31:42] INFO: Server running on port 5000 (development)
+[2026-07-03 00:31:57] INFO: Server running on port 5000 (development)
+[2026-07-03 00:32:04] INFO: Server running on port 5000 (development)
+[2026-07-03 00:32:46] INFO: Server running on port 5000 (development)
+[2026-07-03 00:33:14] INFO: Server running on port 5000 (development)
+[2026-07-03 00:33:17] INFO: Server running on port 5000 (development)
+[2026-07-03 00:33:26] INFO: Server running on port 5000 (development)
+[2026-07-03 00:33:47] INFO: Server running on port 5000 (development)
+[2026-07-03 00:33:52] INFO: Server running on port 5000 (development)
+[2026-07-03 00:33:56] INFO: Server running on port 5000 (development)
+[2026-07-03 00:44:57] INFO: POST /api/services 400 44.439 ms - - bytes
+[2026-07-03 00:45:02] INFO: GET /api/services 200 533.198 ms - - bytes
+[2026-07-03 01:22:50] INFO: Server running on port 5000 (development)
+[2026-07-03 01:22:56] INFO: GET /api-docs/ 304 13.183 ms - - bytes
+[2026-07-03 01:22:56] INFO: GET /api-docs/swagger-ui.css 304 8.869 ms - - bytes
+[2026-07-03 01:22:56] INFO: GET /api-docs/swagger-ui-bundle.js 304 8.159 ms - - bytes
+[2026-07-03 01:22:56] INFO: GET /api-docs/swagger-ui-init.js 304 1.365 ms - - bytes
+[2026-07-03 01:22:56] INFO: GET /api-docs/swagger-ui-standalone-preset.js 304 10.889 ms - - bytes
+[2026-07-03 01:22:59] INFO: GET /api-docs/favicon-32x32.png 304 2.299 ms - - bytes
+[2026-07-03 01:25:36] INFO: Server running on port 5000 (development)
+[2026-07-03 01:25:49] INFO: Server running on port 5000 (development)
+[2026-07-03 01:26:04] INFO: Server running on port 5000 (development)
+[2026-07-03 01:26:40] INFO: GET / 200 6.015 ms - - bytes
+[2026-07-03 01:27:52] INFO: GET / 200 3.812 ms - - bytes
+[2026-07-03 01:35:19] INFO: GET / 200 6.395 ms - - bytes
+[2026-07-03 01:53:16] INFO: GET / 200 3.686 ms - - bytes
+[2026-07-05 22:19:16] INFO: POST /api/auth/register 201 388.856 ms - - bytes
+[2026-07-05 22:26:48] INFO: POST /api/auth/register 201 374.432 ms - - bytes
+[2026-07-05 22:29:59] INFO: POST /api/auth/register 201 327.488 ms - - bytes
+[2026-07-05 22:30:00] INFO: POST /api/auth/register 201 225.444 ms - - bytes
+[2026-07-05 22:30:00] INFO: POST /api/auth/register 400 13.012 ms - - bytes
+[2026-07-05 22:30:00] INFO: POST /api/auth/register 201 206.395 ms - - bytes
+[2026-07-05 22:30:00] INFO: POST /api/auth/login 200 214.489 ms - - bytes
+[2026-07-05 22:30:00] INFO: POST /api/auth/register 429 3.221 ms - - bytes
+[2026-07-05 22:30:00] INFO: POST /api/auth/login 429 1.250 ms - - bytes
+[2026-07-05 22:30:00] INFO: POST /api/auth/login 429 1.066 ms - - bytes
+[2026-07-05 22:41:14] INFO: POST /api/auth/register 201 352.724 ms - - bytes
+[2026-07-05 22:41:15] INFO: POST /api/auth/register 201 199.867 ms - - bytes
+[2026-07-05 22:41:15] INFO: POST /api/auth/register 400 8.161 ms - - bytes
+[2026-07-05 22:52:35] INFO: POST /api/auth/register 201 332.330 ms - - bytes
+[2026-07-05 22:52:36] INFO: POST /api/auth/register 201 217.916 ms - - bytes
+[2026-07-05 22:52:36] INFO: POST /api/auth/register 400 9.380 ms - - bytes
+[2026-07-05 22:56:43] INFO: POST /api/auth/register 201 376.101 ms - - bytes
+[2026-07-05 22:56:44] INFO: POST /api/auth/register 201 234.083 ms - - bytes
+[2026-07-05 22:56:44] INFO: POST /api/auth/register 400 16.444 ms - - bytes
+[2026-07-05 22:56:44] INFO: POST /api/auth/register 201 182.869 ms - - bytes
+[2026-07-05 22:56:44] INFO: POST /api/auth/login 200 198.953 ms - - bytes
+[2026-07-05 22:56:44] INFO: POST /api/auth/register 429 2.150 ms - - bytes
+[2026-07-05 22:56:44] INFO: POST /api/auth/login 429 1.387 ms - - bytes
+[2026-07-05 22:56:44] INFO: POST /api/auth/login 429 1.136 ms - - bytes
