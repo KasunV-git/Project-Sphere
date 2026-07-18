@@ -989,3 +989,53 @@
     at processTicksAndRejections (node:internal/process/task_queues:95:5)
     at getCategoryById (D:\Project Sphere\Project-Sphere\backend\controllers\categoryController.js:47:7)
 [2026-07-19 01:54:28] INFO: GET /api/categories/invalid-id 400 10.880 ms - - bytes
+[2026-07-19 02:02:03] INFO: POST /api/auth/register 201 276.970 ms - - bytes
+[2026-07-19 02:02:04] INFO: POST /api/auth/register 201 203.504 ms - - bytes
+[2026-07-19 02:02:04] INFO: POST /api/auth/login 200 203.554 ms - - bytes
+[2026-07-19 02:02:04] INFO: POST /api/auth/login 200 190.250 ms - - bytes
+[2026-07-19 02:02:04] INFO: POST /api/categories 201 9.773 ms - - bytes
+[2026-07-19 02:02:04] INFO: POST /api/auth/register 201 221.791 ms - - bytes
+[2026-07-19 02:02:04] INFO: POST /api/auth/register 201 194.037 ms - - bytes
+[2026-07-19 02:02:05] INFO: POST /api/auth/login 200 195.925 ms - - bytes
+[2026-07-19 02:02:05] INFO: POST /api/auth/login 200 190.311 ms - - bytes
+[2026-07-19 02:02:05] INFO: POST /api/categories 403 2.691 ms - - bytes
+[2026-07-19 02:02:05] INFO: POST /api/auth/register 201 214.016 ms - - bytes
+[2026-07-19 02:02:05] INFO: POST /api/auth/register 201 196.319 ms - - bytes
+[2026-07-19 02:02:06] INFO: POST /api/auth/login 200 193.032 ms - - bytes
+[2026-07-19 02:02:06] INFO: POST /api/auth/login 200 191.838 ms - - bytes
+[2026-07-19 02:02:06] INFO: POST /api/categories 401 0.419 ms - - bytes
+[2026-07-19 02:02:06] INFO: POST /api/auth/register 201 379.489 ms - - bytes
+[2026-07-19 02:02:06] INFO: POST /api/auth/register 201 191.228 ms - - bytes
+[2026-07-19 02:02:07] INFO: POST /api/auth/login 200 193.651 ms - - bytes
+[2026-07-19 02:02:07] INFO: POST /api/auth/login 200 192.024 ms - - bytes
+[2026-07-19 02:02:07] INFO: POST /api/categories 201 32.407 ms - - bytes
+[2026-07-19 02:02:07] INFO: GET /api/categories 200 15.504 ms - - bytes
+[2026-07-19 02:02:07] INFO: POST /api/auth/register 201 221.788 ms - - bytes
+[2026-07-19 02:02:07] INFO: POST /api/auth/register 201 199.662 ms - - bytes
+[2026-07-19 02:02:08] INFO: POST /api/auth/login 200 192.996 ms - - bytes
+[2026-07-19 02:02:08] INFO: POST /api/auth/login 200 189.992 ms - - bytes
+[2026-07-19 02:02:08] INFO: POST /api/categories 201 28.621 ms - - bytes
+[2026-07-19 02:02:08] INFO: GET /api/categories/6a5be2c8f55671614d80ae30 200 4.665 ms - - bytes
+[2026-07-19 02:02:08] INFO: POST /api/auth/register 201 210.071 ms - - bytes
+[2026-07-19 02:02:08] INFO: POST /api/auth/register 201 193.376 ms - - bytes
+[2026-07-19 02:02:08] INFO: POST /api/auth/login 200 194.871 ms - - bytes
+[2026-07-19 02:02:09] INFO: POST /api/auth/login 200 190.631 ms - - bytes
+[2026-07-19 02:02:09] INFO: POST /api/categories 201 27.892 ms - - bytes
+[2026-07-19 02:02:09] INFO: GET /api/categories/6a5be2c9f55671614d80ae34 404 3.146 ms - - bytes
+[2026-07-19 02:02:09] INFO: POST /api/auth/register 201 213.939 ms - - bytes
+[2026-07-19 02:02:09] INFO: POST /api/auth/register 201 192.185 ms - - bytes
+[2026-07-19 02:02:09] INFO: POST /api/auth/login 200 191.009 ms - - bytes
+[2026-07-19 02:02:10] INFO: POST /api/auth/login 200 193.418 ms - - bytes
+[2026-07-19 02:02:10] INFO: POST /api/categories 201 32.622 ms - - bytes
+[2026-07-19 02:02:10] ERROR: CastError: Cast to ObjectId failed for value "invalid-id" (type string) at path "_id" for model "Category"
+    at SchemaObjectId.cast (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\schema\objectId.js:252:11)
+    at SchemaObjectId.SchemaType.applySetters (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\schemaType.js:1373:12)
+    at SchemaObjectId.SchemaType.castForQuery (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\schemaType.js:1793:17)
+    at cast (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\cast.js:386:32)
+    at model.Query.Query.cast (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\query.js:5228:12)
+    at model.Query.Query._castConditions (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\query.js:2411:10)
+    at model.Query._findOne (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\query.js:2758:8)
+    at maybeTracedQueryExec (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\query.js:4801:83)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at getCategoryById (D:\Project Sphere\Project-Sphere\backend\controllers\categoryController.js:48:7)
+[2026-07-19 02:02:10] INFO: GET /api/categories/invalid-id 400 16.068 ms - - bytes

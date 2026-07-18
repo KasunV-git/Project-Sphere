@@ -132,5 +132,82 @@ describe("Category API", () => {
     });
   });
 
-  
+  describe("PUT /api/categories/:id", () => {
+    let categoryId;
+
+    beforeEach(async () => {
+      const response = await request(app)
+        .post("/api/categories")
+        .set("Authorization", `Bearer ${adminToken}`)
+        .send({
+          name: "Utilities",
+          description: "Utility tools",
+          icon: "tool.png",
+        });
+
+      categoryId = response.body.category._id;
+    });
+
+    test("admin should update category", async () => {
+      const response = await request(app)
+        .put(`/api/categories/${categoryId}`)
+        .set("Authorization", `Bearer ${adminToken}`)
+        .send({
+          name: "Academic Tools",
+          description: "Updated description",
+        });
+
+      expect(response.statusCode).toBe(200);
+      expect(response.body.success).toBe(true);
+      expect(response.body.category.name).toBe("Academic Tools");
+    });
+
+    test("normal user should not update category", async () => {
+      const response = await request(app)
+        .put(`/api/categories/${categoryId}`)
+        .set("Authorization", `Bearer ${userToken}`)
+        .send({
+          name: "Hack",
+        });
+
+      expect(response.statusCode).toBe(403);
+      expect(response.body.success).toBe(false);
+    });
+
+    test("should reject update without token", async () => {
+      const response = await request(app)
+        .put(`/api/categories/${categoryId}`)
+        .send({
+          name: "Hack",
+        });
+
+      expect(response.statusCode).toBe(401);
+      expect(response.body.success).toBe(false);
+    });
+
+    test("should return 404 for non-existing category", async () => {
+      const fakeId = new mongoose.Types.ObjectId();
+
+      const response = await request(app)
+        .put(`/api/categories/${fakeId}`)
+        .set("Authorization", `Bearer ${adminToken}`)
+        .send({
+          name: "Updated",
+        });
+
+      expect(response.statusCode).toBe(404);
+    });
+
+    test("should reject invalid ObjectId", async () => {
+      const response = await request(app)
+        .put("/api/categories/invalid-id")
+        .set("Authorization", `Bearer ${adminToken}`)
+        .send({
+          name: "Updated",
+        });
+
+      expect(response.statusCode).toBe(400);
+      expect(response.body.success).toBe(false);
+    });
+  });
 });

@@ -23,8 +23,9 @@ const getCategories = async (req, res, next) => {
   try {
 
     const categories = await Category
+    .find()
     .select("-createdAt -updatedAt")
-    .find().lean();
+    .lean();
 
     res.status(200).json({
       success: true,
@@ -76,7 +77,7 @@ const updateCategory = async (req, res, next) => {
         req.params.id,
         req.body,
         {
-          new: true,
+          returnDocument: "after",
           runValidators: true
         }
       );
