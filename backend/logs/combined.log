@@ -340,3 +340,102 @@
 [2026-07-05 22:56:44] INFO: POST /api/auth/register 429 2.150 ms - - bytes
 [2026-07-05 22:56:44] INFO: POST /api/auth/login 429 1.387 ms - - bytes
 [2026-07-05 22:56:44] INFO: POST /api/auth/login 429 1.136 ms - - bytes
+[2026-07-17 22:08:23] INFO: POST /api/auth/register 201 469.649 ms - - bytes
+[2026-07-17 22:08:23] INFO: POST /api/auth/register 201 228.706 ms - - bytes
+[2026-07-17 22:08:23] INFO: POST /api/auth/register 400 30.661 ms - - bytes
+[2026-07-17 22:08:23] ERROR: ValidationError: User validation failed: email: Path `email` is required.
+    at model.validate (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\document.js:2864:36)
+    at model.$__save (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\model.js:398:7)
+    at maybeTracedSave (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\model.js:674:7)
+    at Function.create (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\model.js:2762:5)
+    at registerUser (D:\Project Sphere\Project-Sphere\backend\controllers\authController.js:67:18)
+[2026-07-17 22:08:23] INFO: POST /api/auth/register 400 243.810 ms - - bytes
+[2026-07-17 22:08:24] ERROR: Error: Illegal arguments: undefined, number
+    at _async (D:\Project Sphere\Project-Sphere\backend\node_modules\bcryptjs\umd\index.js:233:15)
+    at D:\Project Sphere\Project-Sphere\backend\node_modules\bcryptjs\umd\index.js:245:11
+    at new Promise (<anonymous>)
+    at Object.hash (D:\Project Sphere\Project-Sphere\backend\node_modules\bcryptjs\umd\index.js:244:16)
+    at hash (D:\Project Sphere\Project-Sphere\backend\controllers\authController.js:65:41)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2026-07-17 22:08:24] INFO: POST /api/auth/register 500 20.583 ms - - bytes
+[2026-07-17 22:08:24] INFO: POST /api/auth/register 429 3.449 ms - - bytes
+[2026-07-17 22:08:24] INFO: POST /api/auth/login 429 2.287 ms - - bytes
+[2026-07-17 22:08:24] INFO: POST /api/auth/register 429 1.125 ms - - bytes
+[2026-07-17 22:08:24] INFO: POST /api/auth/login 429 3.659 ms - - bytes
+[2026-07-17 22:08:24] INFO: POST /api/auth/login 429 4.714 ms - - bytes
+[2026-07-17 22:08:24] INFO: POST /api/auth/login 429 3.056 ms - - bytes
+[2026-07-17 22:08:24] INFO: POST /api/auth/login 429 1.329 ms - - bytes
+[2026-07-17 22:08:24] INFO: POST /api/auth/register 429 3.874 ms - - bytes
+[2026-07-17 22:08:24] INFO: POST /api/auth/login 429 2.020 ms - - bytes
+[2026-07-17 22:08:24] INFO: GET /api/auth/profile 429 3.229 ms - - bytes
+[2026-07-17 22:08:24] INFO: GET /api/auth/profile 429 1.541 ms - - bytes
+[2026-07-17 22:08:24] INFO: GET /api/auth/profile 429 1.528 ms - - bytes
+[2026-07-17 22:08:25] INFO: POST /api/auth/register 429 2.266 ms - - bytes
+[2026-07-17 22:08:25] INFO: POST /api/auth/login 429 1.326 ms - - bytes
+[2026-07-17 22:08:25] INFO: GET /api/auth/admin 429 1.451 ms - - bytes
+[2026-07-18 21:38:55] INFO: POST /api/auth/register 201 343.993 ms - - bytes
+[2026-07-18 21:38:56] INFO: POST /api/auth/register 201 184.951 ms - - bytes
+[2026-07-18 21:38:56] INFO: POST /api/auth/register 400 16.200 ms - - bytes
+[2026-07-18 21:38:56] ERROR: ValidationError: User validation failed: email: Path `email` is required.
+    at model.validate (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\document.js:2864:36)
+    at model.$__save (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\model.js:398:7)
+    at maybeTracedSave (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\model.js:674:7)
+    at Function.create (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\model.js:2762:5)
+    at registerUser (D:\Project Sphere\Project-Sphere\backend\controllers\authController.js:67:18)
+[2026-07-18 21:38:56] INFO: POST /api/auth/register 400 228.109 ms - - bytes
+[2026-07-18 21:38:56] ERROR: Error: Illegal arguments: undefined, number
+    at _async (D:\Project Sphere\Project-Sphere\backend\node_modules\bcryptjs\umd\index.js:233:15)
+    at D:\Project Sphere\Project-Sphere\backend\node_modules\bcryptjs\umd\index.js:245:11
+    at new Promise (<anonymous>)
+    at Object.hash (D:\Project Sphere\Project-Sphere\backend\node_modules\bcryptjs\umd\index.js:244:16)
+    at hash (D:\Project Sphere\Project-Sphere\backend\controllers\authController.js:65:41)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2026-07-18 21:38:56] INFO: POST /api/auth/register 500 13.666 ms - - bytes
+[2026-07-18 21:38:56] INFO: POST /api/auth/register 429 3.464 ms - - bytes
+[2026-07-18 21:38:56] INFO: POST /api/auth/login 429 1.692 ms - - bytes
+[2026-07-18 21:38:56] INFO: POST /api/auth/register 429 2.154 ms - - bytes
+[2026-07-18 21:38:56] INFO: POST /api/auth/login 429 2.959 ms - - bytes
+[2026-07-18 21:38:56] INFO: POST /api/auth/login 429 1.972 ms - - bytes
+[2026-07-18 21:38:56] INFO: POST /api/auth/login 429 2.298 ms - - bytes
+[2026-07-18 21:38:56] INFO: POST /api/auth/login 429 1.390 ms - - bytes
+[2026-07-18 21:38:56] INFO: POST /api/auth/register 429 2.141 ms - - bytes
+[2026-07-18 21:38:56] INFO: POST /api/auth/login 429 1.196 ms - - bytes
+[2026-07-18 21:38:56] INFO: GET /api/auth/profile 429 1.535 ms - - bytes
+[2026-07-18 21:38:57] INFO: GET /api/auth/profile 429 2.970 ms - - bytes
+[2026-07-18 21:38:57] INFO: GET /api/auth/profile 429 2.633 ms - - bytes
+[2026-07-18 21:38:57] INFO: POST /api/auth/register 429 1.515 ms - - bytes
+[2026-07-18 21:38:57] INFO: POST /api/auth/login 429 1.219 ms - - bytes
+[2026-07-18 21:38:57] INFO: GET /api/auth/admin 429 1.936 ms - - bytes
+[2026-07-18 21:43:19] INFO: POST /api/auth/register 201 369.096 ms - - bytes
+[2026-07-18 21:43:19] INFO: POST /api/auth/register 201 188.576 ms - - bytes
+[2026-07-18 21:43:19] INFO: POST /api/auth/register 400 11.034 ms - - bytes
+[2026-07-18 21:43:19] ERROR: ValidationError: User validation failed: email: Path `email` is required.
+    at model.validate (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\document.js:2864:36)
+    at model.$__save (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\model.js:398:7)
+    at maybeTracedSave (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\model.js:674:7)
+    at Function.create (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\model.js:2762:5)
+    at registerUser (D:\Project Sphere\Project-Sphere\backend\controllers\authController.js:67:18)
+[2026-07-18 21:43:19] INFO: POST /api/auth/register 400 224.579 ms - - bytes
+[2026-07-18 21:43:19] ERROR: Error: Illegal arguments: undefined, number
+    at _async (D:\Project Sphere\Project-Sphere\backend\node_modules\bcryptjs\umd\index.js:233:15)
+    at D:\Project Sphere\Project-Sphere\backend\node_modules\bcryptjs\umd\index.js:245:11
+    at new Promise (<anonymous>)
+    at Object.hash (D:\Project Sphere\Project-Sphere\backend\node_modules\bcryptjs\umd\index.js:244:16)
+    at hash (D:\Project Sphere\Project-Sphere\backend\controllers\authController.js:65:41)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2026-07-18 21:43:19] INFO: POST /api/auth/register 500 10.894 ms - - bytes
+[2026-07-18 21:43:19] INFO: POST /api/auth/register 429 1.800 ms - - bytes
+[2026-07-18 21:43:19] INFO: POST /api/auth/login 429 1.273 ms - - bytes
+[2026-07-18 21:43:19] INFO: POST /api/auth/register 429 2.349 ms - - bytes
+[2026-07-18 21:43:19] INFO: POST /api/auth/login 429 2.269 ms - - bytes
+[2026-07-18 21:43:19] INFO: POST /api/auth/login 429 3.018 ms - - bytes
+[2026-07-18 21:43:20] INFO: POST /api/auth/login 429 1.193 ms - - bytes
+[2026-07-18 21:43:20] INFO: POST /api/auth/login 429 1.866 ms - - bytes
+[2026-07-18 21:43:20] INFO: POST /api/auth/register 429 1.411 ms - - bytes
+[2026-07-18 21:43:20] INFO: POST /api/auth/login 429 1.238 ms - - bytes
+[2026-07-18 21:43:20] INFO: GET /api/auth/profile 429 2.196 ms - - bytes
+[2026-07-18 21:43:20] INFO: GET /api/auth/profile 429 1.136 ms - - bytes
+[2026-07-18 21:43:20] INFO: GET /api/auth/profile 429 1.579 ms - - bytes
+[2026-07-18 21:43:20] INFO: POST /api/auth/register 429 1.177 ms - - bytes
+[2026-07-18 21:43:20] INFO: POST /api/auth/login 429 1.226 ms - - bytes
+[2026-07-18 21:43:20] INFO: GET /api/auth/admin 429 1.225 ms - - bytes

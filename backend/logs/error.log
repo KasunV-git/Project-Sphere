@@ -9,3 +9,42 @@
     at maybeTracedQueryExec (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\query.js:4801:83)
     at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
     at async getServiceById (D:\Project Sphere\Project-Sphere\backend\controllers\serviceController.js:128:21)
+[2026-07-17 22:08:23] ERROR: ValidationError: User validation failed: email: Path `email` is required.
+    at model.validate (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\document.js:2864:36)
+    at model.$__save (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\model.js:398:7)
+    at maybeTracedSave (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\model.js:674:7)
+    at Function.create (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\model.js:2762:5)
+    at registerUser (D:\Project Sphere\Project-Sphere\backend\controllers\authController.js:67:18)
+[2026-07-17 22:08:24] ERROR: Error: Illegal arguments: undefined, number
+    at _async (D:\Project Sphere\Project-Sphere\backend\node_modules\bcryptjs\umd\index.js:233:15)
+    at D:\Project Sphere\Project-Sphere\backend\node_modules\bcryptjs\umd\index.js:245:11
+    at new Promise (<anonymous>)
+    at Object.hash (D:\Project Sphere\Project-Sphere\backend\node_modules\bcryptjs\umd\index.js:244:16)
+    at hash (D:\Project Sphere\Project-Sphere\backend\controllers\authController.js:65:41)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2026-07-18 21:38:56] ERROR: ValidationError: User validation failed: email: Path `email` is required.
+    at model.validate (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\document.js:2864:36)
+    at model.$__save (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\model.js:398:7)
+    at maybeTracedSave (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\model.js:674:7)
+    at Function.create (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\model.js:2762:5)
+    at registerUser (D:\Project Sphere\Project-Sphere\backend\controllers\authController.js:67:18)
+[2026-07-18 21:38:56] ERROR: Error: Illegal arguments: undefined, number
+    at _async (D:\Project Sphere\Project-Sphere\backend\node_modules\bcryptjs\umd\index.js:233:15)
+    at D:\Project Sphere\Project-Sphere\backend\node_modules\bcryptjs\umd\index.js:245:11
+    at new Promise (<anonymous>)
+    at Object.hash (D:\Project Sphere\Project-Sphere\backend\node_modules\bcryptjs\umd\index.js:244:16)
+    at hash (D:\Project Sphere\Project-Sphere\backend\controllers\authController.js:65:41)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2026-07-18 21:43:19] ERROR: ValidationError: User validation failed: email: Path `email` is required.
+    at model.validate (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\document.js:2864:36)
+    at model.$__save (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\model.js:398:7)
+    at maybeTracedSave (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\model.js:674:7)
+    at Function.create (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\model.js:2762:5)
+    at registerUser (D:\Project Sphere\Project-Sphere\backend\controllers\authController.js:67:18)
+[2026-07-18 21:43:19] ERROR: Error: Illegal arguments: undefined, number
+    at _async (D:\Project Sphere\Project-Sphere\backend\node_modules\bcryptjs\umd\index.js:233:15)
+    at D:\Project Sphere\Project-Sphere\backend\node_modules\bcryptjs\umd\index.js:245:11
+    at new Promise (<anonymous>)
+    at Object.hash (D:\Project Sphere\Project-Sphere\backend\node_modules\bcryptjs\umd\index.js:244:16)
+    at hash (D:\Project Sphere\Project-Sphere\backend\controllers\authController.js:65:41)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
