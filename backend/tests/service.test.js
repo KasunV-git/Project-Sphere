@@ -76,4 +76,111 @@ describe("Service API", () => {
       expect(response.body.service.name).toBe("GPA Calculator");
     });
   });
+
+  test("normal user should not create a service", async () => {
+    const response = await request(app)
+      .post("/api/services")
+      .set("Authorization", `Bearer ${userToken}`)
+      .send({
+        name: "Image Upscaler",
+        slug: "image-upscaler",
+        description: "Upscale images",
+        category: categoryId,
+      });
+
+    expect(response.statusCode).toBe(403);
+
+    expect(response.body.success).toBe(false);
+  });
+
+  test("should reject request without token", async () => {
+    const response = await request(app).post("/api/services").send({
+      name: "Image Upscaler",
+      slug: "image-upscaler",
+      description: "Upscale images",
+      category: categoryId,
+    });
+
+    expect(response.statusCode).toBe(401);
+
+    expect(response.body.success).toBe(false);
+  });
+
+  test("should reject invalid category", async () => {
+    const invalidCategory = new mongoose.Types.ObjectId();
+
+    const response = await request(app)
+      .post("/api/services")
+      .set("Authorization", `Bearer ${adminToken}`)
+      .send({
+        name: "Image Upscaler",
+        slug: "image-upscaler",
+        description: "Upscale images",
+        category: invalidCategory,
+      });
+
+    expect(response.statusCode).toBe(404);
+
+    expect(response.body.success).toBe(false);
+  });
+
+  describe("GET /api/services", () => {
+    let serviceId;
+
+    beforeEach(async () => {
+      const service = await request(app)
+        .post("/api/services")
+        .set("Authorization", `Bearer ${adminToken}`)
+        .send({
+          name: "GPA Calculator",
+          slug: "gpa-calculator",
+          description: "Calculate GPA",
+          category: categoryId,
+        });
+
+      serviceId = service.body.service._id;
+    });
+  });
+
+  test("should get all services", async () => {
+    const response = await request(app).get("/api/services");
+
+    expect(response.statusCode).toBe(200);
+
+    expect(response.body.success).toBe(true);
+
+    expect(response.body.services).toBeDefined();
+
+    expect(Array.isArray(response.body.services)).toBe(true);
+
+    expect(response.body.services.length).toBe(1);
+  });
+
+  test("should get service by id", async () => {
+    const response = await request(app).get(`/api/services/${serviceId}`);
+
+    expect(response.statusCode).toBe(200);
+
+    expect(response.body.success).toBe(true);
+
+    expect(response.body.service.name).toBe("GPA Calculator");
+  });
+
+  test("should return 404 for non-existing service", async () => {
+    const fakeId = new mongoose.Types.ObjectId();
+
+    const response = await request(app).get(`/api/services/${fakeId}`);
+
+    expect(response.statusCode).toBe(404);
+
+    expect(response.body.success).toBe(false);
+  });
+
+  test("should reject invalid service id", async () => {
+    const response = await request(app).get("/api/services/invalid-id");
+
+    expect(response.statusCode).toBe(500);
+
+    expect(response.body.success).toBe(false);
+  });
 });
