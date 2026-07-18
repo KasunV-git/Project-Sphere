@@ -1,8 +1,7 @@
 const Category = require("../models/category");
 
-
 /* Create Category */
-const createCategory = async (req, res) => {
+const createCategory = async (req, res, next) => {
   try {
 
     const category = await Category.create(req.body);
@@ -14,19 +13,19 @@ const createCategory = async (req, res) => {
 
   } catch (error) {
 
-    res.status(500).json({
-      success: false,
-      message: error.message
-    });
+    next(error);
 
   }
 };
 
 /* Get All Categories */
-const getCategories = async (req, res) => {
+const getCategories = async (req, res, next) => {
   try {
 
-    const categories = await Category.find();
+    const categories = await Category
+    .find()
+    .select("-createdAt -updatedAt")
+    .lean();
 
     res.status(200).json({
       success: true,
@@ -36,20 +35,17 @@ const getCategories = async (req, res) => {
 
   } catch (error) {
 
-    res.status(500).json({
-      success: false,
-      message: error.message
-    });
+    next(error);
 
   }
 };
 
 /* Get Category by ID */
-const getCategoryById = async (req, res) => {
+const getCategoryById = async (req, res, next) => {
   try {
 
     const category =
-      await Category.findById(req.params.id);
+      await Category.findById(req.params.id).lean();
 
     if (!category) {
 
@@ -67,16 +63,13 @@ const getCategoryById = async (req, res) => {
 
   } catch (error) {
 
-    res.status(500).json({
-      success: false,
-      message: error.message
-    });
+    next(error);
 
   }
 };
 
 /* Update Category */
-const updateCategory = async (req, res) => {
+const updateCategory = async (req, res, next) => {
   try {
 
     const category =
@@ -84,7 +77,8 @@ const updateCategory = async (req, res) => {
         req.params.id,
         req.body,
         {
-          new: true
+          returnDocument: "after",
+          runValidators: true
         }
       );
 
@@ -104,16 +98,13 @@ const updateCategory = async (req, res) => {
 
   } catch (error) {
 
-    res.status(500).json({
-      success: false,
-      message: error.message
-    });
+    next(error);
 
   }
 };
 
 /* Delete Category */
-const deleteCategory = async (req, res) => {
+const deleteCategory = async (req, res, next) => {
   try {
 
     const category =
@@ -137,10 +128,7 @@ const deleteCategory = async (req, res) => {
 
   } catch (error) {
 
-    res.status(500).json({
-      success: false,
-      message: error.message
-    });
+    next(error);
 
   }
 };

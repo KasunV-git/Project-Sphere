@@ -1,9 +1,13 @@
 const User = require("../models/user");
 
-const getUsers = async (req, res) => {
+const getUsers = async (req, res, next) => {
   try {
 
-    const users = await User.find().select("-password");
+    const users = await User
+    .select("-password -createdAt -updatedAt")
+    .find()
+    .select("-password")
+    .lean();
 
     res.status(200).json({
       success: true,
@@ -13,21 +17,18 @@ const getUsers = async (req, res) => {
 
   } catch (error) {
 
-    res.status(500).json({
-      success: false,
-      message: error.message
-    });
+    next(error);
 
   }
 };
 
 /* ---------------------------------------- */
-const getUserById = async (req, res) => {
+const getUserById = async (req, res, next) => {
 
   try {
 
     const user = await User.findById(req.params.id)
-      .select("-password");
+      .select("-password").lean();
 
     if (!user) {
       return res.status(404).json({
@@ -43,17 +44,14 @@ const getUserById = async (req, res) => {
 
   } catch (error) {
 
-    res.status(500).json({
-      success: false,
-      message: error.message
-    });
+    next(error);
 
   }
 
 };
 
 /* ---------------------------------------- */
-const updateUser = async (req, res) => {
+const updateUser = async (req, res, next) => {
 
   try {
 
@@ -80,17 +78,14 @@ const updateUser = async (req, res) => {
 
   } catch (error) {
 
-    res.status(500).json({
-      success: false,
-      message: error.message
-    });
+    next(error);
 
   }
 
 };
 
 /* ---------------------------------------- */
-const deleteUser = async (req, res) => {
+const deleteUser = async (req, res, next) => {
 
   try {
 
@@ -112,10 +107,7 @@ const deleteUser = async (req, res) => {
 
   } catch (error) {
 
-    res.status(500).json({
-      success: false,
-      message: error.message
-    });
+    next(error);
 
   }
 

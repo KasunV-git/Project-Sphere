@@ -6,7 +6,7 @@ const Favorite = require("../models/favorite");
 const UsageHistory = require("../models/usageHistory");
 
 // Dashboard summary
-const getDashboardStats = async (req, res) => {
+const getDashboardStats = async (req, res, next) => {
     try {
 
         const [
@@ -34,15 +34,13 @@ const getDashboardStats = async (req, res) => {
                 totalReviews,
                 totalFavorites,
                 totalUsage
-            }
+            },
+            generatedAt: new Date()
         });
 
     } catch (error) {
 
-        res.status(500).json({
-            success: false,
-            message: error.message
-        });
+        next(error);
 
     }
 };

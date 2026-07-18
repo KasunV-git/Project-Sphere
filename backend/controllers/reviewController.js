@@ -2,7 +2,7 @@ const Review = require("../models/review");
 const Service = require("../models/service");
 
 // Create Review
-const createReview = async (req, res) => {
+const createReview = async (req, res, next) => {
   try {
 
     const review = await Review.create({
@@ -21,10 +21,7 @@ const createReview = async (req, res) => {
 
   } catch (error) {
 
-    res.status(500).json({
-      success: false,
-      message: error.message
-    });
+    next(error);
 
   }
 };
@@ -32,14 +29,15 @@ const createReview = async (req, res) => {
 
 
 // Get reviews for a service
-const getServiceReviews = async (req, res) => {
+const getServiceReviews = async (req, res, next) => {
   try {
 
     const reviews = await Review.find({
       service: req.params.serviceId
     })
       .populate("user", "name")
-      .sort({ createdAt: -1 });
+      .sort({ createdAt: -1 })
+      .lean();
 
     res.status(200).json({
       success: true,
@@ -49,16 +47,13 @@ const getServiceReviews = async (req, res) => {
 
   } catch (error) {
 
-    res.status(500).json({
-      success: false,
-      message: error.message
-    });
+    next(error);
 
   }
 };
 
 // Update Review
-const updateReview = async (req, res) => {
+const updateReview = async (req, res, next) => {
 
   try {
 
@@ -95,17 +90,14 @@ const updateReview = async (req, res) => {
 
   } catch (error) {
 
-    res.status(500).json({
-      success: false,
-      message: error.message
-    });
+    next(error);
 
   }
 
 };
 
 // Delete Review
-const deleteReview = async (req, res) => {
+const deleteReview = async (req, res, next) => {
 
   try {
 
@@ -141,10 +133,7 @@ const deleteReview = async (req, res) => {
 
   } catch (error) {
 
-    res.status(500).json({
-      success: false,
-      message: error.message
-    });
+    next(error);
 
   }
 
@@ -153,7 +142,9 @@ const deleteReview = async (req, res) => {
 const updateServiceRating = async (serviceId) => {
     const reviews = await Review.find({
         service: serviceId
-    });
+    })
+    .select("rating")
+    .lean();
 
     let average = 0;
 
@@ -163,7 +154,7 @@ const updateServiceRating = async (serviceId) => {
             0
         );
 
-        average = total / reviews.length;
+        average = Number((total / reviews.length).toFixed(1));
     }
 
     await Service.findByIdAndUpdate(
@@ -171,6 +162,9 @@ const updateServiceRating = async (serviceId) => {
         {
             averageRating: average,
             reviewCount: reviews.length
+        },
+        {
+          runValidators: true
         }
     );
 };

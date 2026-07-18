@@ -15,7 +15,8 @@ const favoriteSchema = new mongoose.Schema(
     }
   },
   {
-    timestamps: true
+    timestamps: true,
+    versionKey: false
   }
 );
 
@@ -29,6 +30,11 @@ favoriteSchema.index(
     unique: true
   }
 );
+
+// Faster analytics by service
+favoriteSchema.index({
+  service: 1
+});
 
 module.exports = mongoose.model(
   "Favorite",

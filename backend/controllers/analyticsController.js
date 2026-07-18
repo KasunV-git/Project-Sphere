@@ -1,6 +1,8 @@
 const UsageHistory = require("../models/usageHistory");
+const Service = require("../models/service");
+const Favorite = require("../models/favorite");
 
-const getTopServices = async (req, res) => {
+const getTopServices = async (req, res, next) => {
 
     try {
 
@@ -42,28 +44,28 @@ const getTopServices = async (req, res) => {
 
     } catch (error) {
 
-        res.status(500).json({
-            success: false,
-            message: error.message
-        });
+        next(error);
 
     }
 
 };
 
-const Service = require("../models/service");
 
-const getTopRatedServices = async (req, res) => {
+const getTopRatedServices = async (req, res, next) => {
 
     try {
 
         const services = await Service.find()
+            .select(
+                "name slug icon averageRating reviewCount category"
+            )    
             .sort({
                 averageRating: -1,
                 reviewCount: -1
             })
             .limit(10)
-            .populate("category", "name");
+            .populate("category", "name")
+            .lean();
 
         res.status(200).json({
             success: true,
@@ -72,18 +74,14 @@ const getTopRatedServices = async (req, res) => {
 
     } catch (error) {
 
-        res.status(500).json({
-            success: false,
-            message: error.message
-        });
+        next(error);
 
     }
 
 };
 
-const Favorite = require("../models/favorite");
 
-const getMostFavoritedServices = async (req, res) => {
+const getMostFavoritedServices = async (req, res, next) => {
 
     try {
 
@@ -125,16 +123,13 @@ const getMostFavoritedServices = async (req, res) => {
 
     } catch (error) {
 
-        res.status(500).json({
-            success: false,
-            message: error.message
-        });
+        next(error);
 
     }
 
 };
 
-const getUsageTrends = async (req, res) => {
+const getUsageTrends = async (req, res, next) => {
 
     try {
 
@@ -156,7 +151,7 @@ const getUsageTrends = async (req, res) => {
 
             {
                 $sort: {
-                    "_id": 1
+                    _id: 1
                 }
             }
 
@@ -169,10 +164,7 @@ const getUsageTrends = async (req, res) => {
 
     } catch (error) {
 
-        res.status(500).json({
-            success: false,
-            message: error.message
-        });
+        next(error);
 
     }
 

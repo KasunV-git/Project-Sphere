@@ -28,7 +28,8 @@ const reviewSchema = new mongoose.Schema(
     }
   },
   {
-    timestamps: true
+    timestamps: true,
+    versionKey: false
   }
 );
 
@@ -42,6 +43,15 @@ reviewSchema.index(
     unique: true
   }
 );
+
+/* --------------------------------- */
+reviewSchema.index({
+    service:1
+});
+
+reviewSchema.index({
+    createdAt:-1
+});
 
 module.exports = mongoose.model(
   "Review",

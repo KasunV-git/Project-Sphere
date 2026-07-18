@@ -1,7 +1,7 @@
 const UsageHistory = require("../models/usageHistory");
 
 // Record service usage
-const recordUsage = async (req, res) => {
+const recordUsage = async (req, res, next) => {
   try {
 
     const usage = await UsageHistory.create({
@@ -16,23 +16,21 @@ const recordUsage = async (req, res) => {
 
   } catch (error) {
 
-    res.status(500).json({
-      success: false,
-      message: error.message
-    });
+    next(error);
 
   }
 };
 
 // Get logged in user's history
-const getMyHistory = async (req, res) => {
+const getMyHistory = async (req, res, next) => {
   try {
 
     const history = await UsageHistory.find({
       user: req.user.id
     })
-      .populate("service")
-      .sort({ usedAt: -1 });
+      .populate("service", "name slug icon averageRating")
+      .sort({ usedAt: -1 })
+      .lean();
 
     res.status(200).json({
       success: true,
@@ -42,22 +40,20 @@ const getMyHistory = async (req, res) => {
 
   } catch (error) {
 
-    res.status(500).json({
-      success: false,
-      message: error.message
-    });
+    next(error);
 
   }
 };
 
 // Admin - Get all history
-const getAllHistory = async (req, res) => {
+const getAllHistory = async (req, res, next) => {
   try {
 
     const history = await UsageHistory.find()
       .populate("user", "name email role")
       .populate("service", "name slug")
-      .sort({ usedAt: -1 });
+      .sort({ usedAt: -1 })
+      .lean();
 
     res.status(200).json({
       success: true,
@@ -67,16 +63,13 @@ const getAllHistory = async (req, res) => {
 
   } catch (error) {
 
-    res.status(500).json({
-      success: false,
-      message: error.message
-    });
+    next(error);
 
   }
 };
 
 // Admin - Delete usage
-const deleteHistory = async (req, res) => {
+const deleteHistory = async (req, res, next) => {
   try {
 
     const history = await UsageHistory.findByIdAndDelete(
@@ -97,10 +90,7 @@ const deleteHistory = async (req, res) => {
 
   } catch (error) {
 
-    res.status(500).json({
-      success: false,
-      message: error.message
-    });
+    next(error);
 
   }
 };

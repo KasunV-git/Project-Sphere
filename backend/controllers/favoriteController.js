@@ -2,12 +2,14 @@ const Favorite = require("../models/favorite");
 const Service = require("../models/service");
 
 // Add favorite
-const addFavorite = async (req, res) => {
+const addFavorite = async (req, res, next) => {
   try {
 
     const { service } = req.body;
 
-    const existingService = await Service.findById(service);
+    const existingService = await Service.findById(service)
+      .select("_id")
+      .lean();
 
     if (!existingService) {
       return res.status(404).json({
@@ -28,28 +30,35 @@ const addFavorite = async (req, res) => {
 
   } catch (error) {
 
-    if (error.code === 11000) {
-      return res.status(400).json({
-        success: false,
-        message: "Already in favorites"
-      });
+    if (err.code === 11000) {
+
+      statusCode = 400;
+
+        if (err.keyPattern?.user && err.keyPattern?.service) {
+          err.message = "Already in favorites";
+        } else {
+          err.message = "Duplicate resource";
+        }
+
     }
 
-    res.status(500).json({
-      success: false,
-      message: error.message
-    });
+    next(error);
 
   }
 };
 
 // Get my favorites
-const getMyFavorites = async (req, res) => {
+const getMyFavorites = async (req, res, next) => {
   try {
 
     const favorites = await Favorite.find({
       user: req.user.id
-    }).populate("service");
+    })
+    .populate(
+      "service",
+      "name slug icon averageRating reviewCount"
+    )
+    .lean();
 
     res.status(200).json({
       success: true,
@@ -59,16 +68,13 @@ const getMyFavorites = async (req, res) => {
 
   } catch (error) {
 
-    res.status(500).json({
-      success: false,
-      message: error.message
-    });
+    next(error);
 
   }
 };
 
 // Remove favorite
-const removeFavorite = async (req, res) => {
+const removeFavorite = async (req, res, next) => {
   try {
 
     const favorite = await Favorite.findOneAndDelete({
@@ -90,10 +96,7 @@ const removeFavorite = async (req, res) => {
 
   } catch (error) {
 
-    res.status(500).json({
-      success: false,
-      message: error.message
-    });
+    next(error);
 
   }
 };
