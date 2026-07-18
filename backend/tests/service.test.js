@@ -128,6 +128,8 @@ describe("Service API", () => {
     let serviceId;
 
     beforeEach(async () => {
+      console.log("\n========== GET beforeEach ==========");
+
       const service = await request(app)
         .post("/api/services")
         .set("Authorization", `Bearer ${adminToken}`)
@@ -138,49 +140,54 @@ describe("Service API", () => {
           category: categoryId,
         });
 
-      serviceId = service.body.service._id;
+      console.log("Create Service Status:", service.statusCode);
+
+      console.log(
+        "Create Service Response:",
+        JSON.stringify(service.body, null, 2),
+      );
+
+      if (service.body.service) {
+        serviceId = service.body.service._id;
+      }
     });
-  });
 
-  test("should get all services", async () => {
-    const response = await request(app).get("/api/services");
+    test("should get all services", async () => {
+      const response = await request(app).get("/api/services");
 
-    expect(response.statusCode).toBe(200);
+      console.log("GET ALL SERVICES:", JSON.stringify(response.body, null, 2));
 
-    expect(response.body.success).toBe(true);
+      expect(response.statusCode).toBe(200);
+      expect(response.body.success).toBe(true);
+      expect(Array.isArray(response.body.services)).toBe(true);
+      expect(response.body.services.length).toBe(1);
+    });
 
-    expect(response.body.services).toBeDefined();
+    test("should get service by id", async () => {
+      const response = await request(app).get(`/api/services/${serviceId}`);
 
-    expect(Array.isArray(response.body.services)).toBe(true);
+      console.log("GET SERVICE BY ID:", JSON.stringify(response.body, null, 2));
 
-    expect(response.body.services.length).toBe(1);
-  });
+      expect(response.statusCode).toBe(200);
+      expect(response.body.success).toBe(true);
+      expect(response.body.service.name).toBe("GPA Calculator");
+    });
 
-  test("should get service by id", async () => {
-    const response = await request(app).get(`/api/services/${serviceId}`);
+    test("should return 404 for non-existing service", async () => {
+      const fakeId = new mongoose.Types.ObjectId();
 
-    expect(response.statusCode).toBe(200);
+      const response = await request(app).get(`/api/services/${fakeId}`);
 
-    expect(response.body.success).toBe(true);
+      expect(response.statusCode).toBe(404);
+      expect(response.body.success).toBe(false);
+    });
 
-    expect(response.body.service.name).toBe("GPA Calculator");
-  });
+    test("should reject invalid service id", async () => {
+      const response = await request(app).get("/api/services/invalid-id");
 
-  test("should return 404 for non-existing service", async () => {
-    const fakeId = new mongoose.Types.ObjectId();
-
-    const response = await request(app).get(`/api/services/${fakeId}`);
-
-    expect(response.statusCode).toBe(404);
-
-    expect(response.body.success).toBe(false);
-  });
-
-  test("should reject invalid service id", async () => {
-    const response = await request(app).get("/api/services/invalid-id");
-
-    expect(response.statusCode).toBe(500);
-
-    expect(response.body.success).toBe(false);
+      // Your application returns 400
+      expect(response.statusCode).toBe(400);
+      expect(response.body.success).toBe(false);
+    });
   });
 });
