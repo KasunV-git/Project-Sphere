@@ -1,21 +1,11 @@
 const Service = require("../models/service");
 const Category = require("../models/category");
 
-const {
-    sendSuccess,
-    sendError
-} = require("../services/responseService");
+const { sendSuccess, sendError } = require("../services/responseService");
 
 const createService = async (req, res, next) => {
   try {
-
-    const {
-      name,
-      slug,
-      description,
-      category,
-      icon
-    } = req.body;
+    const { name, slug, description, category, icon } = req.body;
 
     // Check whether category exists
     const existingCategory = await Category.findById(category);
@@ -23,7 +13,7 @@ const createService = async (req, res, next) => {
     if (!existingCategory) {
       return res.status(404).json({
         success: false,
-        message: "Category not found"
+        message: "Category not found",
       });
     }
 
@@ -32,27 +22,19 @@ const createService = async (req, res, next) => {
       slug,
       description,
       category,
-      icon
+      icon,
     });
 
-    sendSuccess(
-      res,
-      201,
-      {
-        service
-      }
-    );
-
+    sendSuccess(res, 201, {
+      service,
+    });
   } catch (error) {
-
-      next(error);
-
+    next(error);
   }
 };
 
 const getServices = async (req, res, next) => {
   try {
-
     // -----------------------------
     // Read query parameters
     // -----------------------------
@@ -68,46 +50,46 @@ const getServices = async (req, res, next) => {
     // -----------------------------
 
     // -----------------------------
-// Build search filter
-// -----------------------------
+    // Build search filter
+    // -----------------------------
 
-const filter = {};
+    const filter = {};
 
-// Search by name
-if (req.query.search) {
-  filter.name = {
-    $regex: req.query.search,
-    $options: "i"
-  };
-}
+    // Search by name
+    if (req.query.search) {
+      filter.name = {
+        $regex: req.query.search,
+        $options: "i",
+      };
+    }
 
-// Filter by category ID
-if (req.query.category) {
-  filter.category = req.query.category;
-}
+    // Filter by category ID
+    if (req.query.category) {
+      filter.category = req.query.category;
+    }
 
-// Filter by active status
-if (req.query.isActive !== undefined) {
-  filter.isActive = req.query.isActive === "true";
-}
+    // Filter by active status
+    if (req.query.isActive !== undefined) {
+      filter.isActive = req.query.isActive === "true";
+    }
 
-// -----------------------------
-// Query database
-// -----------------------------
+    // -----------------------------
+    // Query database
+    // -----------------------------
 
-// -----------------------------
-// Sorting
-// -----------------------------
+    // -----------------------------
+    // Sorting
+    // -----------------------------
 
-const sort = req.query.sort || "-createdAt";
+    const sort = req.query.sort || "-createdAt";
 
-const services = await Service.find(filter)
-  .select("-createdAt -updatedAt")
-  .populate("category", "name icon")
-  .sort(sort)
-  .skip(skip)
-  .limit(limit)
-  .lean();
+    const services = await Service.find(filter)
+      .select("-createdAt -updatedAt")
+      .populate("category", "name icon")
+      .sort(sort)
+      .skip(skip)
+      .limit(limit)
+      .lean();
 
     const total = await Service.countDocuments(filter);
 
@@ -122,104 +104,65 @@ const services = await Service.find(filter)
 
       count: services.length,
 
-      services
+      services,
     });
-
   } catch (error) {
-
-      next(error);
-
+    next(error);
   }
 };
 
 const getServiceById = async (req, res, next) => {
   try {
-
     const service = await Service.findById(req.params.id)
-    .populate("category", "name icon")
-    .lean();
+      .populate("category", "name icon")
+      .lean();
 
     if (!service) {
-      return sendError(
-        res,
-        404,
-        "Service not found"
-    );
+      return sendError(res, 404, "Service not found");
     }
 
-    sendSuccess(
-      res,
-      200,
-      {
-        service
-      }
-    );
-
+    sendSuccess(res, 200, {
+      service,
+    });
   } catch (error) {
-
-   next(error);
-
-}
+    next(error);
+  }
 };
 
 const updateService = async (req, res, next) => {
   try {
-
-    const service = await Service.findByIdAndUpdate(
-      req.params.id,
-      req.body,
-      {
-        new: true,
-        runValidators: true
-      }
-    );
+    const service = await Service.findByIdAndUpdate(req.params.id, req.body, {
+      new: true,
+      runValidators: true,
+    });
 
     if (!service) {
-      sendSuccess(
-        res,
-        404,
-        {},
-        "Service not found"
-      );
+      return sendSuccess(res, 404, {}, "Service not found");
     }
 
-    sendSuccess(
-      res,
-      200,
-      {service}
-    );
-
+    return sendSuccess(res, 200, { service });
   } catch (error) {
-
-      next(error);
-
+    next(error);
   }
-
 };
 
 const deleteService = async (req, res, next) => {
   try {
-
-    const service = await Service.findByIdAndDelete(
-      req.params.id
-    );
+    const service = await Service.findByIdAndDelete(req.params.id);
 
     if (!service) {
       return res.status(404).json({
         success: false,
-        message: "Service not found"
+        message: "Service not found",
       });
     }
 
     res.status(200).json({
       success: true,
-      message: "Service deleted"
+      message: "Service deleted",
     });
-
   } catch (error) {
-
-      next(error);
-
+    next(error);
   }
 };
 
@@ -228,5 +171,5 @@ module.exports = {
   getServices,
   getServiceById,
   updateService,
-  deleteService
+  deleteService,
 };

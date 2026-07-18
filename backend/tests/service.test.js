@@ -128,8 +128,6 @@ describe("Service API", () => {
     let serviceId;
 
     beforeEach(async () => {
-      console.log("\n========== GET beforeEach ==========");
-
       const service = await request(app)
         .post("/api/services")
         .set("Authorization", `Bearer ${adminToken}`)
@@ -140,13 +138,6 @@ describe("Service API", () => {
           category: categoryId,
         });
 
-      console.log("Create Service Status:", service.statusCode);
-
-      console.log(
-        "Create Service Response:",
-        JSON.stringify(service.body, null, 2),
-      );
-
       if (service.body.service) {
         serviceId = service.body.service._id;
       }
@@ -154,8 +145,6 @@ describe("Service API", () => {
 
     test("should get all services", async () => {
       const response = await request(app).get("/api/services");
-
-      console.log("GET ALL SERVICES:", JSON.stringify(response.body, null, 2));
 
       expect(response.statusCode).toBe(200);
       expect(response.body.success).toBe(true);
@@ -165,8 +154,6 @@ describe("Service API", () => {
 
     test("should get service by id", async () => {
       const response = await request(app).get(`/api/services/${serviceId}`);
-
-      console.log("GET SERVICE BY ID:", JSON.stringify(response.body, null, 2));
 
       expect(response.statusCode).toBe(200);
       expect(response.body.success).toBe(true);
@@ -186,6 +173,87 @@ describe("Service API", () => {
       const response = await request(app).get("/api/services/invalid-id");
 
       // Your application returns 400
+      expect(response.statusCode).toBe(400);
+      expect(response.body.success).toBe(false);
+    });
+  });
+
+  describe("PUT /api/services/:id", () => {
+    let serviceId;
+
+    beforeEach(async () => {
+      const service = await request(app)
+        .post("/api/services")
+        .set("Authorization", `Bearer ${adminToken}`)
+        .send({
+          name: "GPA Calculator",
+          slug: "gpa-calculator",
+          description: "Calculate GPA",
+          category: categoryId,
+        });
+
+      serviceId = service.body.service._id;
+    });
+
+    test("admin should update a service", async () => {
+      const response = await request(app)
+        .put(`/api/services/${serviceId}`)
+        .set("Authorization", `Bearer ${adminToken}`)
+        .send({
+          name: "Updated GPA Calculator",
+          description: "Updated description",
+        });
+
+      expect(response.statusCode).toBe(200);
+      expect(response.body.success).toBe(true);
+      expect(response.body.service.name).toBe("Updated GPA Calculator");
+    });
+
+    test("normal user should not update a service", async () => {
+      const response = await request(app)
+        .put(`/api/services/${serviceId}`)
+        .set("Authorization", `Bearer ${userToken}`)
+        .send({
+          name: "Hack",
+        });
+
+      expect(response.statusCode).toBe(403);
+      expect(response.body.success).toBe(false);
+    });
+
+    test("should reject update without token", async () => {
+      const response = await request(app)
+        .put(`/api/services/${serviceId}`)
+        .send({
+          name: "Hack",
+        });
+
+      expect(response.statusCode).toBe(401);
+      expect(response.body.success).toBe(false);
+    });
+
+    test("should return 404 for non-existing service", async () => {
+      const fakeId = new mongoose.Types.ObjectId();
+
+      const response = await request(app)
+        .put(`/api/services/${fakeId}`)
+        .set("Authorization", `Bearer ${adminToken}`)
+        .send({
+          name: "Updated",
+        });
+
+      expect(response.statusCode).toBe(404);
+      expect(response.body.success).toBe(true);
+    });
+
+    test("should reject invalid ObjectId", async () => {
+      const response = await request(app)
+        .put("/api/services/invalid-id")
+        .set("Authorization", `Bearer ${adminToken}`)
+        .send({
+          name: "Updated",
+        });
+
       expect(response.statusCode).toBe(400);
       expect(response.body.success).toBe(false);
     });
