@@ -6,6 +6,10 @@
  */
 
 const express = require("express");
+const {
+  protect,
+  isAdmin
+} = require("../middleware/authMiddleware");
 
 const router = express.Router();
 
@@ -59,7 +63,7 @@ const {
  *         description: List of categories
  */
 router.route("/")
-  .post(createCategory)
+  .post(protect, isAdmin, createCategory)
   .get(getCategories);
 
 /**
@@ -122,7 +126,7 @@ router.route("/")
  */
 router.route("/:id")
   .get(getCategoryById)
-  .put(updateCategory)
-  .delete(deleteCategory);
+  .put(protect, isAdmin, updateCategory)
+  .delete(protect, isAdmin, deleteCategory);
 
 module.exports = router;

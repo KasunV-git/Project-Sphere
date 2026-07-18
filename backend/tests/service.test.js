@@ -258,4 +258,70 @@ describe("Service API", () => {
       expect(response.body.success).toBe(false);
     });
   });
+
+  describe("DELETE /api/services/:id", () => {
+    let serviceId;
+
+    beforeEach(async () => {
+      const service = await request(app)
+        .post("/api/services")
+        .set("Authorization", `Bearer ${adminToken}`)
+        .send({
+          name: "GPA Calculator",
+          slug: "gpa-calculator",
+          description: "Calculate GPA",
+          category: categoryId,
+        });
+
+      serviceId = service.body.service._id;
+    });
+
+    test("admin should delete a service", async () => {
+      const response = await request(app)
+        .delete(`/api/services/${serviceId}`)
+        .set("Authorization", `Bearer ${adminToken}`);
+
+      expect(response.statusCode).toBe(200);
+      expect(response.body.success).toBe(true);
+
+      const check = await request(app).get(`/api/services/${serviceId}`);
+
+      expect(check.statusCode).toBe(404);
+    });
+
+    test("normal user should not delete a service", async () => {
+      const response = await request(app)
+        .delete(`/api/services/${serviceId}`)
+        .set("Authorization", `Bearer ${userToken}`);
+
+      expect(response.statusCode).toBe(403);
+      expect(response.body.success).toBe(false);
+    });
+
+    test("should reject delete without token", async () => {
+      const response = await request(app).delete(`/api/services/${serviceId}`);
+
+      expect(response.statusCode).toBe(401);
+      expect(response.body.success).toBe(false);
+    });
+
+    test("should return 404 for non-existing service", async () => {
+      const fakeId = new mongoose.Types.ObjectId();
+
+      const response = await request(app)
+        .delete(`/api/services/${fakeId}`)
+        .set("Authorization", `Bearer ${adminToken}`);
+
+      expect(response.statusCode).toBe(404);
+    });
+
+    test("should reject invalid ObjectId", async () => {
+      const response = await request(app)
+        .delete("/api/services/invalid-id")
+        .set("Authorization", `Bearer ${adminToken}`);
+
+      expect(response.statusCode).toBe(400);
+      expect(response.body.success).toBe(false);
+    });
+  });
 });

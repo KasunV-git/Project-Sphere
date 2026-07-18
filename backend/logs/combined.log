@@ -685,3 +685,307 @@
     at processTicksAndRejections (node:internal/process/task_queues:95:5)
     at updateService (D:\Project Sphere\Project-Sphere\backend\controllers\serviceController.js:134:21)
 [2026-07-19 01:24:59] INFO: PUT /api/services/invalid-id 400 6.163 ms - - bytes
+[2026-07-19 01:28:10] INFO: POST /api/auth/register 201 290.413 ms - - bytes
+[2026-07-19 01:28:10] INFO: POST /api/auth/register 201 196.540 ms - - bytes
+[2026-07-19 01:28:10] INFO: POST /api/auth/login 200 204.684 ms - - bytes
+[2026-07-19 01:28:11] INFO: POST /api/auth/login 200 197.355 ms - - bytes
+[2026-07-19 01:28:11] INFO: POST /api/services 201 28.328 ms - - bytes
+[2026-07-19 01:28:11] INFO: POST /api/auth/register 201 219.735 ms - - bytes
+[2026-07-19 01:28:11] INFO: POST /api/auth/register 201 199.845 ms - - bytes
+[2026-07-19 01:28:11] INFO: POST /api/auth/login 200 190.714 ms - - bytes
+[2026-07-19 01:28:12] INFO: POST /api/auth/login 200 191.572 ms - - bytes
+[2026-07-19 01:28:12] INFO: POST /api/services 403 2.842 ms - - bytes
+[2026-07-19 01:28:12] INFO: POST /api/auth/register 201 214.321 ms - - bytes
+[2026-07-19 01:28:12] INFO: POST /api/auth/register 201 194.597 ms - - bytes
+[2026-07-19 01:28:12] INFO: POST /api/auth/login 200 192.781 ms - - bytes
+[2026-07-19 01:28:12] INFO: POST /api/auth/login 200 190.594 ms - - bytes
+[2026-07-19 01:28:13] INFO: POST /api/services 401 0.416 ms - - bytes
+[2026-07-19 01:28:13] INFO: POST /api/auth/register 201 209.964 ms - - bytes
+[2026-07-19 01:28:13] INFO: POST /api/auth/register 201 195.522 ms - - bytes
+[2026-07-19 01:28:13] INFO: POST /api/auth/login 200 196.690 ms - - bytes
+[2026-07-19 01:28:13] INFO: POST /api/auth/login 200 190.044 ms - - bytes
+[2026-07-19 01:28:13] INFO: POST /api/services 404 8.851 ms - - bytes
+[2026-07-19 01:28:14] INFO: POST /api/auth/register 201 213.294 ms - - bytes
+[2026-07-19 01:28:14] INFO: POST /api/auth/register 201 191.624 ms - - bytes
+[2026-07-19 01:28:14] INFO: POST /api/auth/login 200 192.204 ms - - bytes
+[2026-07-19 01:28:14] INFO: POST /api/auth/login 200 191.608 ms - - bytes
+[2026-07-19 01:28:14] INFO: POST /api/services 201 25.995 ms - - bytes
+[2026-07-19 01:28:14] INFO: GET /api/services 200 35.097 ms - - bytes
+[2026-07-19 01:28:15] INFO: POST /api/auth/register 201 212.460 ms - - bytes
+[2026-07-19 01:28:15] INFO: POST /api/auth/register 201 195.716 ms - - bytes
+[2026-07-19 01:28:15] INFO: POST /api/auth/login 200 191.583 ms - - bytes
+[2026-07-19 01:28:15] INFO: POST /api/auth/login 200 199.437 ms - - bytes
+[2026-07-19 01:28:15] INFO: POST /api/services 201 35.156 ms - - bytes
+[2026-07-19 01:28:15] INFO: GET /api/services/6a5bdad73604cd51aeb1a066 200 12.605 ms - - bytes
+[2026-07-19 01:28:16] INFO: POST /api/auth/register 201 223.196 ms - - bytes
+[2026-07-19 01:28:16] INFO: POST /api/auth/register 201 191.329 ms - - bytes
+[2026-07-19 01:28:16] INFO: POST /api/auth/login 200 190.501 ms - - bytes
+[2026-07-19 01:28:16] INFO: POST /api/auth/login 200 194.630 ms - - bytes
+[2026-07-19 01:28:16] INFO: POST /api/services 201 28.339 ms - - bytes
+[2026-07-19 01:28:16] INFO: GET /api/services/6a5bdad83604cd51aeb1a06b 404 3.696 ms - - bytes
+[2026-07-19 01:28:17] INFO: POST /api/auth/register 201 211.407 ms - - bytes
+[2026-07-19 01:28:17] INFO: POST /api/auth/register 201 192.045 ms - - bytes
+[2026-07-19 01:28:17] INFO: POST /api/auth/login 200 189.665 ms - - bytes
+[2026-07-19 01:28:17] INFO: POST /api/auth/login 200 190.986 ms - - bytes
+[2026-07-19 01:28:17] INFO: POST /api/services 201 29.798 ms - - bytes
+[2026-07-19 01:28:17] ERROR: CastError: Cast to ObjectId failed for value "invalid-id" (type string) at path "_id" for model "Service"
+    at SchemaObjectId.cast (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\schema\objectId.js:252:11)
+    at SchemaObjectId.SchemaType.applySetters (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\schemaType.js:1373:12)
+    at SchemaObjectId.SchemaType.castForQuery (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\schemaType.js:1793:17)
+    at cast (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\cast.js:386:32)
+    at model.Query.Query.cast (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\query.js:5228:12)
+    at model.Query.Query._castConditions (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\query.js:2411:10)
+    at model.Query._findOne (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\query.js:2758:8)
+    at maybeTracedQueryExec (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\query.js:4801:83)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at getServiceById (D:\Project Sphere\Project-Sphere\backend\controllers\serviceController.js:116:21)
+[2026-07-19 01:28:17] INFO: GET /api/services/invalid-id 400 16.330 ms - - bytes
+[2026-07-19 01:28:17] INFO: POST /api/auth/register 201 208.433 ms - - bytes
+[2026-07-19 01:28:18] INFO: POST /api/auth/register 201 190.751 ms - - bytes
+[2026-07-19 01:28:18] INFO: POST /api/auth/login 200 191.642 ms - - bytes
+[2026-07-19 01:28:18] INFO: POST /api/auth/login 200 188.823 ms - - bytes
+[2026-07-19 01:28:18] INFO: POST /api/services 201 28.064 ms - - bytes
+[2026-07-19 01:28:18] INFO: PUT /api/services/6a5bdada3604cd51aeb1a073 200 18.936 ms - - bytes
+[2026-07-19 01:28:18] INFO: POST /api/auth/register 201 211.121 ms - - bytes
+[2026-07-19 01:28:19] INFO: POST /api/auth/register 201 190.521 ms - - bytes
+[2026-07-19 01:28:19] INFO: POST /api/auth/login 200 190.469 ms - - bytes
+[2026-07-19 01:28:19] INFO: POST /api/auth/login 200 188.851 ms - - bytes
+[2026-07-19 01:28:19] INFO: POST /api/services 201 25.637 ms - - bytes
+[2026-07-19 01:28:19] INFO: PUT /api/services/6a5bdadb3604cd51aeb1a077 403 2.384 ms - - bytes
+[2026-07-19 01:28:19] INFO: POST /api/auth/register 201 209.658 ms - - bytes
+[2026-07-19 01:28:20] INFO: POST /api/auth/register 201 191.591 ms - - bytes
+[2026-07-19 01:28:20] INFO: POST /api/auth/login 200 189.574 ms - - bytes
+[2026-07-19 01:28:20] INFO: POST /api/auth/login 200 190.801 ms - - bytes
+[2026-07-19 01:28:20] INFO: POST /api/services 201 25.005 ms - - bytes
+[2026-07-19 01:28:20] INFO: PUT /api/services/6a5bdadc3604cd51aeb1a07b 401 0.517 ms - - bytes
+[2026-07-19 01:28:20] INFO: POST /api/auth/register 201 217.282 ms - - bytes
+[2026-07-19 01:28:20] INFO: POST /api/auth/register 201 191.603 ms - - bytes
+[2026-07-19 01:28:21] INFO: POST /api/auth/login 200 191.294 ms - - bytes
+[2026-07-19 01:28:21] INFO: POST /api/auth/login 200 192.073 ms - - bytes
+[2026-07-19 01:28:21] INFO: POST /api/services 201 26.521 ms - - bytes
+[2026-07-19 01:28:21] INFO: PUT /api/services/6a5bdadd3604cd51aeb1a080 404 6.599 ms - - bytes
+[2026-07-19 01:28:21] INFO: POST /api/auth/register 201 214.357 ms - - bytes
+[2026-07-19 01:28:21] INFO: POST /api/auth/register 201 196.096 ms - - bytes
+[2026-07-19 01:28:22] INFO: POST /api/auth/login 200 202.729 ms - - bytes
+[2026-07-19 01:28:22] INFO: POST /api/auth/login 200 189.363 ms - - bytes
+[2026-07-19 01:28:22] INFO: POST /api/services 201 33.333 ms - - bytes
+[2026-07-19 01:28:22] ERROR: CastError: Cast to ObjectId failed for value "invalid-id" (type string) at path "_id" for model "Service"
+    at SchemaObjectId.cast (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\schema\objectId.js:252:11)
+    at SchemaObjectId.SchemaType.applySetters (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\schemaType.js:1373:12)
+    at SchemaObjectId.SchemaType.castForQuery (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\schemaType.js:1793:17)
+    at cast (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\cast.js:386:32)
+    at model.Query.Query.cast (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\query.js:5228:12)
+    at model.Query.Query._castConditions (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\query.js:2411:10)
+    at model.Query._findOneAndUpdate (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\query.js:3557:8)
+    at maybeTracedQueryExec (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\query.js:4801:83)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at updateService (D:\Project Sphere\Project-Sphere\backend\controllers\serviceController.js:134:21)
+[2026-07-19 01:28:22] INFO: PUT /api/services/invalid-id 400 9.694 ms - - bytes
+[2026-07-19 01:28:22] INFO: POST /api/auth/register 201 227.623 ms - - bytes
+[2026-07-19 01:28:22] INFO: POST /api/auth/register 201 203.802 ms - - bytes
+[2026-07-19 01:28:23] INFO: POST /api/auth/login 200 190.233 ms - - bytes
+[2026-07-19 01:28:23] INFO: POST /api/auth/login 200 189.827 ms - - bytes
+[2026-07-19 01:28:23] INFO: POST /api/services 201 29.123 ms - - bytes
+[2026-07-19 01:28:23] INFO: DELETE /api/services/6a5bdadf3604cd51aeb1a088 200 9.319 ms - - bytes
+[2026-07-19 01:28:23] INFO: GET /api/services/6a5bdadf3604cd51aeb1a088 404 3.656 ms - - bytes
+[2026-07-19 01:28:23] INFO: POST /api/auth/register 201 212.172 ms - - bytes
+[2026-07-19 01:28:23] INFO: POST /api/auth/register 201 190.486 ms - - bytes
+[2026-07-19 01:28:24] INFO: POST /api/auth/login 200 212.618 ms - - bytes
+[2026-07-19 01:28:24] INFO: POST /api/auth/login 200 224.832 ms - - bytes
+[2026-07-19 01:28:24] INFO: POST /api/services 201 29.897 ms - - bytes
+[2026-07-19 01:28:24] INFO: DELETE /api/services/6a5bdae03604cd51aeb1a08c 403 2.896 ms - - bytes
+[2026-07-19 01:28:24] INFO: POST /api/auth/register 201 223.151 ms - - bytes
+[2026-07-19 01:28:24] INFO: POST /api/auth/register 201 190.832 ms - - bytes
+[2026-07-19 01:28:25] INFO: POST /api/auth/login 200 191.773 ms - - bytes
+[2026-07-19 01:28:25] INFO: POST /api/auth/login 200 189.400 ms - - bytes
+[2026-07-19 01:28:25] INFO: POST /api/services 201 39.981 ms - - bytes
+[2026-07-19 01:28:25] INFO: DELETE /api/services/6a5bdae13604cd51aeb1a090 401 0.784 ms - - bytes
+[2026-07-19 01:28:25] INFO: POST /api/auth/register 201 228.868 ms - - bytes
+[2026-07-19 01:28:25] INFO: POST /api/auth/register 201 198.317 ms - - bytes
+[2026-07-19 01:28:26] INFO: POST /api/auth/login 200 189.342 ms - - bytes
+[2026-07-19 01:28:26] INFO: POST /api/auth/login 200 188.613 ms - - bytes
+[2026-07-19 01:28:26] INFO: POST /api/services 201 31.127 ms - - bytes
+[2026-07-19 01:28:26] INFO: DELETE /api/services/6a5bdae23604cd51aeb1a095 404 6.029 ms - - bytes
+[2026-07-19 01:28:26] INFO: POST /api/auth/register 201 239.856 ms - - bytes
+[2026-07-19 01:28:26] INFO: POST /api/auth/register 201 229.445 ms - - bytes
+[2026-07-19 01:28:27] INFO: POST /api/auth/login 200 187.644 ms - - bytes
+[2026-07-19 01:28:27] INFO: POST /api/auth/login 200 208.450 ms - - bytes
+[2026-07-19 01:28:27] INFO: POST /api/services 201 47.296 ms - - bytes
+[2026-07-19 01:28:27] ERROR: CastError: Cast to ObjectId failed for value "invalid-id" (type string) at path "_id" for model "Service"
+    at SchemaObjectId.cast (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\schema\objectId.js:252:11)
+    at SchemaObjectId.SchemaType.applySetters (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\schemaType.js:1373:12)
+    at SchemaObjectId.SchemaType.castForQuery (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\schemaType.js:1793:17)
+    at cast (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\cast.js:386:32)
+    at model.Query.Query.cast (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\query.js:5228:12)
+    at model.Query.Query._castConditions (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\query.js:2411:10)
+    at model.Query._findOneAndDelete (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\query.js:3702:8)
+    at maybeTracedQueryExec (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\query.js:4801:83)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at deleteService (D:\Project Sphere\Project-Sphere\backend\controllers\serviceController.js:151:21)
+[2026-07-19 01:28:27] INFO: DELETE /api/services/invalid-id 400 11.531 ms - - bytes
+[2026-07-19 01:44:03] INFO: POST /api/auth/register 201 325.240 ms - - bytes
+[2026-07-19 01:44:04] INFO: POST /api/auth/register 201 197.486 ms - - bytes
+[2026-07-19 01:44:04] INFO: POST /api/auth/login 200 203.031 ms - - bytes
+[2026-07-19 01:44:04] INFO: POST /api/auth/login 200 192.413 ms - - bytes
+[2026-07-19 01:44:04] INFO: POST /api/categories 201 8.499 ms - - bytes
+[2026-07-19 01:44:04] INFO: POST /api/auth/register 201 216.511 ms - - bytes
+[2026-07-19 01:44:04] INFO: POST /api/auth/register 201 194.726 ms - - bytes
+[2026-07-19 01:44:05] INFO: POST /api/auth/login 200 192.029 ms - - bytes
+[2026-07-19 01:44:05] INFO: POST /api/auth/login 200 191.185 ms - - bytes
+[2026-07-19 01:44:05] INFO: POST /api/categories 201 27.252 ms - - bytes
+[2026-07-19 01:44:05] INFO: POST /api/auth/register 201 208.757 ms - - bytes
+[2026-07-19 01:44:05] INFO: POST /api/auth/register 201 196.323 ms - - bytes
+[2026-07-19 01:44:06] INFO: POST /api/auth/login 200 192.155 ms - - bytes
+[2026-07-19 01:44:06] INFO: POST /api/auth/login 200 191.615 ms - - bytes
+[2026-07-19 01:44:06] INFO: POST /api/categories 201 23.905 ms - - bytes
+[2026-07-19 01:50:54] INFO: POST /api/auth/register 201 287.750 ms - - bytes
+[2026-07-19 01:50:54] INFO: POST /api/auth/register 201 199.056 ms - - bytes
+[2026-07-19 01:50:54] INFO: POST /api/auth/login 200 199.502 ms - - bytes
+[2026-07-19 01:50:54] INFO: POST /api/auth/login 200 195.576 ms - - bytes
+[2026-07-19 01:50:54] INFO: POST /api/categories 201 10.049 ms - - bytes
+[2026-07-19 01:50:55] INFO: POST /api/auth/register 201 220.631 ms - - bytes
+[2026-07-19 01:50:55] INFO: POST /api/auth/register 201 191.452 ms - - bytes
+[2026-07-19 01:50:55] INFO: POST /api/auth/login 200 191.492 ms - - bytes
+[2026-07-19 01:50:55] INFO: POST /api/auth/login 200 188.962 ms - - bytes
+[2026-07-19 01:50:55] INFO: POST /api/categories 403 2.832 ms - - bytes
+[2026-07-19 01:50:55] INFO: POST /api/auth/register 201 209.551 ms - - bytes
+[2026-07-19 01:50:56] INFO: POST /api/auth/register 201 193.557 ms - - bytes
+[2026-07-19 01:50:56] INFO: POST /api/auth/login 200 189.001 ms - - bytes
+[2026-07-19 01:50:56] INFO: POST /api/auth/login 200 192.245 ms - - bytes
+[2026-07-19 01:50:56] INFO: POST /api/categories 401 0.463 ms - - bytes
+[2026-07-19 01:54:22] INFO: POST /api/auth/register 201 313.038 ms - - bytes
+[2026-07-19 01:54:22] INFO: POST /api/auth/register 201 231.475 ms - - bytes
+[2026-07-19 01:54:22] INFO: POST /api/auth/login 200 215.954 ms - - bytes
+[2026-07-19 01:54:22] INFO: POST /api/auth/login 200 192.812 ms - - bytes
+[2026-07-19 01:54:22] INFO: POST /api/categories 201 11.590 ms - - bytes
+[2026-07-19 01:54:23] INFO: POST /api/auth/register 201 217.404 ms - - bytes
+[2026-07-19 01:54:23] INFO: POST /api/auth/register 201 193.917 ms - - bytes
+[2026-07-19 01:54:23] INFO: POST /api/auth/login 200 196.150 ms - - bytes
+[2026-07-19 01:54:23] INFO: POST /api/auth/login 200 190.743 ms - - bytes
+[2026-07-19 01:54:23] INFO: POST /api/categories 403 2.667 ms - - bytes
+[2026-07-19 01:54:24] INFO: POST /api/auth/register 201 222.228 ms - - bytes
+[2026-07-19 01:54:24] INFO: POST /api/auth/register 201 193.368 ms - - bytes
+[2026-07-19 01:54:24] INFO: POST /api/auth/login 200 192.049 ms - - bytes
+[2026-07-19 01:54:24] INFO: POST /api/auth/login 200 190.905 ms - - bytes
+[2026-07-19 01:54:24] INFO: POST /api/categories 401 0.694 ms - - bytes
+[2026-07-19 01:54:25] INFO: POST /api/auth/register 201 220.746 ms - - bytes
+[2026-07-19 01:54:25] INFO: POST /api/auth/register 201 195.462 ms - - bytes
+[2026-07-19 01:54:25] INFO: POST /api/auth/login 200 195.023 ms - - bytes
+[2026-07-19 01:54:25] INFO: POST /api/auth/login 200 188.638 ms - - bytes
+[2026-07-19 01:54:25] INFO: POST /api/categories 201 27.706 ms - - bytes
+[2026-07-19 01:54:25] ERROR: TypeError: Category.select is not a function
+    at select (D:\Project Sphere\Project-Sphere\backend\controllers\categoryController.js:26:6)
+    at Layer.handleRequest (D:\Project Sphere\Project-Sphere\backend\node_modules\router\lib\layer.js:152:17)
+    at next (D:\Project Sphere\Project-Sphere\backend\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (D:\Project Sphere\Project-Sphere\backend\node_modules\router\lib\route.js:117:3)
+    at handle (D:\Project Sphere\Project-Sphere\backend\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (D:\Project Sphere\Project-Sphere\backend\node_modules\router\lib\layer.js:152:17)
+    at D:\Project Sphere\Project-Sphere\backend\node_modules\router\index.js:295:15
+    at processParams (D:\Project Sphere\Project-Sphere\backend\node_modules\router\index.js:582:12)
+    at next (D:\Project Sphere\Project-Sphere\backend\node_modules\router\index.js:291:5)
+    at Function.handle (D:\Project Sphere\Project-Sphere\backend\node_modules\router\index.js:186:3)
+    at router (D:\Project Sphere\Project-Sphere\backend\node_modules\router\index.js:60:12)
+    at Layer.handleRequest (D:\Project Sphere\Project-Sphere\backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (D:\Project Sphere\Project-Sphere\backend\node_modules\router\index.js:342:13)
+    at D:\Project Sphere\Project-Sphere\backend\node_modules\router\index.js:297:9
+    at processParams (D:\Project Sphere\Project-Sphere\backend\node_modules\router\index.js:582:12)
+    at next (D:\Project Sphere\Project-Sphere\backend\node_modules\router\index.js:291:5)
+    at logger (D:\Project Sphere\Project-Sphere\backend\node_modules\morgan\index.js:170:5)
+    at Layer.handleRequest (D:\Project Sphere\Project-Sphere\backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (D:\Project Sphere\Project-Sphere\backend\node_modules\router\index.js:342:13)
+    at D:\Project Sphere\Project-Sphere\backend\node_modules\router\index.js:297:9
+    at processParams (D:\Project Sphere\Project-Sphere\backend\node_modules\router\index.js:582:12)
+    at next (D:\Project Sphere\Project-Sphere\backend\node_modules\router\index.js:291:5)
+    at read (D:\Project Sphere\Project-Sphere\backend\node_modules\body-parser\lib\read.js:53:5)
+    at jsonParser (D:\Project Sphere\Project-Sphere\backend\node_modules\body-parser\lib\types\json.js:88:5)
+    at Layer.handleRequest (D:\Project Sphere\Project-Sphere\backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (D:\Project Sphere\Project-Sphere\backend\node_modules\router\index.js:342:13)
+    at D:\Project Sphere\Project-Sphere\backend\node_modules\router\index.js:297:9
+    at processParams (D:\Project Sphere\Project-Sphere\backend\node_modules\router\index.js:582:12)
+    at next (D:\Project Sphere\Project-Sphere\backend\node_modules\router\index.js:291:5)
+    at compression (D:\Project Sphere\Project-Sphere\backend\node_modules\compression\index.js:243:5)
+    at Layer.handleRequest (D:\Project Sphere\Project-Sphere\backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (D:\Project Sphere\Project-Sphere\backend\node_modules\router\index.js:342:13)
+    at D:\Project Sphere\Project-Sphere\backend\node_modules\router\index.js:297:9
+    at processParams (D:\Project Sphere\Project-Sphere\backend\node_modules\router\index.js:582:12)
+    at next (D:\Project Sphere\Project-Sphere\backend\node_modules\router\index.js:291:5)
+    at cors (D:\Project Sphere\Project-Sphere\backend\node_modules\cors\lib\index.js:188:7)
+    at D:\Project Sphere\Project-Sphere\backend\node_modules\cors\lib\index.js:224:17
+    at originCallback (D:\Project Sphere\Project-Sphere\backend\node_modules\cors\lib\index.js:214:15)
+    at D:\Project Sphere\Project-Sphere\backend\node_modules\cors\lib\index.js:219:13
+    at optionsCallback (D:\Project Sphere\Project-Sphere\backend\node_modules\cors\lib\index.js:199:9)
+    at corsMiddleware (D:\Project Sphere\Project-Sphere\backend\node_modules\cors\lib\index.js:204:7)
+    at Layer.handleRequest (D:\Project Sphere\Project-Sphere\backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (D:\Project Sphere\Project-Sphere\backend\node_modules\router\index.js:342:13)
+    at D:\Project Sphere\Project-Sphere\backend\node_modules\router\index.js:297:9
+    at processParams (D:\Project Sphere\Project-Sphere\backend\node_modules\router\index.js:582:12)
+    at next (D:\Project Sphere\Project-Sphere\backend\node_modules\router\index.js:291:5)
+    at internalNext (D:\Project Sphere\Project-Sphere\backend\node_modules\helmet\index.cjs:531:6)
+    at xXssProtectionMiddleware (D:\Project Sphere\Project-Sphere\backend\node_modules\helmet\index.cjs:311:3)
+    at internalNext (D:\Project Sphere\Project-Sphere\backend\node_modules\helmet\index.cjs:529:6)
+    at xPoweredByMiddleware (D:\Project Sphere\Project-Sphere\backend\node_modules\helmet\index.cjs:304:3)
+    at internalNext (D:\Project Sphere\Project-Sphere\backend\node_modules\helmet\index.cjs:529:6)
+    at xPermittedCrossDomainPoliciesMiddleware (D:\Project Sphere\Project-Sphere\backend\node_modules\helmet\index.cjs:297:3)
+    at internalNext (D:\Project Sphere\Project-Sphere\backend\node_modules\helmet\index.cjs:529:6)
+    at xFrameOptionsMiddleware (D:\Project Sphere\Project-Sphere\backend\node_modules\helmet\index.cjs:281:3)
+    at internalNext (D:\Project Sphere\Project-Sphere\backend\node_modules\helmet\index.cjs:529:6)
+    at xDownloadOptionsMiddleware (D:\Project Sphere\Project-Sphere\backend\node_modules\helmet\index.cjs:261:3)
+    at internalNext (D:\Project Sphere\Project-Sphere\backend\node_modules\helmet\index.cjs:529:6)
+    at xDnsPrefetchControlMiddleware (D:\Project Sphere\Project-Sphere\backend\node_modules\helmet\index.cjs:254:3)
+    at internalNext (D:\Project Sphere\Project-Sphere\backend\node_modules\helmet\index.cjs:529:6)
+    at xContentTypeOptionsMiddleware (D:\Project Sphere\Project-Sphere\backend\node_modules\helmet\index.cjs:246:3)
+    at internalNext (D:\Project Sphere\Project-Sphere\backend\node_modules\helmet\index.cjs:529:6)
+    at strictTransportSecurityMiddleware (D:\Project Sphere\Project-Sphere\backend\node_modules\helmet\index.cjs:239:3)
+    at internalNext (D:\Project Sphere\Project-Sphere\backend\node_modules\helmet\index.cjs:529:6)
+    at referrerPolicyMiddleware (D:\Project Sphere\Project-Sphere\backend\node_modules\helmet\index.cjs:207:3)
+    at internalNext (D:\Project Sphere\Project-Sphere\backend\node_modules\helmet\index.cjs:529:6)
+    at originAgentClusterMiddleware (D:\Project Sphere\Project-Sphere\backend\node_modules\helmet\index.cjs:182:3)
+    at internalNext (D:\Project Sphere\Project-Sphere\backend\node_modules\helmet\index.cjs:529:6)
+    at crossOriginResourcePolicyMiddleware (D:\Project Sphere\Project-Sphere\backend\node_modules\helmet\index.cjs:175:3)
+    at internalNext (D:\Project Sphere\Project-Sphere\backend\node_modules\helmet\index.cjs:529:6)
+    at crossOriginOpenerPolicyMiddleware (D:\Project Sphere\Project-Sphere\backend\node_modules\helmet\index.cjs:159:3)
+    at internalNext (D:\Project Sphere\Project-Sphere\backend\node_modules\helmet\index.cjs:529:6)
+    at contentSecurityPolicyMiddleware (D:\Project Sphere\Project-Sphere\backend\node_modules\helmet\index.cjs:124:4)
+    at internalNext (D:\Project Sphere\Project-Sphere\backend\node_modules\helmet\index.cjs:529:6)
+    at helmetMiddleware (D:\Project Sphere\Project-Sphere\backend\node_modules\helmet\index.cjs:533:6)
+    at Layer.handleRequest (D:\Project Sphere\Project-Sphere\backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (D:\Project Sphere\Project-Sphere\backend\node_modules\router\index.js:342:13)
+    at D:\Project Sphere\Project-Sphere\backend\node_modules\router\index.js:297:9
+    at processParams (D:\Project Sphere\Project-Sphere\backend\node_modules\router\index.js:582:12)
+    at next (D:\Project Sphere\Project-Sphere\backend\node_modules\router\index.js:291:5)
+    at Function.handle (D:\Project Sphere\Project-Sphere\backend\node_modules\router\index.js:186:3)
+    at Function.handle (D:\Project Sphere\Project-Sphere\backend\node_modules\express\lib\application.js:177:15)
+    at Server.app (D:\Project Sphere\Project-Sphere\backend\node_modules\express\lib\express.js:38:9)
+    at Server.emit (node:events:524:28)
+    at parserOnIncoming (node:_http_server:1139:12)
+    at HTTPParser.parserOnHeadersComplete (node:_http_common:118:17)
+[2026-07-19 01:54:25] INFO: GET /api/categories 500 41.240 ms - - bytes
+[2026-07-19 01:54:25] INFO: POST /api/auth/register 201 212.221 ms - - bytes
+[2026-07-19 01:54:26] INFO: POST /api/auth/register 201 194.927 ms - - bytes
+[2026-07-19 01:54:26] INFO: POST /api/auth/login 200 191.539 ms - - bytes
+[2026-07-19 01:54:26] INFO: POST /api/auth/login 200 189.828 ms - - bytes
+[2026-07-19 01:54:26] INFO: POST /api/categories 201 25.588 ms - - bytes
+[2026-07-19 01:54:26] INFO: GET /api/categories/6a5be0fa820be74c4dd88fc2 200 5.721 ms - - bytes
+[2026-07-19 01:54:26] INFO: POST /api/auth/register 201 212.226 ms - - bytes
+[2026-07-19 01:54:27] INFO: POST /api/auth/register 201 194.803 ms - - bytes
+[2026-07-19 01:54:27] INFO: POST /api/auth/login 200 194.823 ms - - bytes
+[2026-07-19 01:54:27] INFO: POST /api/auth/login 200 190.674 ms - - bytes
+[2026-07-19 01:54:27] INFO: POST /api/categories 201 25.224 ms - - bytes
+[2026-07-19 01:54:27] INFO: GET /api/categories/6a5be0fb820be74c4dd88fc6 404 3.182 ms - - bytes
+[2026-07-19 01:54:27] INFO: POST /api/auth/register 201 214.497 ms - - bytes
+[2026-07-19 01:54:28] INFO: POST /api/auth/register 201 193.643 ms - - bytes
+[2026-07-19 01:54:28] INFO: POST /api/auth/login 200 193.278 ms - - bytes
+[2026-07-19 01:54:28] INFO: POST /api/auth/login 200 192.719 ms - - bytes
+[2026-07-19 01:54:28] INFO: POST /api/categories 201 28.810 ms - - bytes
+[2026-07-19 01:54:28] ERROR: CastError: Cast to ObjectId failed for value "invalid-id" (type string) at path "_id" for model "Category"
+    at SchemaObjectId.cast (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\schema\objectId.js:252:11)
+    at SchemaObjectId.SchemaType.applySetters (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\schemaType.js:1373:12)
+    at SchemaObjectId.SchemaType.castForQuery (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\schemaType.js:1793:17)
+    at cast (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\cast.js:386:32)
+    at model.Query.Query.cast (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\query.js:5228:12)
+    at model.Query.Query._castConditions (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\query.js:2411:10)
+    at model.Query._findOne (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\query.js:2758:8)
+    at maybeTracedQueryExec (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\query.js:4801:83)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at getCategoryById (D:\Project Sphere\Project-Sphere\backend\controllers\categoryController.js:47:7)
+[2026-07-19 01:54:28] INFO: GET /api/categories/invalid-id 400 10.880 ms - - bytes
