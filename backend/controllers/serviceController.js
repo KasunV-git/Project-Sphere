@@ -102,7 +102,7 @@ if (req.query.isActive !== undefined) {
 const sort = req.query.sort || "-createdAt";
 
 const services = await Service.find(filter)
-  .select("-createdAT -updatedAt")
+  .select("-createdAt -updatedAt")
   .populate("category", "name icon")
   .sort(sort)
   .skip(skip)
@@ -177,16 +177,17 @@ const updateService = async (req, res, next) => {
     if (!service) {
       sendSuccess(
         res,
-        200,
+        404,
         {},
         "Service not found"
       );
     }
 
-    res.status(200).json({
-      success: true,
-      service
-    });
+    sendSuccess(
+      res,
+      200,
+      {service}
+    );
 
   } catch (error) {
 

@@ -3,7 +3,7 @@ const jwt = require("jsonwebtoken");
 const protect = (req, res, next) => {
   let token;
 
-  console.log("AUTH HEADER:", req.headers.authorization);
+  //console.log("AUTH HEADER:", req.headers.authorization);
 
   if (
     req.headers.authorization &&
@@ -12,7 +12,7 @@ const protect = (req, res, next) => {
     try {
       token = req.headers.authorization.split(" ")[1];
 
-      console.log("VERIFY SECRET:", process.env.JWT_SECRET);
+      //console.log("VERIFY SECRET:", process.env.JWT_SECRET);
       
       const decoded = jwt.verify(
         token,
@@ -24,7 +24,7 @@ const protect = (req, res, next) => {
       next();
 
     } catch (error) {
-        console.log(error);
+        //console.log(error);
 
         return res.status(401).json({
         success: false,

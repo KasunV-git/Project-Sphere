@@ -459,3 +459,8 @@
 [2026-07-18 23:13:56] INFO: POST /api/auth/register 201 211.993 ms - - bytes
 [2026-07-18 23:13:56] INFO: POST /api/auth/login 200 202.067 ms - - bytes
 [2026-07-18 23:13:56] INFO: GET /api/auth/admin 403 31.958 ms - - bytes
+[2026-07-18 23:42:22] INFO: POST /api/auth/register 201 335.549 ms - - bytes
+[2026-07-18 23:42:22] INFO: POST /api/auth/register 201 211.430 ms - - bytes
+[2026-07-18 23:42:22] INFO: POST /api/auth/login 200 222.792 ms - - bytes
+[2026-07-18 23:42:22] INFO: POST /api/auth/login 200 198.257 ms - - bytes
+[2026-07-18 23:42:22] INFO: POST /api/services 201 33.303 ms - - bytes
