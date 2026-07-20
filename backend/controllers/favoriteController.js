@@ -22,6 +22,20 @@ const addFavorite = async (req, res, next) => {
       service,
     });
 
+    const existingFavorite = await Favorite.findOne({
+      user: req.user.id,
+      service,
+    })
+      .select("_id")
+      .lean();
+
+    if (existingFavorite) {
+      return res.status(400).json({
+        success: false,
+        message: "Already in favorites",
+      });
+    }
+
     res.status(201).json({
       success: true,
       favorite,
