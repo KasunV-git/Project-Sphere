@@ -117,6 +117,26 @@ describe("Favorite API", () => {
       expect(response.statusCode).toBe(400);
       expect(response.body.success).toBe(false);
     });
+
+    test("should not allow duplicate favorites", async () => {
+      await request(app)
+        .post("/api/favorites")
+        .set("Authorization", `Bearer ${userToken}`)
+        .send({
+          service: serviceId,
+        });
+
+      const response = await request(app)
+        .post("/api/favorites")
+        .set("Authorization", `Bearer ${userToken}`)
+        .send({
+          service: serviceId,
+        });
+
+      expect(response.statusCode).toBe(400);
+      expect(response.body.success).toBe(false);
+      expect(response.body.message).toBe("Already in favorites");
+    });
   });
 
   describe("GET /api/favorites", () => {
@@ -218,6 +238,4 @@ describe("Favorite API", () => {
       expect(response.body.success).toBe(false);
     });
   });
-
-  
 });

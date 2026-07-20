@@ -6,6 +6,7 @@ const addFavorite = async (req, res, next) => {
   try {
     const { service } = req.body;
 
+    // Check whether the service exists
     const existingService = await Service.findById(service)
       .select("_id")
       .lean();
@@ -17,11 +18,7 @@ const addFavorite = async (req, res, next) => {
       });
     }
 
-    const favorite = await Favorite.create({
-      user: req.user.id,
-      service,
-    });
-
+    // Check whether the favorite already exists
     const existingFavorite = await Favorite.findOne({
       user: req.user.id,
       service,
@@ -36,19 +33,21 @@ const addFavorite = async (req, res, next) => {
       });
     }
 
+    // Create the favorite
+    const favorite = await Favorite.create({
+      user: req.user.id,
+      service,
+    });
+
     res.status(201).json({
       success: true,
       favorite,
     });
   } catch (error) {
+    // Safety net for race conditions
     if (error.code === 11000) {
       error.statusCode = 400;
-
-      if (error.keyPattern?.user && error.keyPattern?.service) {
-        error.message = "Already in favorites";
-      } else {
-        error.message = "Duplicate resource";
-      }
+      error.message = "Already in favorites";
     }
 
     next(error);

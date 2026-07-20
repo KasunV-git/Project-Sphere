@@ -1538,3 +1538,229 @@
     at processTicksAndRejections (node:internal/process/task_queues:95:5)
     at removeFavorite (D:\Project Sphere\Project-Sphere\backend\controllers\favoriteController.js:80:22)
 [2026-07-20 12:33:08] INFO: DELETE /api/favorites/invalid-id 400 7.426 ms - - bytes
+[2026-07-20 12:46:09] INFO: POST /api/auth/register 201 288.812 ms - - bytes
+[2026-07-20 12:46:10] INFO: POST /api/auth/register 201 195.979 ms - - bytes
+[2026-07-20 12:46:10] INFO: POST /api/auth/login 200 208.763 ms - - bytes
+[2026-07-20 12:46:10] INFO: POST /api/auth/login 200 194.282 ms - - bytes
+[2026-07-20 12:46:10] INFO: POST /api/categories 201 12.388 ms - - bytes
+[2026-07-20 12:46:10] INFO: POST /api/services 201 25.040 ms - - bytes
+[2026-07-20 12:46:10] INFO: POST /api/favorites 201 23.834 ms - - bytes
+[2026-07-20 12:46:10] INFO: POST /api/auth/register 201 212.189 ms - - bytes
+[2026-07-20 12:46:11] INFO: POST /api/auth/register 201 190.002 ms - - bytes
+[2026-07-20 12:46:11] INFO: POST /api/auth/login 200 203.039 ms - - bytes
+[2026-07-20 12:46:11] INFO: POST /api/auth/login 200 195.108 ms - - bytes
+[2026-07-20 12:46:11] INFO: POST /api/categories 201 26.821 ms - - bytes
+[2026-07-20 12:46:11] INFO: POST /api/services 201 32.980 ms - - bytes
+[2026-07-20 12:46:11] INFO: POST /api/favorites 401 0.679 ms - - bytes
+[2026-07-20 12:46:11] INFO: POST /api/auth/register 201 211.938 ms - - bytes
+[2026-07-20 12:46:12] INFO: POST /api/auth/register 201 190.678 ms - - bytes
+[2026-07-20 12:46:12] INFO: POST /api/auth/login 200 191.307 ms - - bytes
+[2026-07-20 12:46:12] INFO: POST /api/auth/login 200 193.463 ms - - bytes
+[2026-07-20 12:46:12] INFO: POST /api/categories 201 26.419 ms - - bytes
+[2026-07-20 12:46:12] INFO: POST /api/services 201 29.852 ms - - bytes
+[2026-07-20 12:46:12] INFO: POST /api/favorites 404 6.398 ms - - bytes
+[2026-07-20 12:46:12] INFO: POST /api/auth/register 201 210.203 ms - - bytes
+[2026-07-20 12:46:13] INFO: POST /api/auth/register 201 190.241 ms - - bytes
+[2026-07-20 12:46:13] INFO: POST /api/auth/login 200 186.120 ms - - bytes
+[2026-07-20 12:46:13] INFO: POST /api/auth/login 200 191.742 ms - - bytes
+[2026-07-20 12:46:13] INFO: POST /api/categories 201 26.998 ms - - bytes
+[2026-07-20 12:46:13] INFO: POST /api/services 201 30.066 ms - - bytes
+[2026-07-20 12:46:13] ERROR: CastError: Cast to ObjectId failed for value "invalid-id" (type string) at path "_id" for model "Service"
+    at SchemaObjectId.cast (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\schema\objectId.js:252:11)
+    at SchemaObjectId.SchemaType.applySetters (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\schemaType.js:1373:12)
+    at SchemaObjectId.SchemaType.castForQuery (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\schemaType.js:1793:17)
+    at cast (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\cast.js:386:32)
+    at model.Query.Query.cast (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\query.js:5228:12)
+    at model.Query.Query._castConditions (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\query.js:2411:10)
+    at model.Query._findOne (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\query.js:2758:8)
+    at maybeTracedQueryExec (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\query.js:4801:83)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at addFavorite (D:\Project Sphere\Project-Sphere\backend\controllers\favoriteController.js:10:29)
+[2026-07-20 12:46:13] INFO: POST /api/favorites 400 16.443 ms - - bytes
+[2026-07-20 12:46:13] INFO: POST /api/auth/register 201 208.327 ms - - bytes
+[2026-07-20 12:46:13] INFO: POST /api/auth/register 201 193.207 ms - - bytes
+[2026-07-20 12:46:14] INFO: POST /api/auth/login 200 192.906 ms - - bytes
+[2026-07-20 12:46:14] INFO: POST /api/auth/login 200 189.213 ms - - bytes
+[2026-07-20 12:46:14] INFO: POST /api/categories 201 24.926 ms - - bytes
+[2026-07-20 12:46:14] INFO: POST /api/services 201 29.600 ms - - bytes
+[2026-07-20 12:46:14] INFO: POST /api/favorites 201 33.815 ms - - bytes
+[2026-07-20 12:46:14] INFO: GET /api/favorites 200 26.461 ms - - bytes
+[2026-07-20 12:46:14] INFO: POST /api/auth/register 201 215.940 ms - - bytes
+[2026-07-20 12:46:14] INFO: POST /api/auth/register 201 194.763 ms - - bytes
+[2026-07-20 12:46:15] INFO: POST /api/auth/login 200 197.094 ms - - bytes
+[2026-07-20 12:46:15] INFO: POST /api/auth/login 200 192.597 ms - - bytes
+[2026-07-20 12:46:15] INFO: POST /api/categories 201 27.279 ms - - bytes
+[2026-07-20 12:46:15] INFO: POST /api/services 201 31.676 ms - - bytes
+[2026-07-20 12:46:15] INFO: POST /api/favorites 201 31.861 ms - - bytes
+[2026-07-20 12:46:15] INFO: POST /api/auth/register 201 192.672 ms - - bytes
+[2026-07-20 12:46:15] INFO: POST /api/auth/login 200 190.391 ms - - bytes
+[2026-07-20 12:46:15] INFO: GET /api/favorites 200 5.419 ms - - bytes
+[2026-07-20 12:46:16] INFO: POST /api/auth/register 201 208.338 ms - - bytes
+[2026-07-20 12:46:16] INFO: POST /api/auth/register 201 189.773 ms - - bytes
+[2026-07-20 12:46:16] INFO: POST /api/auth/login 200 186.937 ms - - bytes
+[2026-07-20 12:46:16] INFO: POST /api/auth/login 200 189.162 ms - - bytes
+[2026-07-20 12:46:16] INFO: POST /api/categories 201 27.831 ms - - bytes
+[2026-07-20 12:46:16] INFO: POST /api/services 201 26.159 ms - - bytes
+[2026-07-20 12:46:16] INFO: POST /api/favorites 201 29.685 ms - - bytes
+[2026-07-20 12:46:16] INFO: GET /api/favorites 401 1.030 ms - - bytes
+[2026-07-20 12:46:17] INFO: POST /api/auth/register 201 209.528 ms - - bytes
+[2026-07-20 12:46:17] INFO: POST /api/auth/register 201 190.903 ms - - bytes
+[2026-07-20 12:46:17] INFO: POST /api/auth/login 200 188.458 ms - - bytes
+[2026-07-20 12:46:17] INFO: POST /api/auth/login 200 190.547 ms - - bytes
+[2026-07-20 12:46:17] INFO: POST /api/categories 201 28.206 ms - - bytes
+[2026-07-20 12:46:17] INFO: POST /api/services 201 28.303 ms - - bytes
+[2026-07-20 12:46:17] INFO: POST /api/favorites 201 32.290 ms - - bytes
+[2026-07-20 12:46:17] INFO: DELETE /api/favorites/6a5dcb41de92b3eb63f34e94 200 8.306 ms - - bytes
+[2026-07-20 12:46:18] INFO: POST /api/auth/register 201 208.265 ms - - bytes
+[2026-07-20 12:46:18] INFO: POST /api/auth/register 201 192.924 ms - - bytes
+[2026-07-20 12:46:18] INFO: POST /api/auth/login 200 189.742 ms - - bytes
+[2026-07-20 12:46:18] INFO: POST /api/auth/login 200 184.134 ms - - bytes
+[2026-07-20 12:46:18] INFO: POST /api/categories 201 25.053 ms - - bytes
+[2026-07-20 12:46:18] INFO: POST /api/services 201 28.875 ms - - bytes
+[2026-07-20 12:46:18] INFO: POST /api/favorites 201 29.179 ms - - bytes
+[2026-07-20 12:46:18] INFO: DELETE /api/favorites/6a5dcb42de92b3eb63f34e99 200 6.779 ms - - bytes
+[2026-07-20 12:46:18] INFO: DELETE /api/favorites/6a5dcb42de92b3eb63f34e99 404 4.844 ms - - bytes
+[2026-07-20 12:46:19] INFO: POST /api/auth/register 201 210.249 ms - - bytes
+[2026-07-20 12:46:19] INFO: POST /api/auth/register 201 190.491 ms - - bytes
+[2026-07-20 12:46:19] INFO: POST /api/auth/login 200 189.307 ms - - bytes
+[2026-07-20 12:46:19] INFO: POST /api/auth/login 200 193.699 ms - - bytes
+[2026-07-20 12:46:19] INFO: POST /api/categories 201 27.899 ms - - bytes
+[2026-07-20 12:46:19] INFO: POST /api/services 201 27.034 ms - - bytes
+[2026-07-20 12:46:19] INFO: POST /api/favorites 201 29.650 ms - - bytes
+[2026-07-20 12:46:19] INFO: DELETE /api/favorites/6a5dcb43de92b3eb63f34e9e 401 0.438 ms - - bytes
+[2026-07-20 12:46:20] INFO: POST /api/auth/register 201 218.448 ms - - bytes
+[2026-07-20 12:46:20] INFO: POST /api/auth/register 201 190.234 ms - - bytes
+[2026-07-20 12:46:20] INFO: POST /api/auth/login 200 189.290 ms - - bytes
+[2026-07-20 12:46:20] INFO: POST /api/auth/login 200 189.046 ms - - bytes
+[2026-07-20 12:46:20] INFO: POST /api/categories 201 26.874 ms - - bytes
+[2026-07-20 12:46:20] INFO: POST /api/services 201 34.415 ms - - bytes
+[2026-07-20 12:46:20] INFO: POST /api/favorites 201 31.802 ms - - bytes
+[2026-07-20 12:46:20] ERROR: CastError: Cast to ObjectId failed for value "invalid-id" (type string) at path "service" for model "Favorite"
+    at SchemaObjectId.cast (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\schema\objectId.js:252:11)
+    at SchemaObjectId.SchemaType.applySetters (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\schemaType.js:1373:12)
+    at SchemaObjectId.SchemaType.castForQuery (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\schemaType.js:1793:17)
+    at cast (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\cast.js:386:32)
+    at model.Query.Query.cast (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\query.js:5228:12)
+    at model.Query.Query._castConditions (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\query.js:2411:10)
+    at model.Query._findOneAndDelete (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\query.js:3702:8)
+    at maybeTracedQueryExec (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\query.js:4801:83)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at removeFavorite (D:\Project Sphere\Project-Sphere\backend\controllers\favoriteController.js:79:22)
+[2026-07-20 12:46:20] INFO: DELETE /api/favorites/invalid-id 400 5.374 ms - - bytes
+[2026-07-20 12:48:46] INFO: POST /api/auth/register 201 281.318 ms - - bytes
+[2026-07-20 12:48:46] INFO: POST /api/auth/register 201 199.326 ms - - bytes
+[2026-07-20 12:48:46] INFO: POST /api/auth/login 200 201.671 ms - - bytes
+[2026-07-20 12:48:46] INFO: POST /api/auth/login 200 195.156 ms - - bytes
+[2026-07-20 12:48:46] INFO: POST /api/categories 201 11.980 ms - - bytes
+[2026-07-20 12:48:46] INFO: POST /api/services 201 27.044 ms - - bytes
+[2026-07-20 12:48:46] INFO: POST /api/favorites 201 25.862 ms - - bytes
+[2026-07-20 12:48:47] INFO: POST /api/auth/register 201 216.856 ms - - bytes
+[2026-07-20 12:48:47] INFO: POST /api/auth/register 201 194.051 ms - - bytes
+[2026-07-20 12:48:47] INFO: POST /api/auth/login 200 194.530 ms - - bytes
+[2026-07-20 12:48:47] INFO: POST /api/auth/login 200 190.472 ms - - bytes
+[2026-07-20 12:48:47] INFO: POST /api/categories 201 30.377 ms - - bytes
+[2026-07-20 12:48:47] INFO: POST /api/services 201 34.501 ms - - bytes
+[2026-07-20 12:48:47] INFO: POST /api/favorites 401 0.627 ms - - bytes
+[2026-07-20 12:48:48] INFO: POST /api/auth/register 201 337.070 ms - - bytes
+[2026-07-20 12:48:48] INFO: POST /api/auth/register 201 194.855 ms - - bytes
+[2026-07-20 12:48:48] INFO: POST /api/auth/login 200 194.736 ms - - bytes
+[2026-07-20 12:48:48] INFO: POST /api/auth/login 200 192.723 ms - - bytes
+[2026-07-20 12:48:48] INFO: POST /api/categories 201 24.634 ms - - bytes
+[2026-07-20 12:48:48] INFO: POST /api/services 201 33.078 ms - - bytes
+[2026-07-20 12:48:48] INFO: POST /api/favorites 404 9.254 ms - - bytes
+[2026-07-20 12:48:49] INFO: POST /api/auth/register 201 213.100 ms - - bytes
+[2026-07-20 12:48:49] INFO: POST /api/auth/register 201 189.480 ms - - bytes
+[2026-07-20 12:48:49] INFO: POST /api/auth/login 200 195.024 ms - - bytes
+[2026-07-20 12:48:49] INFO: POST /api/auth/login 200 191.063 ms - - bytes
+[2026-07-20 12:48:49] INFO: POST /api/categories 201 27.161 ms - - bytes
+[2026-07-20 12:48:49] INFO: POST /api/services 201 33.048 ms - - bytes
+[2026-07-20 12:48:49] ERROR: CastError: Cast to ObjectId failed for value "invalid-id" (type string) at path "_id" for model "Service"
+    at SchemaObjectId.cast (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\schema\objectId.js:252:11)
+    at SchemaObjectId.SchemaType.applySetters (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\schemaType.js:1373:12)
+    at SchemaObjectId.SchemaType.castForQuery (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\schemaType.js:1793:17)
+    at cast (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\cast.js:386:32)
+    at model.Query.Query.cast (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\query.js:5228:12)
+    at model.Query.Query._castConditions (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\query.js:2411:10)
+    at model.Query._findOne (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\query.js:2758:8)
+    at maybeTracedQueryExec (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\query.js:4801:83)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at addFavorite (D:\Project Sphere\Project-Sphere\backend\controllers\favoriteController.js:10:29)
+[2026-07-20 12:48:49] INFO: POST /api/favorites 400 16.689 ms - - bytes
+[2026-07-20 12:48:50] INFO: POST /api/auth/register 201 214.913 ms - - bytes
+[2026-07-20 12:48:50] INFO: POST /api/auth/register 201 191.583 ms - - bytes
+[2026-07-20 12:48:50] INFO: POST /api/auth/login 200 191.984 ms - - bytes
+[2026-07-20 12:48:50] INFO: POST /api/auth/login 200 190.576 ms - - bytes
+[2026-07-20 12:48:50] INFO: POST /api/categories 201 24.608 ms - - bytes
+[2026-07-20 12:48:50] INFO: POST /api/services 201 33.416 ms - - bytes
+[2026-07-20 12:48:50] INFO: POST /api/favorites 201 33.189 ms - - bytes
+[2026-07-20 12:48:50] INFO: POST /api/favorites 400 9.181 ms - - bytes
+[2026-07-20 12:48:51] INFO: POST /api/auth/register 201 215.418 ms - - bytes
+[2026-07-20 12:48:51] INFO: POST /api/auth/register 201 192.502 ms - - bytes
+[2026-07-20 12:48:51] INFO: POST /api/auth/login 200 190.668 ms - - bytes
+[2026-07-20 12:48:51] INFO: POST /api/auth/login 200 188.038 ms - - bytes
+[2026-07-20 12:48:51] INFO: POST /api/categories 201 26.572 ms - - bytes
+[2026-07-20 12:48:51] INFO: POST /api/services 201 26.788 ms - - bytes
+[2026-07-20 12:48:51] INFO: POST /api/favorites 201 36.321 ms - - bytes
+[2026-07-20 12:48:51] INFO: GET /api/favorites 200 26.799 ms - - bytes
+[2026-07-20 12:48:52] INFO: POST /api/auth/register 201 222.240 ms - - bytes
+[2026-07-20 12:48:52] INFO: POST /api/auth/register 201 194.439 ms - - bytes
+[2026-07-20 12:48:52] INFO: POST /api/auth/login 200 190.895 ms - - bytes
+[2026-07-20 12:48:52] INFO: POST /api/auth/login 200 189.992 ms - - bytes
+[2026-07-20 12:48:52] INFO: POST /api/categories 201 29.894 ms - - bytes
+[2026-07-20 12:48:52] INFO: POST /api/services 201 29.282 ms - - bytes
+[2026-07-20 12:48:52] INFO: POST /api/favorites 201 34.319 ms - - bytes
+[2026-07-20 12:48:53] INFO: POST /api/auth/register 201 197.708 ms - - bytes
+[2026-07-20 12:48:53] INFO: POST /api/auth/login 200 189.919 ms - - bytes
+[2026-07-20 12:48:53] INFO: GET /api/favorites 200 7.061 ms - - bytes
+[2026-07-20 12:48:53] INFO: POST /api/auth/register 201 210.861 ms - - bytes
+[2026-07-20 12:48:53] INFO: POST /api/auth/register 201 189.057 ms - - bytes
+[2026-07-20 12:48:54] INFO: POST /api/auth/login 200 190.657 ms - - bytes
+[2026-07-20 12:48:54] INFO: POST /api/auth/login 200 189.390 ms - - bytes
+[2026-07-20 12:48:54] INFO: POST /api/categories 201 47.170 ms - - bytes
+[2026-07-20 12:48:54] INFO: POST /api/services 201 41.387 ms - - bytes
+[2026-07-20 12:48:54] INFO: POST /api/favorites 201 35.154 ms - - bytes
+[2026-07-20 12:48:54] INFO: GET /api/favorites 401 0.396 ms - - bytes
+[2026-07-20 12:48:54] INFO: POST /api/auth/register 201 212.874 ms - - bytes
+[2026-07-20 12:48:54] INFO: POST /api/auth/register 201 191.646 ms - - bytes
+[2026-07-20 12:48:55] INFO: POST /api/auth/login 200 198.258 ms - - bytes
+[2026-07-20 12:48:55] INFO: POST /api/auth/login 200 192.281 ms - - bytes
+[2026-07-20 12:48:55] INFO: POST /api/categories 201 36.915 ms - - bytes
+[2026-07-20 12:48:55] INFO: POST /api/services 201 34.994 ms - - bytes
+[2026-07-20 12:48:55] INFO: POST /api/favorites 201 45.585 ms - - bytes
+[2026-07-20 12:48:55] INFO: DELETE /api/favorites/6a5dcbdfb11165aec5181eee 200 14.194 ms - - bytes
+[2026-07-20 12:48:55] INFO: POST /api/auth/register 201 214.809 ms - - bytes
+[2026-07-20 12:48:55] INFO: POST /api/auth/register 201 192.558 ms - - bytes
+[2026-07-20 12:48:56] INFO: POST /api/auth/login 200 192.460 ms - - bytes
+[2026-07-20 12:48:56] INFO: POST /api/auth/login 200 206.860 ms - - bytes
+[2026-07-20 12:48:56] INFO: POST /api/categories 201 25.805 ms - - bytes
+[2026-07-20 12:48:56] INFO: POST /api/services 201 30.492 ms - - bytes
+[2026-07-20 12:48:56] INFO: POST /api/favorites 201 28.606 ms - - bytes
+[2026-07-20 12:48:56] INFO: DELETE /api/favorites/6a5dcbe0b11165aec5181ef3 200 7.414 ms - - bytes
+[2026-07-20 12:48:56] INFO: DELETE /api/favorites/6a5dcbe0b11165aec5181ef3 404 5.621 ms - - bytes
+[2026-07-20 12:48:56] INFO: POST /api/auth/register 201 210.843 ms - - bytes
+[2026-07-20 12:48:56] INFO: POST /api/auth/register 201 200.846 ms - - bytes
+[2026-07-20 12:48:57] INFO: POST /api/auth/login 200 191.895 ms - - bytes
+[2026-07-20 12:48:57] INFO: POST /api/auth/login 200 192.452 ms - - bytes
+[2026-07-20 12:48:57] INFO: POST /api/categories 201 33.847 ms - - bytes
+[2026-07-20 12:48:57] INFO: POST /api/services 201 35.801 ms - - bytes
+[2026-07-20 12:48:57] INFO: POST /api/favorites 201 32.095 ms - - bytes
+[2026-07-20 12:48:57] INFO: DELETE /api/favorites/6a5dcbe1b11165aec5181ef8 401 0.719 ms - - bytes
+[2026-07-20 12:48:57] INFO: POST /api/auth/register 201 244.788 ms - - bytes
+[2026-07-20 12:48:57] INFO: POST /api/auth/register 201 189.253 ms - - bytes
+[2026-07-20 12:48:58] INFO: POST /api/auth/login 200 192.830 ms - - bytes
+[2026-07-20 12:48:58] INFO: POST /api/auth/login 200 194.284 ms - - bytes
+[2026-07-20 12:48:58] INFO: POST /api/categories 201 44.158 ms - - bytes
+[2026-07-20 12:48:58] INFO: POST /api/services 201 31.095 ms - - bytes
+[2026-07-20 12:48:58] INFO: POST /api/favorites 201 32.347 ms - - bytes
+[2026-07-20 12:48:58] ERROR: CastError: Cast to ObjectId failed for value "invalid-id" (type string) at path "service" for model "Favorite"
+    at SchemaObjectId.cast (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\schema\objectId.js:252:11)
+    at SchemaObjectId.SchemaType.applySetters (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\schemaType.js:1373:12)
+    at SchemaObjectId.SchemaType.castForQuery (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\schemaType.js:1793:17)
+    at cast (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\cast.js:386:32)
+    at model.Query.Query.cast (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\query.js:5228:12)
+    at model.Query.Query._castConditions (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\query.js:2411:10)
+    at model.Query._findOneAndDelete (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\query.js:3702:8)
+    at maybeTracedQueryExec (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\query.js:4801:83)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at removeFavorite (D:\Project Sphere\Project-Sphere\backend\controllers\favoriteController.js:79:22)
+[2026-07-20 12:48:58] INFO: DELETE /api/favorites/invalid-id 400 6.699 ms - - bytes
