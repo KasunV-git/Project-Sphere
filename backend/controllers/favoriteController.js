@@ -4,9 +4,9 @@ const Service = require("../models/service");
 // Add favorite
 const addFavorite = async (req, res, next) => {
   try {
-
     const { service } = req.body;
 
+    // Check whether the service exists
     const existingService = await Service.findById(service)
       .select("_id")
       .lean();
@@ -14,95 +14,91 @@ const addFavorite = async (req, res, next) => {
     if (!existingService) {
       return res.status(404).json({
         success: false,
-        message: "Service not found"
+        message: "Service not found",
       });
     }
 
+    // Check whether the favorite already exists
+    const existingFavorite = await Favorite.findOne({
+      user: req.user.id,
+      service,
+    })
+      .select("_id")
+      .lean();
+
+    if (existingFavorite) {
+      return res.status(400).json({
+        success: false,
+        message: "Already in favorites",
+      });
+    }
+
+    // Create the favorite
     const favorite = await Favorite.create({
       user: req.user.id,
-      service
+      service,
     });
 
     res.status(201).json({
       success: true,
-      favorite
+      favorite,
     });
-
   } catch (error) {
-
-    if (err.code === 11000) {
-
-      statusCode = 400;
-
-        if (err.keyPattern?.user && err.keyPattern?.service) {
-          err.message = "Already in favorites";
-        } else {
-          err.message = "Duplicate resource";
-        }
-
+    // Safety net for race conditions
+    if (error.code === 11000) {
+      error.statusCode = 400;
+      error.message = "Already in favorites";
     }
 
     next(error);
-
   }
 };
 
 // Get my favorites
 const getMyFavorites = async (req, res, next) => {
   try {
-
     const favorites = await Favorite.find({
-      user: req.user.id
+      user: req.user.id,
     })
-    .populate(
-      "service",
-      "name slug icon averageRating reviewCount"
-    )
-    .lean();
+      .populate("service", "name slug icon averageRating reviewCount")
+      .lean();
 
     res.status(200).json({
       success: true,
       count: favorites.length,
-      favorites
+      favorites,
     });
-
   } catch (error) {
-
     next(error);
-
   }
 };
 
 // Remove favorite
 const removeFavorite = async (req, res, next) => {
   try {
-
     const favorite = await Favorite.findOneAndDelete({
       user: req.user.id,
-      service: req.params.serviceId
+      service: req.params.serviceId,
     });
 
     if (!favorite) {
       return res.status(404).json({
         success: false,
-        message: "Favorite not found"
+        message: "Favorite not found",
       });
     }
 
     res.status(200).json({
       success: true,
-      message: "Favorite removed"
+      message: "Favorite removed",
     });
-
   } catch (error) {
-
     next(error);
-
   }
 };
 
 module.exports = {
   addFavorite,
   getMyFavorites,
-  removeFavorite
+  removeFavorite,
 };
