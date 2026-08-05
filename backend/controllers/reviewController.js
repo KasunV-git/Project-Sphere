@@ -162,6 +162,7 @@ const updateServiceRating = async (serviceId) => {
     },
     {
       runValidators: true,
+      returnDocument: "after",
     },
   );
 };
