@@ -174,4 +174,10 @@ describe("GET /api/usage/me", () => {
     expect(response.body.count).toBe(0);
     expect(response.body.history).toEqual([]);
   });
+
+  test("should reject request without token", async () => {
+    const response = await request(app).get("/api/usage/me");
+
+    expect(response.statusCode).toBe(401);
+  });
 });
