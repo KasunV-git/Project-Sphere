@@ -163,4 +163,15 @@ describe("GET /api/usage/me", () => {
     expect(response.body.history[0].service._id).toBe(serviceId);
     expect(response.body.history[0].service.name).toBe("GPA Calculator");
   });
+
+  test("should return empty history for new user", async () => {
+    const response = await request(app)
+      .get("/api/usage/me")
+      .set("Authorization", `Bearer ${userToken}`);
+
+    expect(response.statusCode).toBe(200);
+    expect(response.body.success).toBe(true);
+    expect(response.body.count).toBe(0);
+    expect(response.body.history).toEqual([]);
+  });
 });
