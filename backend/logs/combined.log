@@ -2017,3 +2017,1099 @@
 [2026-08-05 15:11:44] INFO: POST /api/categories 201 5.369 ms - - bytes
 [2026-08-05 15:11:44] INFO: POST /api/services 201 14.116 ms - - bytes
 [2026-08-05 15:11:44] INFO: GET /api/reviews/service/6a730558a7761ca77c5a25cd 200 3.429 ms - - bytes
+[2026-08-07 22:46:48] INFO: POST /api/auth/register 201 259.494 ms - - bytes
+[2026-08-07 22:46:48] INFO: POST /api/auth/register 201 195.980 ms - - bytes
+[2026-08-07 22:46:49] INFO: POST /api/auth/login 200 212.297 ms - - bytes
+[2026-08-07 22:46:49] INFO: POST /api/auth/login 200 189.957 ms - - bytes
+[2026-08-07 22:46:49] INFO: POST /api/categories 201 9.167 ms - - bytes
+[2026-08-07 22:46:49] INFO: POST /api/services 201 27.380 ms - - bytes
+[2026-08-07 22:46:49] INFO: POST /api/reviews 201 40.930 ms - - bytes
+[2026-08-07 22:46:49] INFO: POST /api/auth/register 201 192.831 ms - - bytes
+[2026-08-07 22:46:49] INFO: POST /api/auth/register 201 191.365 ms - - bytes
+[2026-08-07 22:46:50] INFO: POST /api/auth/login 200 191.834 ms - - bytes
+[2026-08-07 22:46:50] INFO: POST /api/auth/login 200 188.442 ms - - bytes
+[2026-08-07 22:46:50] INFO: POST /api/categories 201 6.233 ms - - bytes
+[2026-08-07 22:46:50] INFO: POST /api/services 201 17.347 ms - - bytes
+[2026-08-07 22:46:50] INFO: POST /api/reviews 401 0.680 ms - - bytes
+[2026-08-07 22:46:50] INFO: POST /api/auth/register 201 193.310 ms - - bytes
+[2026-08-07 22:46:50] INFO: POST /api/auth/register 201 191.311 ms - - bytes
+[2026-08-07 22:46:50] INFO: POST /api/auth/login 200 190.320 ms - - bytes
+[2026-08-07 22:46:51] INFO: POST /api/auth/login 200 190.467 ms - - bytes
+[2026-08-07 22:46:51] INFO: POST /api/categories 201 9.270 ms - - bytes
+[2026-08-07 22:46:51] INFO: POST /api/services 201 15.702 ms - - bytes
+[2026-08-07 22:46:51] INFO: POST /api/reviews 404 6.604 ms - - bytes
+[2026-08-07 22:46:51] INFO: POST /api/auth/register 201 191.662 ms - - bytes
+[2026-08-07 22:46:51] INFO: POST /api/auth/register 201 190.822 ms - - bytes
+[2026-08-07 22:46:51] INFO: POST /api/auth/login 200 193.487 ms - - bytes
+[2026-08-07 22:46:52] INFO: POST /api/auth/login 200 189.704 ms - - bytes
+[2026-08-07 22:46:52] INFO: POST /api/categories 201 5.666 ms - - bytes
+[2026-08-07 22:46:52] INFO: POST /api/services 201 12.821 ms - - bytes
+[2026-08-07 22:46:52] ERROR: CastError: Cast to ObjectId failed for value "invalid-id" (type string) at path "_id" for model "Service"
+    at SchemaObjectId.cast (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\schema\objectId.js:252:11)
+    at SchemaObjectId.SchemaType.applySetters (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\schemaType.js:1373:12)
+    at SchemaObjectId.SchemaType.castForQuery (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\schemaType.js:1793:17)
+    at cast (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\cast.js:386:32)
+    at model.Query.Query.cast (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\query.js:5228:12)
+    at model.Query.Query._castConditions (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\query.js:2411:10)
+    at model.Query._findOne (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\query.js:2758:8)
+    at maybeTracedQueryExec (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\query.js:4801:83)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at createReview (D:\Project Sphere\Project-Sphere\backend\controllers\reviewController.js:7:29)
+[2026-08-07 22:46:52] INFO: POST /api/reviews 400 57.007 ms - - bytes
+[2026-08-07 22:46:52] INFO: POST /api/auth/register 201 189.875 ms - - bytes
+[2026-08-07 22:46:52] INFO: POST /api/auth/register 201 199.968 ms - - bytes
+[2026-08-07 22:46:52] INFO: POST /api/auth/login 200 196.299 ms - - bytes
+[2026-08-07 22:46:53] INFO: POST /api/auth/login 200 190.450 ms - - bytes
+[2026-08-07 22:46:53] INFO: POST /api/categories 201 8.964 ms - - bytes
+[2026-08-07 22:46:53] INFO: POST /api/services 201 13.277 ms - - bytes
+[2026-08-07 22:46:53] INFO: POST /api/reviews 201 24.451 ms - - bytes
+[2026-08-07 22:46:53] INFO: POST /api/reviews 400 9.166 ms - - bytes
+[2026-08-07 22:46:53] INFO: POST /api/auth/register 201 195.671 ms - - bytes
+[2026-08-07 22:46:53] INFO: POST /api/auth/register 201 190.671 ms - - bytes
+[2026-08-07 22:46:53] INFO: POST /api/auth/login 200 191.469 ms - - bytes
+[2026-08-07 22:46:53] INFO: POST /api/auth/login 200 189.556 ms - - bytes
+[2026-08-07 22:46:53] INFO: POST /api/categories 201 7.642 ms - - bytes
+[2026-08-07 22:46:53] INFO: POST /api/services 201 13.244 ms - - bytes
+[2026-08-07 22:46:54] ERROR: ValidationError: Review validation failed: rating: Path `rating` (10) is more than maximum allowed value (5).
+    at model.validate (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\document.js:2864:36)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at model.$__save (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\model.js:398:7)
+    at maybeTracedSave (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\model.js:674:7)
+    at Function.create (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\model.js:2762:5)
+    at createReview (D:\Project Sphere\Project-Sphere\backend\controllers\reviewController.js:31:20)
+[2026-08-07 22:46:54] INFO: POST /api/reviews 400 22.066 ms - - bytes
+[2026-08-07 22:46:54] INFO: POST /api/auth/register 201 195.774 ms - - bytes
+[2026-08-07 22:46:54] INFO: POST /api/auth/register 201 196.286 ms - - bytes
+[2026-08-07 22:46:54] INFO: POST /api/auth/login 200 194.129 ms - - bytes
+[2026-08-07 22:46:54] INFO: POST /api/auth/login 200 189.772 ms - - bytes
+[2026-08-07 22:46:54] INFO: POST /api/categories 201 7.623 ms - - bytes
+[2026-08-07 22:46:54] INFO: POST /api/services 201 11.225 ms - - bytes
+[2026-08-07 22:46:54] ERROR: ValidationError: Review validation failed: comment: Path `comment` is required.
+    at model.validate (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\document.js:2864:36)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at model.$__save (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\model.js:398:7)
+    at maybeTracedSave (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\model.js:674:7)
+    at Function.create (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\model.js:2762:5)
+    at createReview (D:\Project Sphere\Project-Sphere\backend\controllers\reviewController.js:31:20)
+[2026-08-07 22:46:54] INFO: POST /api/reviews 400 12.206 ms - - bytes
+[2026-08-07 22:46:55] INFO: POST /api/auth/register 201 197.377 ms - - bytes
+[2026-08-07 22:46:55] INFO: POST /api/auth/register 201 211.187 ms - - bytes
+[2026-08-07 22:46:55] INFO: POST /api/auth/login 200 198.310 ms - - bytes
+[2026-08-07 22:46:55] INFO: POST /api/auth/login 200 201.635 ms - - bytes
+[2026-08-07 22:46:55] INFO: POST /api/categories 201 7.530 ms - - bytes
+[2026-08-07 22:46:55] INFO: POST /api/services 201 22.095 ms - - bytes
+[2026-08-07 22:46:55] INFO: POST /api/reviews 201 33.117 ms - - bytes
+[2026-08-07 22:46:55] INFO: GET /api/reviews/service/6a76130797b69e7a98b6f6f6 200 28.592 ms - - bytes
+[2026-08-07 22:46:56] INFO: POST /api/auth/register 201 199.500 ms - - bytes
+[2026-08-07 22:46:56] INFO: POST /api/auth/register 201 228.299 ms - - bytes
+[2026-08-07 22:46:56] INFO: POST /api/auth/login 200 207.666 ms - - bytes
+[2026-08-07 22:46:56] INFO: POST /api/auth/login 200 211.256 ms - - bytes
+[2026-08-07 22:46:56] INFO: POST /api/categories 201 6.017 ms - - bytes
+[2026-08-07 22:46:56] INFO: POST /api/services 201 24.410 ms - - bytes
+[2026-08-07 22:46:57] INFO: GET /api/reviews/service/6a76130897b69e7a98b6f6fb 200 9.518 ms - - bytes
+[2026-08-07 22:46:57] INFO: POST /api/auth/register 201 200.294 ms - - bytes
+[2026-08-07 22:46:57] INFO: POST /api/auth/register 201 199.063 ms - - bytes
+[2026-08-07 22:46:57] INFO: POST /api/auth/login 200 199.540 ms - - bytes
+[2026-08-07 22:46:57] INFO: POST /api/auth/login 200 195.250 ms - - bytes
+[2026-08-07 22:46:57] INFO: POST /api/categories 201 7.583 ms - - bytes
+[2026-08-07 22:46:57] INFO: POST /api/services 201 18.896 ms - - bytes
+[2026-08-07 22:46:57] ERROR: CastError: Cast to ObjectId failed for value "invalid-id" (type string) at path "service" for model "Review"
+    at SchemaObjectId.cast (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\schema\objectId.js:252:11)
+    at SchemaObjectId.SchemaType.applySetters (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\schemaType.js:1373:12)
+    at SchemaObjectId.SchemaType.castForQuery (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\schemaType.js:1793:17)
+    at cast (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\cast.js:386:32)
+    at model.Query.Query.cast (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\query.js:5228:12)
+    at model.Query.Query._castConditions (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\query.js:2411:10)
+    at model.Query._find (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\query.js:2438:8)
+    at maybeTracedQueryExec (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\query.js:4801:83)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at getServiceReviews (D:\Project Sphere\Project-Sphere\backend\controllers\reviewController.js:56:21)
+[2026-08-07 22:46:57] INFO: GET /api/reviews/service/invalid-id 400 4.849 ms - - bytes
+[2026-08-07 22:46:58] INFO: POST /api/auth/register 201 202.221 ms - - bytes
+[2026-08-07 22:46:58] INFO: POST /api/auth/register 201 222.465 ms - - bytes
+[2026-08-07 22:46:58] INFO: POST /api/auth/login 200 208.479 ms - - bytes
+[2026-08-07 22:46:58] INFO: POST /api/auth/login 200 198.443 ms - - bytes
+[2026-08-07 22:46:58] INFO: POST /api/categories 201 6.945 ms - - bytes
+[2026-08-07 22:46:58] INFO: POST /api/services 201 17.142 ms - - bytes
+[2026-08-07 22:46:58] INFO: GET /api/reviews/service/6a76130a97b69e7a98b6f704 200 6.020 ms - - bytes
+[2026-08-07 22:49:42] INFO: POST /api/auth/register 201 265.321 ms - - bytes
+[2026-08-07 22:49:43] INFO: POST /api/auth/register 201 195.506 ms - - bytes
+[2026-08-07 22:49:43] INFO: POST /api/auth/login 200 200.430 ms - - bytes
+[2026-08-07 22:49:43] INFO: POST /api/auth/login 200 194.883 ms - - bytes
+[2026-08-07 22:49:43] INFO: POST /api/categories 201 13.333 ms - - bytes
+[2026-08-07 22:49:43] INFO: POST /api/services 201 26.529 ms - - bytes
+[2026-08-07 22:49:43] INFO: POST /api/reviews 201 41.308 ms - - bytes
+[2026-08-07 22:49:43] INFO: POST /api/auth/register 201 193.503 ms - - bytes
+[2026-08-07 22:49:44] INFO: POST /api/auth/register 201 191.627 ms - - bytes
+[2026-08-07 22:49:44] INFO: POST /api/auth/login 200 190.854 ms - - bytes
+[2026-08-07 22:49:44] INFO: POST /api/auth/login 200 192.799 ms - - bytes
+[2026-08-07 22:49:44] INFO: POST /api/categories 201 5.846 ms - - bytes
+[2026-08-07 22:49:44] INFO: POST /api/services 201 17.444 ms - - bytes
+[2026-08-07 22:49:44] INFO: POST /api/reviews 401 0.742 ms - - bytes
+[2026-08-07 22:49:44] INFO: POST /api/auth/register 201 198.185 ms - - bytes
+[2026-08-07 22:49:45] INFO: POST /api/auth/register 201 191.227 ms - - bytes
+[2026-08-07 22:49:45] INFO: POST /api/auth/login 200 190.544 ms - - bytes
+[2026-08-07 22:49:45] INFO: POST /api/auth/login 200 189.120 ms - - bytes
+[2026-08-07 22:49:45] INFO: POST /api/categories 201 5.786 ms - - bytes
+[2026-08-07 22:49:45] INFO: POST /api/services 201 15.589 ms - - bytes
+[2026-08-07 22:49:45] INFO: POST /api/reviews 404 5.580 ms - - bytes
+[2026-08-07 22:49:45] INFO: POST /api/auth/register 201 191.982 ms - - bytes
+[2026-08-07 22:49:45] INFO: POST /api/auth/register 201 189.504 ms - - bytes
+[2026-08-07 22:49:46] INFO: POST /api/auth/login 200 189.232 ms - - bytes
+[2026-08-07 22:49:46] INFO: POST /api/auth/login 200 190.165 ms - - bytes
+[2026-08-07 22:49:46] INFO: POST /api/categories 201 7.185 ms - - bytes
+[2026-08-07 22:49:46] INFO: POST /api/services 201 13.370 ms - - bytes
+[2026-08-07 22:49:46] ERROR: CastError: Cast to ObjectId failed for value "invalid-id" (type string) at path "_id" for model "Service"
+    at SchemaObjectId.cast (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\schema\objectId.js:252:11)
+    at SchemaObjectId.SchemaType.applySetters (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\schemaType.js:1373:12)
+    at SchemaObjectId.SchemaType.castForQuery (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\schemaType.js:1793:17)
+    at cast (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\cast.js:386:32)
+    at model.Query.Query.cast (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\query.js:5228:12)
+    at model.Query.Query._castConditions (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\query.js:2411:10)
+    at model.Query._findOne (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\query.js:2758:8)
+    at maybeTracedQueryExec (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\query.js:4801:83)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at createReview (D:\Project Sphere\Project-Sphere\backend\controllers\reviewController.js:7:29)
+[2026-08-07 22:49:46] INFO: POST /api/reviews 400 18.486 ms - - bytes
+[2026-08-07 22:49:46] INFO: POST /api/auth/register 201 188.907 ms - - bytes
+[2026-08-07 22:49:46] INFO: POST /api/auth/register 201 193.028 ms - - bytes
+[2026-08-07 22:49:47] INFO: POST /api/auth/login 200 189.280 ms - - bytes
+[2026-08-07 22:49:47] INFO: POST /api/auth/login 200 189.099 ms - - bytes
+[2026-08-07 22:49:47] INFO: POST /api/categories 201 6.297 ms - - bytes
+[2026-08-07 22:49:47] INFO: POST /api/services 201 12.982 ms - - bytes
+[2026-08-07 22:49:47] INFO: POST /api/reviews 201 21.830 ms - - bytes
+[2026-08-07 22:49:47] INFO: POST /api/reviews 400 10.435 ms - - bytes
+[2026-08-07 22:49:47] INFO: POST /api/auth/register 201 189.985 ms - - bytes
+[2026-08-07 22:49:47] INFO: POST /api/auth/register 201 194.629 ms - - bytes
+[2026-08-07 22:49:48] INFO: POST /api/auth/login 200 188.135 ms - - bytes
+[2026-08-07 22:49:48] INFO: POST /api/auth/login 200 188.587 ms - - bytes
+[2026-08-07 22:49:48] INFO: POST /api/categories 201 7.578 ms - - bytes
+[2026-08-07 22:49:48] INFO: POST /api/services 201 13.023 ms - - bytes
+[2026-08-07 22:49:48] ERROR: ValidationError: Review validation failed: rating: Path `rating` (10) is more than maximum allowed value (5).
+    at model.validate (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\document.js:2864:36)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at model.$__save (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\model.js:398:7)
+    at maybeTracedSave (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\model.js:674:7)
+    at Function.create (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\model.js:2762:5)
+    at createReview (D:\Project Sphere\Project-Sphere\backend\controllers\reviewController.js:31:20)
+[2026-08-07 22:49:48] INFO: POST /api/reviews 400 16.616 ms - - bytes
+[2026-08-07 22:49:48] INFO: POST /api/auth/register 201 189.435 ms - - bytes
+[2026-08-07 22:49:48] INFO: POST /api/auth/register 201 188.916 ms - - bytes
+[2026-08-07 22:49:48] INFO: POST /api/auth/login 200 188.945 ms - - bytes
+[2026-08-07 22:49:49] INFO: POST /api/auth/login 200 190.083 ms - - bytes
+[2026-08-07 22:49:49] INFO: POST /api/categories 201 5.694 ms - - bytes
+[2026-08-07 22:49:49] INFO: POST /api/services 201 9.407 ms - - bytes
+[2026-08-07 22:49:49] ERROR: ValidationError: Review validation failed: comment: Path `comment` is required.
+    at model.validate (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\document.js:2864:36)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at model.$__save (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\model.js:398:7)
+    at maybeTracedSave (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\model.js:674:7)
+    at Function.create (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\model.js:2762:5)
+    at createReview (D:\Project Sphere\Project-Sphere\backend\controllers\reviewController.js:31:20)
+[2026-08-07 22:49:49] INFO: POST /api/reviews 400 15.982 ms - - bytes
+[2026-08-07 22:49:49] INFO: POST /api/auth/register 201 189.133 ms - - bytes
+[2026-08-07 22:49:49] INFO: POST /api/auth/register 201 190.681 ms - - bytes
+[2026-08-07 22:49:49] INFO: POST /api/auth/login 200 186.582 ms - - bytes
+[2026-08-07 22:49:50] INFO: POST /api/auth/login 200 187.977 ms - - bytes
+[2026-08-07 22:49:50] INFO: POST /api/categories 201 6.939 ms - - bytes
+[2026-08-07 22:49:50] INFO: POST /api/services 201 10.966 ms - - bytes
+[2026-08-07 22:49:50] INFO: POST /api/reviews 201 24.758 ms - - bytes
+[2026-08-07 22:49:50] INFO: GET /api/reviews/service/6a7613b65c1b876e0dd88507 200 21.140 ms - - bytes
+[2026-08-07 22:49:50] INFO: POST /api/auth/register 201 187.194 ms - - bytes
+[2026-08-07 22:49:50] INFO: POST /api/auth/register 201 189.329 ms - - bytes
+[2026-08-07 22:49:50] INFO: POST /api/auth/login 200 188.137 ms - - bytes
+[2026-08-07 22:49:50] INFO: POST /api/auth/login 200 188.043 ms - - bytes
+[2026-08-07 22:49:50] INFO: POST /api/categories 201 7.309 ms - - bytes
+[2026-08-07 22:49:50] INFO: POST /api/services 201 16.688 ms - - bytes
+[2026-08-07 22:49:50] INFO: GET /api/reviews/service/6a7613b65c1b876e0dd8850c 200 4.890 ms - - bytes
+[2026-08-07 22:49:51] INFO: POST /api/auth/register 201 189.264 ms - - bytes
+[2026-08-07 22:49:51] INFO: POST /api/auth/register 201 189.676 ms - - bytes
+[2026-08-07 22:49:51] INFO: POST /api/auth/login 200 188.675 ms - - bytes
+[2026-08-07 22:49:51] INFO: POST /api/auth/login 200 191.905 ms - - bytes
+[2026-08-07 22:49:51] INFO: POST /api/categories 201 7.806 ms - - bytes
+[2026-08-07 22:49:51] INFO: POST /api/services 201 11.408 ms - - bytes
+[2026-08-07 22:49:51] ERROR: CastError: Cast to ObjectId failed for value "invalid-id" (type string) at path "service" for model "Review"
+    at SchemaObjectId.cast (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\schema\objectId.js:252:11)
+    at SchemaObjectId.SchemaType.applySetters (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\schemaType.js:1373:12)
+    at SchemaObjectId.SchemaType.castForQuery (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\schemaType.js:1793:17)
+    at cast (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\cast.js:386:32)
+    at model.Query.Query.cast (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\query.js:5228:12)
+    at model.Query.Query._castConditions (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\query.js:2411:10)
+    at model.Query._find (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\query.js:2438:8)
+    at maybeTracedQueryExec (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\query.js:4801:83)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at getServiceReviews (D:\Project Sphere\Project-Sphere\backend\controllers\reviewController.js:56:21)
+[2026-08-07 22:49:51] INFO: GET /api/reviews/service/invalid-id 400 3.850 ms - - bytes
+[2026-08-07 22:49:52] INFO: POST /api/auth/register 201 189.942 ms - - bytes
+[2026-08-07 22:49:52] INFO: POST /api/auth/register 201 191.491 ms - - bytes
+[2026-08-07 22:49:52] INFO: POST /api/auth/login 200 187.191 ms - - bytes
+[2026-08-07 22:49:52] INFO: POST /api/auth/login 200 189.185 ms - - bytes
+[2026-08-07 22:49:52] INFO: POST /api/categories 201 6.122 ms - - bytes
+[2026-08-07 22:49:52] INFO: POST /api/services 201 10.074 ms - - bytes
+[2026-08-07 22:49:52] INFO: GET /api/reviews/service/6a7613b85c1b876e0dd88515 200 3.337 ms - - bytes
+[2026-08-07 22:49:52] INFO: POST /api/auth/register 201 195.207 ms - - bytes
+[2026-08-07 22:49:53] INFO: POST /api/auth/register 201 189.446 ms - - bytes
+[2026-08-07 22:49:53] INFO: POST /api/auth/login 200 189.027 ms - - bytes
+[2026-08-07 22:49:53] INFO: POST /api/auth/login 200 188.223 ms - - bytes
+[2026-08-07 22:49:53] INFO: POST /api/categories 201 5.138 ms - - bytes
+[2026-08-07 22:49:53] INFO: POST /api/services 201 12.719 ms - - bytes
+[2026-08-07 22:49:53] INFO: POST /api/reviews 201 21.299 ms - - bytes
+[2026-08-07 22:49:53] INFO: PUT /api/reviews/6a7613b95c1b876e0dd8851a 200 28.280 ms - - bytes
+[2026-08-07 22:49:53] INFO: POST /api/auth/register 201 192.257 ms - - bytes
+[2026-08-07 22:49:54] INFO: POST /api/auth/register 201 188.331 ms - - bytes
+[2026-08-07 22:49:54] INFO: POST /api/auth/login 200 187.929 ms - - bytes
+[2026-08-07 22:49:54] INFO: POST /api/auth/login 200 186.689 ms - - bytes
+[2026-08-07 22:49:54] INFO: POST /api/categories 201 5.306 ms - - bytes
+[2026-08-07 22:49:54] INFO: POST /api/services 201 9.418 ms - - bytes
+[2026-08-07 22:49:54] INFO: POST /api/reviews 201 21.408 ms - - bytes
+[2026-08-07 22:49:54] INFO: PUT /api/reviews/6a7613ba5c1b876e0dd8851f 401 0.417 ms - - bytes
+[2026-08-07 22:49:54] INFO: POST /api/auth/register 201 192.400 ms - - bytes
+[2026-08-07 22:49:54] INFO: POST /api/auth/register 201 188.818 ms - - bytes
+[2026-08-07 22:49:55] INFO: POST /api/auth/login 200 186.120 ms - - bytes
+[2026-08-07 22:49:55] INFO: POST /api/auth/login 200 186.328 ms - - bytes
+[2026-08-07 22:49:55] INFO: POST /api/categories 201 6.370 ms - - bytes
+[2026-08-07 22:49:55] INFO: POST /api/services 201 11.208 ms - - bytes
+[2026-08-07 22:49:55] INFO: POST /api/reviews 201 19.997 ms - - bytes
+[2026-08-07 22:49:55] INFO: POST /api/auth/register 201 203.225 ms - - bytes
+[2026-08-07 22:49:55] INFO: POST /api/auth/login 200 190.429 ms - - bytes
+[2026-08-07 22:49:55] INFO: PUT /api/reviews/6a7613bb5c1b876e0dd88524 403 9.049 ms - - bytes
+[2026-08-07 22:49:56] INFO: POST /api/auth/register 201 188.942 ms - - bytes
+[2026-08-07 22:49:56] INFO: POST /api/auth/register 201 194.963 ms - - bytes
+[2026-08-07 22:49:56] INFO: POST /api/auth/login 200 188.284 ms - - bytes
+[2026-08-07 22:49:56] INFO: POST /api/auth/login 200 186.769 ms - - bytes
+[2026-08-07 22:49:56] INFO: POST /api/categories 201 5.215 ms - - bytes
+[2026-08-07 22:49:56] INFO: POST /api/services 201 10.955 ms - - bytes
+[2026-08-07 22:49:56] INFO: PUT /api/reviews/6a7613bc5c1b876e0dd8852a 404 4.734 ms - - bytes
+[2026-08-07 22:49:56] INFO: POST /api/auth/register 201 188.375 ms - - bytes
+[2026-08-07 22:49:57] INFO: POST /api/auth/register 201 189.467 ms - - bytes
+[2026-08-07 22:49:57] INFO: POST /api/auth/login 200 193.951 ms - - bytes
+[2026-08-07 22:49:57] INFO: POST /api/auth/login 200 202.357 ms - - bytes
+[2026-08-07 22:49:57] INFO: POST /api/categories 201 8.015 ms - - bytes
+[2026-08-07 22:49:57] INFO: POST /api/services 201 12.640 ms - - bytes
+[2026-08-07 22:49:57] ERROR: CastError: Cast to ObjectId failed for value "invalid-id" (type string) at path "_id" for model "Review"
+    at SchemaObjectId.cast (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\schema\objectId.js:252:11)
+    at SchemaObjectId.SchemaType.applySetters (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\schemaType.js:1373:12)
+    at SchemaObjectId.SchemaType.castForQuery (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\schemaType.js:1793:17)
+    at cast (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\cast.js:386:32)
+    at model.Query.Query.cast (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\query.js:5228:12)
+    at model.Query.Query._castConditions (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\query.js:2411:10)
+    at model.Query._findOne (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\query.js:2758:8)
+    at maybeTracedQueryExec (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\query.js:4801:83)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at updateReview (D:\Project Sphere\Project-Sphere\backend\controllers\reviewController.js:76:20)
+[2026-08-07 22:49:57] INFO: PUT /api/reviews/invalid-id 400 6.815 ms - - bytes
+[2026-08-07 22:49:57] INFO: POST /api/auth/register 201 193.714 ms - - bytes
+[2026-08-07 22:49:58] INFO: POST /api/auth/register 201 200.526 ms - - bytes
+[2026-08-07 22:49:58] INFO: POST /api/auth/login 200 187.363 ms - - bytes
+[2026-08-07 22:49:58] INFO: POST /api/auth/login 200 188.186 ms - - bytes
+[2026-08-07 22:49:58] INFO: POST /api/categories 201 8.277 ms - - bytes
+[2026-08-07 22:49:58] INFO: POST /api/services 201 12.711 ms - - bytes
+[2026-08-07 22:49:58] INFO: POST /api/reviews 201 24.967 ms - - bytes
+[2026-08-07 22:49:58] ERROR: ValidationError: Review validation failed: rating: Path `rating` (10) is more than maximum allowed value (5).
+    at model.validate (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\document.js:2864:36)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at model.$__save (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\model.js:398:7)
+    at maybeTracedSave (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\model.js:674:7)
+    at updateReview (D:\Project Sphere\Project-Sphere\backend\controllers\reviewController.js:95:5)
+[2026-08-07 22:49:58] INFO: PUT /api/reviews/6a7613be5c1b876e0dd88533 400 10.546 ms - - bytes
+[2026-08-07 22:53:34] INFO: POST /api/auth/register 201 280.091 ms - - bytes
+[2026-08-07 22:53:34] INFO: POST /api/auth/register 201 199.858 ms - - bytes
+[2026-08-07 22:53:34] INFO: POST /api/auth/login 200 200.318 ms - - bytes
+[2026-08-07 22:53:34] INFO: POST /api/auth/login 200 190.492 ms - - bytes
+[2026-08-07 22:53:34] INFO: POST /api/categories 201 9.889 ms - - bytes
+[2026-08-07 22:53:35] INFO: POST /api/services 201 29.433 ms - - bytes
+[2026-08-07 22:53:35] INFO: POST /api/reviews 201 50.808 ms - - bytes
+[2026-08-07 22:53:35] INFO: POST /api/auth/register 201 191.590 ms - - bytes
+[2026-08-07 22:53:35] INFO: POST /api/auth/register 201 195.604 ms - - bytes
+[2026-08-07 22:53:35] INFO: POST /api/auth/login 200 194.307 ms - - bytes
+[2026-08-07 22:53:35] INFO: POST /api/auth/login 200 192.684 ms - - bytes
+[2026-08-07 22:53:35] INFO: POST /api/categories 201 9.901 ms - - bytes
+[2026-08-07 22:53:35] INFO: POST /api/services 201 17.685 ms - - bytes
+[2026-08-07 22:53:35] INFO: POST /api/reviews 401 0.666 ms - - bytes
+[2026-08-07 22:53:36] INFO: POST /api/auth/register 201 192.595 ms - - bytes
+[2026-08-07 22:53:36] INFO: POST /api/auth/register 201 198.339 ms - - bytes
+[2026-08-07 22:53:36] INFO: POST /api/auth/login 200 196.680 ms - - bytes
+[2026-08-07 22:53:36] INFO: POST /api/auth/login 200 190.439 ms - - bytes
+[2026-08-07 22:53:36] INFO: POST /api/categories 201 8.874 ms - - bytes
+[2026-08-07 22:53:36] INFO: POST /api/services 201 14.223 ms - - bytes
+[2026-08-07 22:53:36] INFO: POST /api/reviews 404 6.963 ms - - bytes
+[2026-08-07 22:53:37] INFO: POST /api/auth/register 201 196.090 ms - - bytes
+[2026-08-07 22:53:37] INFO: POST /api/auth/register 201 189.128 ms - - bytes
+[2026-08-07 22:53:37] INFO: POST /api/auth/login 200 190.550 ms - - bytes
+[2026-08-07 22:53:37] INFO: POST /api/auth/login 200 192.978 ms - - bytes
+[2026-08-07 22:53:37] INFO: POST /api/categories 201 7.272 ms - - bytes
+[2026-08-07 22:53:37] INFO: POST /api/services 201 12.415 ms - - bytes
+[2026-08-07 22:53:37] ERROR: CastError: Cast to ObjectId failed for value "invalid-id" (type string) at path "_id" for model "Service"
+    at SchemaObjectId.cast (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\schema\objectId.js:252:11)
+    at SchemaObjectId.SchemaType.applySetters (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\schemaType.js:1373:12)
+    at SchemaObjectId.SchemaType.castForQuery (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\schemaType.js:1793:17)
+    at cast (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\cast.js:386:32)
+    at model.Query.Query.cast (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\query.js:5228:12)
+    at model.Query.Query._castConditions (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\query.js:2411:10)
+    at model.Query._findOne (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\query.js:2758:8)
+    at maybeTracedQueryExec (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\query.js:4801:83)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at createReview (D:\Project Sphere\Project-Sphere\backend\controllers\reviewController.js:7:29)
+[2026-08-07 22:53:37] INFO: POST /api/reviews 400 16.264 ms - - bytes
+[2026-08-07 22:53:38] INFO: POST /api/auth/register 201 205.336 ms - - bytes
+[2026-08-07 22:53:38] INFO: POST /api/auth/register 201 196.315 ms - - bytes
+[2026-08-07 22:53:38] INFO: POST /api/auth/login 200 196.456 ms - - bytes
+[2026-08-07 22:53:38] INFO: POST /api/auth/login 200 208.081 ms - - bytes
+[2026-08-07 22:53:38] INFO: POST /api/categories 201 11.372 ms - - bytes
+[2026-08-07 22:53:38] INFO: POST /api/services 201 20.438 ms - - bytes
+[2026-08-07 22:53:38] INFO: POST /api/reviews 201 31.367 ms - - bytes
+[2026-08-07 22:53:38] INFO: POST /api/reviews 400 15.299 ms - - bytes
+[2026-08-07 22:53:39] INFO: POST /api/auth/register 201 224.445 ms - - bytes
+[2026-08-07 22:53:39] INFO: POST /api/auth/register 201 296.570 ms - - bytes
+[2026-08-07 22:53:39] INFO: POST /api/auth/login 200 214.047 ms - - bytes
+[2026-08-07 22:53:39] INFO: POST /api/auth/login 200 173.365 ms - - bytes
+[2026-08-07 22:53:39] INFO: POST /api/categories 201 25.204 ms - - bytes
+[2026-08-07 22:53:39] INFO: POST /api/services 201 15.401 ms - - bytes
+[2026-08-07 22:53:40] ERROR: ValidationError: Review validation failed: rating: Path `rating` (10) is more than maximum allowed value (5).
+    at model.validate (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\document.js:2864:36)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at model.$__save (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\model.js:398:7)
+    at maybeTracedSave (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\model.js:674:7)
+    at Function.create (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\model.js:2762:5)
+    at createReview (D:\Project Sphere\Project-Sphere\backend\controllers\reviewController.js:31:20)
+[2026-08-07 22:53:40] INFO: POST /api/reviews 400 26.750 ms - - bytes
+[2026-08-07 22:53:40] INFO: POST /api/auth/register 201 220.011 ms - - bytes
+[2026-08-07 22:53:40] INFO: POST /api/auth/register 201 178.665 ms - - bytes
+[2026-08-07 22:53:40] INFO: POST /api/auth/login 200 185.897 ms - - bytes
+[2026-08-07 22:53:40] INFO: POST /api/auth/login 200 193.218 ms - - bytes
+[2026-08-07 22:53:40] INFO: POST /api/categories 201 8.760 ms - - bytes
+[2026-08-07 22:53:40] INFO: POST /api/services 201 14.091 ms - - bytes
+[2026-08-07 22:53:40] ERROR: ValidationError: Review validation failed: comment: Path `comment` is required.
+    at model.validate (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\document.js:2864:36)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at model.$__save (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\model.js:398:7)
+    at maybeTracedSave (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\model.js:674:7)
+    at Function.create (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\model.js:2762:5)
+    at createReview (D:\Project Sphere\Project-Sphere\backend\controllers\reviewController.js:31:20)
+[2026-08-07 22:53:40] INFO: POST /api/reviews 400 21.091 ms - - bytes
+[2026-08-07 22:53:41] INFO: POST /api/auth/register 201 184.726 ms - - bytes
+[2026-08-07 22:53:41] INFO: POST /api/auth/register 201 188.327 ms - - bytes
+[2026-08-07 22:53:41] INFO: POST /api/auth/login 200 361.594 ms - - bytes
+[2026-08-07 22:53:42] INFO: POST /api/auth/login 200 184.919 ms - - bytes
+[2026-08-07 22:53:42] INFO: POST /api/categories 201 11.349 ms - - bytes
+[2026-08-07 22:53:42] INFO: POST /api/services 201 30.583 ms - - bytes
+[2026-08-07 22:53:42] INFO: POST /api/reviews 201 32.096 ms - - bytes
+[2026-08-07 22:53:42] INFO: GET /api/reviews/service/6a76149eb965337f1b5f57b8 200 117.364 ms - - bytes
+[2026-08-07 22:53:42] INFO: POST /api/auth/register 201 187.195 ms - - bytes
+[2026-08-07 22:53:42] INFO: POST /api/auth/register 201 208.061 ms - - bytes
+[2026-08-07 22:53:43] INFO: POST /api/auth/login 200 252.271 ms - - bytes
+[2026-08-07 22:53:43] INFO: POST /api/auth/login 200 199.817 ms - - bytes
+[2026-08-07 22:53:43] INFO: POST /api/categories 201 7.383 ms - - bytes
+[2026-08-07 22:53:43] INFO: POST /api/services 201 15.243 ms - - bytes
+[2026-08-07 22:53:43] INFO: GET /api/reviews/service/6a76149fb965337f1b5f57bd 200 6.014 ms - - bytes
+[2026-08-07 22:53:43] INFO: POST /api/auth/register 201 191.287 ms - - bytes
+[2026-08-07 22:53:43] INFO: POST /api/auth/register 201 188.374 ms - - bytes
+[2026-08-07 22:53:44] INFO: POST /api/auth/login 200 196.558 ms - - bytes
+[2026-08-07 22:53:44] INFO: POST /api/auth/login 200 227.425 ms - - bytes
+[2026-08-07 22:53:44] INFO: POST /api/categories 201 10.507 ms - - bytes
+[2026-08-07 22:53:44] INFO: POST /api/services 201 25.312 ms - - bytes
+[2026-08-07 22:53:44] ERROR: CastError: Cast to ObjectId failed for value "invalid-id" (type string) at path "service" for model "Review"
+    at SchemaObjectId.cast (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\schema\objectId.js:252:11)
+    at SchemaObjectId.SchemaType.applySetters (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\schemaType.js:1373:12)
+    at SchemaObjectId.SchemaType.castForQuery (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\schemaType.js:1793:17)
+    at cast (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\cast.js:386:32)
+    at model.Query.Query.cast (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\query.js:5228:12)
+    at model.Query.Query._castConditions (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\query.js:2411:10)
+    at model.Query._find (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\query.js:2438:8)
+    at maybeTracedQueryExec (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\query.js:4801:83)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at getServiceReviews (D:\Project Sphere\Project-Sphere\backend\controllers\reviewController.js:56:21)
+[2026-08-07 22:53:44] INFO: GET /api/reviews/service/invalid-id 400 9.304 ms - - bytes
+[2026-08-07 22:53:44] INFO: POST /api/auth/register 201 210.102 ms - - bytes
+[2026-08-07 22:53:44] INFO: POST /api/auth/register 201 204.423 ms - - bytes
+[2026-08-07 22:53:45] INFO: POST /api/auth/login 200 205.351 ms - - bytes
+[2026-08-07 22:53:45] INFO: POST /api/auth/login 200 229.536 ms - - bytes
+[2026-08-07 22:53:45] INFO: POST /api/categories 201 8.962 ms - - bytes
+[2026-08-07 22:53:45] INFO: POST /api/services 201 18.969 ms - - bytes
+[2026-08-07 22:53:45] INFO: GET /api/reviews/service/6a7614a1b965337f1b5f57c6 200 5.820 ms - - bytes
+[2026-08-07 22:53:45] INFO: POST /api/auth/register 201 198.916 ms - - bytes
+[2026-08-07 22:53:46] INFO: POST /api/auth/register 201 185.503 ms - - bytes
+[2026-08-07 22:53:46] INFO: POST /api/auth/login 200 195.396 ms - - bytes
+[2026-08-07 22:53:46] INFO: POST /api/auth/login 200 182.904 ms - - bytes
+[2026-08-07 22:53:46] INFO: POST /api/categories 201 11.462 ms - - bytes
+[2026-08-07 22:53:46] INFO: POST /api/services 201 14.414 ms - - bytes
+[2026-08-07 22:53:46] INFO: POST /api/reviews 201 29.927 ms - - bytes
+[2026-08-07 22:53:46] INFO: PUT /api/reviews/6a7614a2b965337f1b5f57cb 200 39.732 ms - - bytes
+[2026-08-07 22:53:46] INFO: POST /api/auth/register 201 190.972 ms - - bytes
+[2026-08-07 22:53:47] INFO: POST /api/auth/register 201 186.345 ms - - bytes
+[2026-08-07 22:53:47] INFO: POST /api/auth/login 200 186.153 ms - - bytes
+[2026-08-07 22:53:47] INFO: POST /api/auth/login 200 192.780 ms - - bytes
+[2026-08-07 22:53:47] INFO: POST /api/categories 201 9.746 ms - - bytes
+[2026-08-07 22:53:47] INFO: POST /api/services 201 14.945 ms - - bytes
+[2026-08-07 22:53:47] INFO: POST /api/reviews 201 39.057 ms - - bytes
+[2026-08-07 22:53:47] INFO: PUT /api/reviews/6a7614a3b965337f1b5f57d0 401 0.631 ms - - bytes
+[2026-08-07 22:53:47] INFO: POST /api/auth/register 201 193.297 ms - - bytes
+[2026-08-07 22:53:48] INFO: POST /api/auth/register 201 197.400 ms - - bytes
+[2026-08-07 22:53:48] INFO: POST /api/auth/login 200 180.807 ms - - bytes
+[2026-08-07 22:53:48] INFO: POST /api/auth/login 200 181.384 ms - - bytes
+[2026-08-07 22:53:48] INFO: POST /api/categories 201 6.743 ms - - bytes
+[2026-08-07 22:53:48] INFO: POST /api/services 201 16.051 ms - - bytes
+[2026-08-07 22:53:48] INFO: POST /api/reviews 201 27.094 ms - - bytes
+[2026-08-07 22:53:48] INFO: POST /api/auth/register 201 180.608 ms - - bytes
+[2026-08-07 22:53:48] INFO: POST /api/auth/login 200 172.993 ms - - bytes
+[2026-08-07 22:53:48] INFO: PUT /api/reviews/6a7614a4b965337f1b5f57d5 403 7.003 ms - - bytes
+[2026-08-07 22:53:49] INFO: POST /api/auth/register 201 180.169 ms - - bytes
+[2026-08-07 22:53:49] INFO: POST /api/auth/register 201 192.514 ms - - bytes
+[2026-08-07 22:53:49] INFO: POST /api/auth/login 200 177.777 ms - - bytes
+[2026-08-07 22:53:49] INFO: POST /api/auth/login 200 179.007 ms - - bytes
+[2026-08-07 22:53:49] INFO: POST /api/categories 201 8.810 ms - - bytes
+[2026-08-07 22:53:49] INFO: POST /api/services 201 11.258 ms - - bytes
+[2026-08-07 22:53:49] INFO: PUT /api/reviews/6a7614a5b965337f1b5f57db 404 6.575 ms - - bytes
+[2026-08-07 22:53:49] INFO: POST /api/auth/register 201 187.242 ms - - bytes
+[2026-08-07 22:53:50] INFO: POST /api/auth/register 201 187.836 ms - - bytes
+[2026-08-07 22:53:50] INFO: POST /api/auth/login 200 188.450 ms - - bytes
+[2026-08-07 22:53:50] INFO: POST /api/auth/login 200 174.696 ms - - bytes
+[2026-08-07 22:53:50] INFO: POST /api/categories 201 7.804 ms - - bytes
+[2026-08-07 22:53:50] INFO: POST /api/services 201 14.247 ms - - bytes
+[2026-08-07 22:53:50] ERROR: CastError: Cast to ObjectId failed for value "invalid-id" (type string) at path "_id" for model "Review"
+    at SchemaObjectId.cast (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\schema\objectId.js:252:11)
+    at SchemaObjectId.SchemaType.applySetters (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\schemaType.js:1373:12)
+    at SchemaObjectId.SchemaType.castForQuery (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\schemaType.js:1793:17)
+    at cast (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\cast.js:386:32)
+    at model.Query.Query.cast (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\query.js:5228:12)
+    at model.Query.Query._castConditions (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\query.js:2411:10)
+    at model.Query._findOne (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\query.js:2758:8)
+    at maybeTracedQueryExec (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\query.js:4801:83)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at updateReview (D:\Project Sphere\Project-Sphere\backend\controllers\reviewController.js:76:20)
+[2026-08-07 22:53:50] INFO: PUT /api/reviews/invalid-id 400 7.672 ms - - bytes
+[2026-08-07 22:53:50] INFO: POST /api/auth/register 201 181.805 ms - - bytes
+[2026-08-07 22:53:51] INFO: POST /api/auth/register 201 184.307 ms - - bytes
+[2026-08-07 22:53:51] INFO: POST /api/auth/login 200 186.078 ms - - bytes
+[2026-08-07 22:53:51] INFO: POST /api/auth/login 200 189.606 ms - - bytes
+[2026-08-07 22:53:51] INFO: POST /api/categories 201 7.973 ms - - bytes
+[2026-08-07 22:53:51] INFO: POST /api/services 201 13.553 ms - - bytes
+[2026-08-07 22:53:51] INFO: POST /api/reviews 201 29.272 ms - - bytes
+[2026-08-07 22:53:51] ERROR: ValidationError: Review validation failed: rating: Path `rating` (10) is more than maximum allowed value (5).
+    at model.validate (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\document.js:2864:36)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at model.$__save (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\model.js:398:7)
+    at maybeTracedSave (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\model.js:674:7)
+    at updateReview (D:\Project Sphere\Project-Sphere\backend\controllers\reviewController.js:95:5)
+[2026-08-07 22:53:51] INFO: PUT /api/reviews/6a7614a7b965337f1b5f57e4 400 14.366 ms - - bytes
+[2026-08-07 22:53:51] INFO: POST /api/auth/register 201 192.000 ms - - bytes
+[2026-08-07 22:53:52] INFO: POST /api/auth/register 201 183.548 ms - - bytes
+[2026-08-07 22:53:52] INFO: POST /api/auth/login 200 174.969 ms - - bytes
+[2026-08-07 22:53:52] INFO: POST /api/auth/login 200 201.480 ms - - bytes
+[2026-08-07 22:53:52] INFO: POST /api/categories 201 8.764 ms - - bytes
+[2026-08-07 22:53:52] INFO: POST /api/services 201 22.141 ms - - bytes
+[2026-08-07 22:53:52] INFO: POST /api/reviews 201 35.030 ms - - bytes
+[2026-08-07 22:53:52] INFO: DELETE /api/reviews/6a7614a8b965337f1b5f57e9 200 38.907 ms - - bytes
+[2026-08-07 23:00:37] INFO: POST /api/auth/register 201 272.429 ms - - bytes
+[2026-08-07 23:00:37] INFO: POST /api/auth/register 201 219.906 ms - - bytes
+[2026-08-07 23:00:37] INFO: POST /api/auth/login 200 201.161 ms - - bytes
+[2026-08-07 23:00:37] INFO: POST /api/auth/login 200 220.586 ms - - bytes
+[2026-08-07 23:00:38] INFO: POST /api/categories 201 18.369 ms - - bytes
+[2026-08-07 23:00:38] INFO: POST /api/services 201 57.063 ms - - bytes
+[2026-08-07 23:00:38] INFO: POST /api/reviews 201 59.924 ms - - bytes
+[2026-08-07 23:00:38] INFO: POST /api/auth/register 201 186.686 ms - - bytes
+[2026-08-07 23:00:38] INFO: POST /api/auth/register 201 179.072 ms - - bytes
+[2026-08-07 23:00:38] INFO: POST /api/auth/login 200 188.372 ms - - bytes
+[2026-08-07 23:00:39] INFO: POST /api/auth/login 200 176.674 ms - - bytes
+[2026-08-07 23:00:39] INFO: POST /api/categories 201 12.443 ms - - bytes
+[2026-08-07 23:00:39] INFO: POST /api/services 201 25.458 ms - - bytes
+[2026-08-07 23:00:39] INFO: POST /api/reviews 401 1.543 ms - - bytes
+[2026-08-07 23:00:39] INFO: POST /api/auth/register 201 228.124 ms - - bytes
+[2026-08-07 23:00:39] INFO: POST /api/auth/register 201 210.959 ms - - bytes
+[2026-08-07 23:00:39] INFO: POST /api/auth/login 200 193.807 ms - - bytes
+[2026-08-07 23:00:40] INFO: POST /api/auth/login 200 177.899 ms - - bytes
+[2026-08-07 23:00:40] INFO: POST /api/categories 201 9.791 ms - - bytes
+[2026-08-07 23:00:40] INFO: POST /api/services 201 19.387 ms - - bytes
+[2026-08-07 23:00:40] INFO: POST /api/reviews 404 6.933 ms - - bytes
+[2026-08-07 23:00:40] INFO: POST /api/auth/register 201 181.109 ms - - bytes
+[2026-08-07 23:00:40] INFO: POST /api/auth/register 201 179.519 ms - - bytes
+[2026-08-07 23:00:40] INFO: POST /api/auth/login 200 191.158 ms - - bytes
+[2026-08-07 23:00:40] INFO: POST /api/auth/login 200 172.273 ms - - bytes
+[2026-08-07 23:00:40] INFO: POST /api/categories 201 8.814 ms - - bytes
+[2026-08-07 23:00:41] INFO: POST /api/services 201 16.028 ms - - bytes
+[2026-08-07 23:00:41] ERROR: CastError: Cast to ObjectId failed for value "invalid-id" (type string) at path "_id" for model "Service"
+    at SchemaObjectId.cast (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\schema\objectId.js:252:11)
+    at SchemaObjectId.SchemaType.applySetters (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\schemaType.js:1373:12)
+    at SchemaObjectId.SchemaType.castForQuery (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\schemaType.js:1793:17)
+    at cast (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\cast.js:386:32)
+    at model.Query.Query.cast (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\query.js:5228:12)
+    at model.Query.Query._castConditions (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\query.js:2411:10)
+    at model.Query._findOne (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\query.js:2758:8)
+    at maybeTracedQueryExec (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\query.js:4801:83)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at createReview (D:\Project Sphere\Project-Sphere\backend\controllers\reviewController.js:7:29)
+[2026-08-07 23:00:41] INFO: POST /api/reviews 400 27.852 ms - - bytes
+[2026-08-07 23:00:41] INFO: POST /api/auth/register 201 174.593 ms - - bytes
+[2026-08-07 23:00:41] INFO: POST /api/auth/register 201 178.905 ms - - bytes
+[2026-08-07 23:00:41] INFO: POST /api/auth/login 200 184.227 ms - - bytes
+[2026-08-07 23:00:41] INFO: POST /api/auth/login 200 174.564 ms - - bytes
+[2026-08-07 23:00:41] INFO: POST /api/categories 201 9.160 ms - - bytes
+[2026-08-07 23:00:41] INFO: POST /api/services 201 14.504 ms - - bytes
+[2026-08-07 23:00:41] INFO: POST /api/reviews 201 25.553 ms - - bytes
+[2026-08-07 23:00:41] INFO: POST /api/reviews 400 10.782 ms - - bytes
+[2026-08-07 23:00:42] INFO: POST /api/auth/register 201 176.121 ms - - bytes
+[2026-08-07 23:00:42] INFO: POST /api/auth/register 201 175.744 ms - - bytes
+[2026-08-07 23:00:42] INFO: POST /api/auth/login 200 171.440 ms - - bytes
+[2026-08-07 23:00:42] INFO: POST /api/auth/login 200 179.200 ms - - bytes
+[2026-08-07 23:00:42] INFO: POST /api/categories 201 8.382 ms - - bytes
+[2026-08-07 23:00:42] INFO: POST /api/services 201 19.282 ms - - bytes
+[2026-08-07 23:00:42] ERROR: ValidationError: Review validation failed: rating: Path `rating` (10) is more than maximum allowed value (5).
+    at model.validate (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\document.js:2864:36)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at model.$__save (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\model.js:398:7)
+    at maybeTracedSave (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\model.js:674:7)
+    at Function.create (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\model.js:2762:5)
+    at createReview (D:\Project Sphere\Project-Sphere\backend\controllers\reviewController.js:31:20)
+[2026-08-07 23:00:42] INFO: POST /api/reviews 400 28.687 ms - - bytes
+[2026-08-07 23:00:43] INFO: POST /api/auth/register 201 182.031 ms - - bytes
+[2026-08-07 23:00:43] INFO: POST /api/auth/register 201 176.243 ms - - bytes
+[2026-08-07 23:00:43] INFO: POST /api/auth/login 200 177.458 ms - - bytes
+[2026-08-07 23:00:43] INFO: POST /api/auth/login 200 179.862 ms - - bytes
+[2026-08-07 23:00:43] INFO: POST /api/categories 201 9.754 ms - - bytes
+[2026-08-07 23:00:43] INFO: POST /api/services 201 15.454 ms - - bytes
+[2026-08-07 23:00:43] ERROR: ValidationError: Review validation failed: comment: Path `comment` is required.
+    at model.validate (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\document.js:2864:36)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at model.$__save (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\model.js:398:7)
+    at maybeTracedSave (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\model.js:674:7)
+    at Function.create (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\model.js:2762:5)
+    at createReview (D:\Project Sphere\Project-Sphere\backend\controllers\reviewController.js:31:20)
+[2026-08-07 23:00:43] INFO: POST /api/reviews 400 23.615 ms - - bytes
+[2026-08-07 23:00:44] INFO: POST /api/auth/register 201 197.319 ms - - bytes
+[2026-08-07 23:00:44] INFO: POST /api/auth/register 201 197.448 ms - - bytes
+[2026-08-07 23:00:44] INFO: POST /api/auth/login 200 200.529 ms - - bytes
+[2026-08-07 23:00:44] INFO: POST /api/auth/login 200 181.342 ms - - bytes
+[2026-08-07 23:00:44] INFO: POST /api/categories 201 7.453 ms - - bytes
+[2026-08-07 23:00:44] INFO: POST /api/services 201 20.573 ms - - bytes
+[2026-08-07 23:00:44] INFO: POST /api/reviews 201 34.289 ms - - bytes
+[2026-08-07 23:00:44] INFO: GET /api/reviews/service/6a761644491a4c7899904136 200 36.733 ms - - bytes
+[2026-08-07 23:00:45] INFO: POST /api/auth/register 201 204.670 ms - - bytes
+[2026-08-07 23:00:45] INFO: POST /api/auth/register 201 193.139 ms - - bytes
+[2026-08-07 23:00:45] INFO: POST /api/auth/login 200 189.746 ms - - bytes
+[2026-08-07 23:00:45] INFO: POST /api/auth/login 200 174.835 ms - - bytes
+[2026-08-07 23:00:45] INFO: POST /api/categories 201 7.908 ms - - bytes
+[2026-08-07 23:00:45] INFO: POST /api/services 201 16.406 ms - - bytes
+[2026-08-07 23:00:45] INFO: GET /api/reviews/service/6a761645491a4c789990413b 200 5.103 ms - - bytes
+[2026-08-07 23:00:46] INFO: POST /api/auth/register 201 187.297 ms - - bytes
+[2026-08-07 23:00:46] INFO: POST /api/auth/register 201 193.513 ms - - bytes
+[2026-08-07 23:00:46] INFO: POST /api/auth/login 200 186.563 ms - - bytes
+[2026-08-07 23:00:46] INFO: POST /api/auth/login 200 174.001 ms - - bytes
+[2026-08-07 23:00:46] INFO: POST /api/categories 201 6.848 ms - - bytes
+[2026-08-07 23:00:46] INFO: POST /api/services 201 14.062 ms - - bytes
+[2026-08-07 23:00:46] ERROR: CastError: Cast to ObjectId failed for value "invalid-id" (type string) at path "service" for model "Review"
+    at SchemaObjectId.cast (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\schema\objectId.js:252:11)
+    at SchemaObjectId.SchemaType.applySetters (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\schemaType.js:1373:12)
+    at SchemaObjectId.SchemaType.castForQuery (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\schemaType.js:1793:17)
+    at cast (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\cast.js:386:32)
+    at model.Query.Query.cast (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\query.js:5228:12)
+    at model.Query.Query._castConditions (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\query.js:2411:10)
+    at model.Query._find (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\query.js:2438:8)
+    at maybeTracedQueryExec (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\query.js:4801:83)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at getServiceReviews (D:\Project Sphere\Project-Sphere\backend\controllers\reviewController.js:56:21)
+[2026-08-07 23:00:46] INFO: GET /api/reviews/service/invalid-id 400 4.180 ms - - bytes
+[2026-08-07 23:00:46] INFO: POST /api/auth/register 201 174.935 ms - - bytes
+[2026-08-07 23:00:47] INFO: POST /api/auth/register 201 200.066 ms - - bytes
+[2026-08-07 23:00:47] INFO: POST /api/auth/login 200 208.975 ms - - bytes
+[2026-08-07 23:00:47] INFO: POST /api/auth/login 200 212.556 ms - - bytes
+[2026-08-07 23:00:47] INFO: POST /api/categories 201 12.925 ms - - bytes
+[2026-08-07 23:00:47] INFO: POST /api/services 201 27.142 ms - - bytes
+[2026-08-07 23:00:47] INFO: GET /api/reviews/service/6a761647491a4c7899904144 200 7.159 ms - - bytes
+[2026-08-07 23:00:47] INFO: POST /api/auth/register 201 195.894 ms - - bytes
+[2026-08-07 23:00:48] INFO: POST /api/auth/register 201 222.860 ms - - bytes
+[2026-08-07 23:00:48] INFO: POST /api/auth/login 200 203.298 ms - - bytes
+[2026-08-07 23:00:48] INFO: POST /api/auth/login 200 242.977 ms - - bytes
+[2026-08-07 23:00:48] INFO: POST /api/categories 201 13.652 ms - - bytes
+[2026-08-07 23:00:48] INFO: POST /api/services 201 24.903 ms - - bytes
+[2026-08-07 23:00:48] INFO: POST /api/reviews 201 35.518 ms - - bytes
+[2026-08-07 23:00:48] INFO: PUT /api/reviews/6a761648491a4c7899904149 200 41.125 ms - - bytes
+[2026-08-07 23:00:49] INFO: POST /api/auth/register 201 209.484 ms - - bytes
+[2026-08-07 23:00:49] INFO: POST /api/auth/register 201 203.143 ms - - bytes
+[2026-08-07 23:00:49] INFO: POST /api/auth/login 200 191.025 ms - - bytes
+[2026-08-07 23:00:49] INFO: POST /api/auth/login 200 189.015 ms - - bytes
+[2026-08-07 23:00:49] INFO: POST /api/categories 201 10.848 ms - - bytes
+[2026-08-07 23:00:49] INFO: POST /api/services 201 19.080 ms - - bytes
+[2026-08-07 23:00:49] INFO: POST /api/reviews 201 42.668 ms - - bytes
+[2026-08-07 23:00:49] INFO: PUT /api/reviews/6a761649491a4c789990414e 401 0.627 ms - - bytes
+[2026-08-07 23:00:50] INFO: POST /api/auth/register 201 200.284 ms - - bytes
+[2026-08-07 23:00:50] INFO: POST /api/auth/register 201 226.639 ms - - bytes
+[2026-08-07 23:00:50] INFO: POST /api/auth/login 200 190.173 ms - - bytes
+[2026-08-07 23:00:50] INFO: POST /api/auth/login 200 234.023 ms - - bytes
+[2026-08-07 23:00:50] INFO: POST /api/categories 201 11.352 ms - - bytes
+[2026-08-07 23:00:50] INFO: POST /api/services 201 23.998 ms - - bytes
+[2026-08-07 23:00:50] INFO: POST /api/reviews 201 32.641 ms - - bytes
+[2026-08-07 23:00:51] INFO: POST /api/auth/register 201 205.242 ms - - bytes
+[2026-08-07 23:00:51] INFO: POST /api/auth/login 200 205.906 ms - - bytes
+[2026-08-07 23:00:51] INFO: PUT /api/reviews/6a76164a491a4c7899904153 403 10.956 ms - - bytes
+[2026-08-07 23:00:51] INFO: POST /api/auth/register 201 203.112 ms - - bytes
+[2026-08-07 23:00:51] INFO: POST /api/auth/register 201 193.895 ms - - bytes
+[2026-08-07 23:00:52] INFO: POST /api/auth/login 200 192.911 ms - - bytes
+[2026-08-07 23:00:52] INFO: POST /api/auth/login 200 197.578 ms - - bytes
+[2026-08-07 23:00:52] INFO: POST /api/categories 201 10.110 ms - - bytes
+[2026-08-07 23:00:52] INFO: POST /api/services 201 14.708 ms - - bytes
+[2026-08-07 23:00:52] INFO: PUT /api/reviews/6a76164c491a4c7899904159 404 7.627 ms - - bytes
+[2026-08-07 23:00:52] INFO: POST /api/auth/register 201 199.368 ms - - bytes
+[2026-08-07 23:00:52] INFO: POST /api/auth/register 201 213.018 ms - - bytes
+[2026-08-07 23:00:53] INFO: POST /api/auth/login 200 206.770 ms - - bytes
+[2026-08-07 23:00:53] INFO: POST /api/auth/login 200 219.000 ms - - bytes
+[2026-08-07 23:00:53] INFO: POST /api/categories 201 11.731 ms - - bytes
+[2026-08-07 23:00:53] INFO: POST /api/services 201 21.538 ms - - bytes
+[2026-08-07 23:00:53] ERROR: CastError: Cast to ObjectId failed for value "invalid-id" (type string) at path "_id" for model "Review"
+    at SchemaObjectId.cast (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\schema\objectId.js:252:11)
+    at SchemaObjectId.SchemaType.applySetters (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\schemaType.js:1373:12)
+    at SchemaObjectId.SchemaType.castForQuery (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\schemaType.js:1793:17)
+    at cast (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\cast.js:386:32)
+    at model.Query.Query.cast (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\query.js:5228:12)
+    at model.Query.Query._castConditions (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\query.js:2411:10)
+    at model.Query._findOne (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\query.js:2758:8)
+    at maybeTracedQueryExec (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\query.js:4801:83)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at updateReview (D:\Project Sphere\Project-Sphere\backend\controllers\reviewController.js:76:20)
+[2026-08-07 23:00:53] INFO: PUT /api/reviews/invalid-id 400 8.065 ms - - bytes
+[2026-08-07 23:00:53] INFO: POST /api/auth/register 201 183.435 ms - - bytes
+[2026-08-07 23:00:53] INFO: POST /api/auth/register 201 188.048 ms - - bytes
+[2026-08-07 23:00:54] INFO: POST /api/auth/login 200 183.701 ms - - bytes
+[2026-08-07 23:00:54] INFO: POST /api/auth/login 200 180.978 ms - - bytes
+[2026-08-07 23:00:54] INFO: POST /api/categories 201 6.945 ms - - bytes
+[2026-08-07 23:00:54] INFO: POST /api/services 201 10.959 ms - - bytes
+[2026-08-07 23:00:54] INFO: POST /api/reviews 201 25.027 ms - - bytes
+[2026-08-07 23:00:54] ERROR: ValidationError: Review validation failed: rating: Path `rating` (10) is more than maximum allowed value (5).
+    at model.validate (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\document.js:2864:36)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at model.$__save (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\model.js:398:7)
+    at maybeTracedSave (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\model.js:674:7)
+    at updateReview (D:\Project Sphere\Project-Sphere\backend\controllers\reviewController.js:95:5)
+[2026-08-07 23:00:54] INFO: PUT /api/reviews/6a76164e491a4c7899904162 400 12.296 ms - - bytes
+[2026-08-07 23:00:54] INFO: POST /api/auth/register 201 182.340 ms - - bytes
+[2026-08-07 23:00:54] INFO: POST /api/auth/register 201 180.803 ms - - bytes
+[2026-08-07 23:00:54] INFO: POST /api/auth/login 200 185.224 ms - - bytes
+[2026-08-07 23:00:55] INFO: POST /api/auth/login 200 179.980 ms - - bytes
+[2026-08-07 23:00:55] INFO: POST /api/categories 201 7.583 ms - - bytes
+[2026-08-07 23:00:55] INFO: POST /api/services 201 13.364 ms - - bytes
+[2026-08-07 23:00:55] INFO: POST /api/reviews 201 22.790 ms - - bytes
+[2026-08-07 23:03:38] INFO: POST /api/auth/register 201 272.842 ms - - bytes
+[2026-08-07 23:03:39] INFO: POST /api/auth/register 201 194.414 ms - - bytes
+[2026-08-07 23:03:39] INFO: POST /api/auth/login 200 196.208 ms - - bytes
+[2026-08-07 23:03:39] INFO: POST /api/auth/login 200 191.757 ms - - bytes
+[2026-08-07 23:03:39] INFO: POST /api/categories 201 10.429 ms - - bytes
+[2026-08-07 23:03:39] INFO: POST /api/services 201 31.913 ms - - bytes
+[2026-08-07 23:03:39] INFO: POST /api/reviews 201 41.448 ms - - bytes
+[2026-08-07 23:03:39] INFO: POST /api/auth/register 201 196.272 ms - - bytes
+[2026-08-07 23:03:39] INFO: POST /api/auth/register 201 191.546 ms - - bytes
+[2026-08-07 23:03:40] INFO: POST /api/auth/login 200 192.185 ms - - bytes
+[2026-08-07 23:03:40] INFO: POST /api/auth/login 200 193.809 ms - - bytes
+[2026-08-07 23:03:40] INFO: POST /api/categories 201 7.517 ms - - bytes
+[2026-08-07 23:03:40] INFO: POST /api/services 201 15.478 ms - - bytes
+[2026-08-07 23:03:40] INFO: POST /api/reviews 401 0.815 ms - - bytes
+[2026-08-07 23:03:40] INFO: POST /api/auth/register 201 194.506 ms - - bytes
+[2026-08-07 23:03:40] INFO: POST /api/auth/register 201 211.071 ms - - bytes
+[2026-08-07 23:03:41] INFO: POST /api/auth/login 200 191.098 ms - - bytes
+[2026-08-07 23:03:41] INFO: POST /api/auth/login 200 192.001 ms - - bytes
+[2026-08-07 23:03:41] INFO: POST /api/categories 201 8.359 ms - - bytes
+[2026-08-07 23:03:41] INFO: POST /api/services 201 21.172 ms - - bytes
+[2026-08-07 23:03:41] INFO: POST /api/reviews 404 7.192 ms - - bytes
+[2026-08-07 23:03:41] INFO: POST /api/auth/register 201 201.696 ms - - bytes
+[2026-08-07 23:03:41] INFO: POST /api/auth/register 201 191.876 ms - - bytes
+[2026-08-07 23:03:42] INFO: POST /api/auth/login 200 192.317 ms - - bytes
+[2026-08-07 23:03:42] INFO: POST /api/auth/login 200 198.022 ms - - bytes
+[2026-08-07 23:03:42] INFO: POST /api/categories 201 8.500 ms - - bytes
+[2026-08-07 23:03:42] INFO: POST /api/services 201 12.656 ms - - bytes
+[2026-08-07 23:03:42] ERROR: CastError: Cast to ObjectId failed for value "invalid-id" (type string) at path "_id" for model "Service"
+    at SchemaObjectId.cast (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\schema\objectId.js:252:11)
+    at SchemaObjectId.SchemaType.applySetters (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\schemaType.js:1373:12)
+    at SchemaObjectId.SchemaType.castForQuery (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\schemaType.js:1793:17)
+    at cast (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\cast.js:386:32)
+    at model.Query.Query.cast (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\query.js:5228:12)
+    at model.Query.Query._castConditions (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\query.js:2411:10)
+    at model.Query._findOne (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\query.js:2758:8)
+    at maybeTracedQueryExec (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\query.js:4801:83)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at createReview (D:\Project Sphere\Project-Sphere\backend\controllers\reviewController.js:7:29)
+[2026-08-07 23:03:42] INFO: POST /api/reviews 400 26.622 ms - - bytes
+[2026-08-07 23:03:42] INFO: POST /api/auth/register 201 195.760 ms - - bytes
+[2026-08-07 23:03:42] INFO: POST /api/auth/register 201 192.206 ms - - bytes
+[2026-08-07 23:03:43] INFO: POST /api/auth/login 200 193.025 ms - - bytes
+[2026-08-07 23:03:43] INFO: POST /api/auth/login 200 193.025 ms - - bytes
+[2026-08-07 23:03:43] INFO: POST /api/categories 201 7.872 ms - - bytes
+[2026-08-07 23:03:43] INFO: POST /api/services 201 10.013 ms - - bytes
+[2026-08-07 23:03:43] INFO: POST /api/reviews 201 22.170 ms - - bytes
+[2026-08-07 23:03:43] INFO: POST /api/reviews 400 9.833 ms - - bytes
+[2026-08-07 23:03:43] INFO: POST /api/auth/register 201 189.969 ms - - bytes
+[2026-08-07 23:03:43] INFO: POST /api/auth/register 201 192.812 ms - - bytes
+[2026-08-07 23:03:43] INFO: POST /api/auth/login 200 187.956 ms - - bytes
+[2026-08-07 23:03:44] INFO: POST /api/auth/login 200 192.637 ms - - bytes
+[2026-08-07 23:03:44] INFO: POST /api/categories 201 6.440 ms - - bytes
+[2026-08-07 23:03:44] INFO: POST /api/services 201 11.196 ms - - bytes
+[2026-08-07 23:03:44] ERROR: ValidationError: Review validation failed: rating: Path `rating` (10) is more than maximum allowed value (5).
+    at model.validate (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\document.js:2864:36)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at model.$__save (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\model.js:398:7)
+    at maybeTracedSave (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\model.js:674:7)
+    at Function.create (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\model.js:2762:5)
+    at createReview (D:\Project Sphere\Project-Sphere\backend\controllers\reviewController.js:31:20)
+[2026-08-07 23:03:44] INFO: POST /api/reviews 400 18.607 ms - - bytes
+[2026-08-07 23:03:44] INFO: POST /api/auth/register 201 194.348 ms - - bytes
+[2026-08-07 23:03:44] INFO: POST /api/auth/register 201 192.413 ms - - bytes
+[2026-08-07 23:03:44] INFO: POST /api/auth/login 200 195.078 ms - - bytes
+[2026-08-07 23:03:45] INFO: POST /api/auth/login 200 198.739 ms - - bytes
+[2026-08-07 23:03:45] INFO: POST /api/categories 201 9.747 ms - - bytes
+[2026-08-07 23:03:45] INFO: POST /api/services 201 12.243 ms - - bytes
+[2026-08-07 23:03:45] ERROR: ValidationError: Review validation failed: comment: Path `comment` is required.
+    at model.validate (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\document.js:2864:36)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at model.$__save (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\model.js:398:7)
+    at maybeTracedSave (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\model.js:674:7)
+    at Function.create (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\model.js:2762:5)
+    at createReview (D:\Project Sphere\Project-Sphere\backend\controllers\reviewController.js:31:20)
+[2026-08-07 23:03:45] INFO: POST /api/reviews 400 12.110 ms - - bytes
+[2026-08-07 23:03:45] INFO: POST /api/auth/register 201 200.178 ms - - bytes
+[2026-08-07 23:03:45] INFO: POST /api/auth/register 201 191.984 ms - - bytes
+[2026-08-07 23:03:45] INFO: POST /api/auth/login 200 190.446 ms - - bytes
+[2026-08-07 23:03:45] INFO: POST /api/auth/login 200 197.333 ms - - bytes
+[2026-08-07 23:03:46] INFO: POST /api/categories 201 5.609 ms - - bytes
+[2026-08-07 23:03:46] INFO: POST /api/services 201 12.396 ms - - bytes
+[2026-08-07 23:03:46] INFO: POST /api/reviews 201 24.287 ms - - bytes
+[2026-08-07 23:03:46] INFO: GET /api/reviews/service/6a7616fa0cbca95111aba117 200 22.812 ms - - bytes
+[2026-08-07 23:03:46] INFO: POST /api/auth/register 201 189.492 ms - - bytes
+[2026-08-07 23:03:46] INFO: POST /api/auth/register 201 190.598 ms - - bytes
+[2026-08-07 23:03:46] INFO: POST /api/auth/login 200 191.404 ms - - bytes
+[2026-08-07 23:03:46] INFO: POST /api/auth/login 200 194.126 ms - - bytes
+[2026-08-07 23:03:46] INFO: POST /api/categories 201 8.938 ms - - bytes
+[2026-08-07 23:03:46] INFO: POST /api/services 201 10.291 ms - - bytes
+[2026-08-07 23:03:46] INFO: GET /api/reviews/service/6a7616fa0cbca95111aba11c 200 5.110 ms - - bytes
+[2026-08-07 23:03:47] INFO: POST /api/auth/register 201 208.838 ms - - bytes
+[2026-08-07 23:03:47] INFO: POST /api/auth/register 201 206.087 ms - - bytes
+[2026-08-07 23:03:47] INFO: POST /api/auth/login 200 189.003 ms - - bytes
+[2026-08-07 23:03:47] INFO: POST /api/auth/login 200 198.948 ms - - bytes
+[2026-08-07 23:03:47] INFO: POST /api/categories 201 9.566 ms - - bytes
+[2026-08-07 23:03:47] INFO: POST /api/services 201 13.224 ms - - bytes
+[2026-08-07 23:03:47] ERROR: CastError: Cast to ObjectId failed for value "invalid-id" (type string) at path "service" for model "Review"
+    at SchemaObjectId.cast (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\schema\objectId.js:252:11)
+    at SchemaObjectId.SchemaType.applySetters (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\schemaType.js:1373:12)
+    at SchemaObjectId.SchemaType.castForQuery (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\schemaType.js:1793:17)
+    at cast (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\cast.js:386:32)
+    at model.Query.Query.cast (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\query.js:5228:12)
+    at model.Query.Query._castConditions (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\query.js:2411:10)
+    at model.Query._find (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\query.js:2438:8)
+    at maybeTracedQueryExec (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\query.js:4801:83)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at getServiceReviews (D:\Project Sphere\Project-Sphere\backend\controllers\reviewController.js:56:21)
+[2026-08-07 23:03:47] INFO: GET /api/reviews/service/invalid-id 400 4.940 ms - - bytes
+[2026-08-07 23:03:48] INFO: POST /api/auth/register 201 202.181 ms - - bytes
+[2026-08-07 23:03:48] INFO: POST /api/auth/register 201 200.472 ms - - bytes
+[2026-08-07 23:03:48] INFO: POST /api/auth/login 200 219.453 ms - - bytes
+[2026-08-07 23:03:48] INFO: POST /api/auth/login 200 248.678 ms - - bytes
+[2026-08-07 23:03:48] INFO: POST /api/categories 201 8.042 ms - - bytes
+[2026-08-07 23:03:48] INFO: POST /api/services 201 15.457 ms - - bytes
+[2026-08-07 23:03:48] INFO: GET /api/reviews/service/6a7616fc0cbca95111aba125 200 3.644 ms - - bytes
+[2026-08-07 23:03:49] INFO: POST /api/auth/register 201 211.836 ms - - bytes
+[2026-08-07 23:03:49] INFO: POST /api/auth/register 201 213.307 ms - - bytes
+[2026-08-07 23:03:49] INFO: POST /api/auth/login 200 190.465 ms - - bytes
+[2026-08-07 23:03:49] INFO: POST /api/auth/login 200 193.112 ms - - bytes
+[2026-08-07 23:03:49] INFO: POST /api/categories 201 7.772 ms - - bytes
+[2026-08-07 23:03:49] INFO: POST /api/services 201 17.538 ms - - bytes
+[2026-08-07 23:03:49] INFO: POST /api/reviews 201 25.456 ms - - bytes
+[2026-08-07 23:03:50] INFO: PUT /api/reviews/6a7616fd0cbca95111aba12a 200 39.187 ms - - bytes
+[2026-08-07 23:03:50] INFO: POST /api/auth/register 201 203.572 ms - - bytes
+[2026-08-07 23:03:50] INFO: POST /api/auth/register 201 210.435 ms - - bytes
+[2026-08-07 23:03:50] INFO: POST /api/auth/login 200 205.008 ms - - bytes
+[2026-08-07 23:03:50] INFO: POST /api/auth/login 200 199.305 ms - - bytes
+[2026-08-07 23:03:50] INFO: POST /api/categories 201 9.171 ms - - bytes
+[2026-08-07 23:03:50] INFO: POST /api/services 201 15.994 ms - - bytes
+[2026-08-07 23:03:51] INFO: POST /api/reviews 201 31.453 ms - - bytes
+[2026-08-07 23:03:51] INFO: PUT /api/reviews/6a7616fe0cbca95111aba12f 401 0.525 ms - - bytes
+[2026-08-07 23:03:51] INFO: POST /api/auth/register 201 203.001 ms - - bytes
+[2026-08-07 23:03:51] INFO: POST /api/auth/register 201 195.427 ms - - bytes
+[2026-08-07 23:03:51] INFO: POST /api/auth/login 200 188.068 ms - - bytes
+[2026-08-07 23:03:51] INFO: POST /api/auth/login 200 193.294 ms - - bytes
+[2026-08-07 23:03:51] INFO: POST /api/categories 201 5.599 ms - - bytes
+[2026-08-07 23:03:51] INFO: POST /api/services 201 14.541 ms - - bytes
+[2026-08-07 23:03:51] INFO: POST /api/reviews 201 19.355 ms - - bytes
+[2026-08-07 23:03:52] INFO: POST /api/auth/register 201 192.537 ms - - bytes
+[2026-08-07 23:03:52] INFO: POST /api/auth/login 200 186.518 ms - - bytes
+[2026-08-07 23:03:52] INFO: PUT /api/reviews/6a7616ff0cbca95111aba134 403 6.162 ms - - bytes
+[2026-08-07 23:03:52] INFO: POST /api/auth/register 201 195.151 ms - - bytes
+[2026-08-07 23:03:52] INFO: POST /api/auth/register 201 189.738 ms - - bytes
+[2026-08-07 23:03:53] INFO: POST /api/auth/login 200 189.703 ms - - bytes
+[2026-08-07 23:03:53] INFO: POST /api/auth/login 200 193.746 ms - - bytes
+[2026-08-07 23:03:53] INFO: POST /api/categories 201 7.177 ms - - bytes
+[2026-08-07 23:03:53] INFO: POST /api/services 201 10.357 ms - - bytes
+[2026-08-07 23:03:53] INFO: PUT /api/reviews/6a7617010cbca95111aba13a 404 5.061 ms - - bytes
+[2026-08-07 23:03:53] INFO: POST /api/auth/register 201 190.213 ms - - bytes
+[2026-08-07 23:03:53] INFO: POST /api/auth/register 201 190.400 ms - - bytes
+[2026-08-07 23:03:53] INFO: POST /api/auth/login 200 191.363 ms - - bytes
+[2026-08-07 23:03:54] INFO: POST /api/auth/login 200 189.156 ms - - bytes
+[2026-08-07 23:03:54] INFO: POST /api/categories 201 5.469 ms - - bytes
+[2026-08-07 23:03:54] INFO: POST /api/services 201 11.176 ms - - bytes
+[2026-08-07 23:03:54] ERROR: CastError: Cast to ObjectId failed for value "invalid-id" (type string) at path "_id" for model "Review"
+    at SchemaObjectId.cast (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\schema\objectId.js:252:11)
+    at SchemaObjectId.SchemaType.applySetters (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\schemaType.js:1373:12)
+    at SchemaObjectId.SchemaType.castForQuery (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\schemaType.js:1793:17)
+    at cast (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\cast.js:386:32)
+    at model.Query.Query.cast (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\query.js:5228:12)
+    at model.Query.Query._castConditions (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\query.js:2411:10)
+    at model.Query._findOne (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\query.js:2758:8)
+    at maybeTracedQueryExec (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\query.js:4801:83)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at updateReview (D:\Project Sphere\Project-Sphere\backend\controllers\reviewController.js:76:20)
+[2026-08-07 23:03:54] INFO: PUT /api/reviews/invalid-id 400 5.600 ms - - bytes
+[2026-08-07 23:03:54] INFO: POST /api/auth/register 201 190.927 ms - - bytes
+[2026-08-07 23:03:54] INFO: POST /api/auth/register 201 190.837 ms - - bytes
+[2026-08-07 23:03:54] INFO: POST /api/auth/login 200 190.036 ms - - bytes
+[2026-08-07 23:03:54] INFO: POST /api/auth/login 200 189.187 ms - - bytes
+[2026-08-07 23:03:54] INFO: POST /api/categories 201 5.617 ms - - bytes
+[2026-08-07 23:03:55] INFO: POST /api/services 201 17.842 ms - - bytes
+[2026-08-07 23:03:55] INFO: POST /api/reviews 201 19.683 ms - - bytes
+[2026-08-07 23:03:55] ERROR: ValidationError: Review validation failed: rating: Path `rating` (10) is more than maximum allowed value (5).
+    at model.validate (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\document.js:2864:36)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at model.$__save (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\model.js:398:7)
+    at maybeTracedSave (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\model.js:674:7)
+    at updateReview (D:\Project Sphere\Project-Sphere\backend\controllers\reviewController.js:95:5)
+[2026-08-07 23:03:55] INFO: PUT /api/reviews/6a7617030cbca95111aba143 400 7.694 ms - - bytes
+[2026-08-07 23:03:55] INFO: POST /api/auth/register 201 191.689 ms - - bytes
+[2026-08-07 23:03:55] INFO: POST /api/auth/register 201 189.469 ms - - bytes
+[2026-08-07 23:03:55] INFO: POST /api/auth/login 200 190.879 ms - - bytes
+[2026-08-07 23:03:55] INFO: POST /api/auth/login 200 188.973 ms - - bytes
+[2026-08-07 23:03:55] INFO: POST /api/categories 201 5.111 ms - - bytes
+[2026-08-07 23:03:55] INFO: POST /api/services 201 13.494 ms - - bytes
+[2026-08-07 23:03:55] INFO: POST /api/reviews 201 19.909 ms - - bytes
+[2026-08-07 23:12:20] INFO: POST /api/auth/register 201 265.890 ms - - bytes
+[2026-08-07 23:12:20] INFO: POST /api/auth/register 201 194.330 ms - - bytes
+[2026-08-07 23:12:20] INFO: POST /api/auth/login 200 198.119 ms - - bytes
+[2026-08-07 23:12:20] INFO: POST /api/auth/login 200 248.125 ms - - bytes
+[2026-08-07 23:12:20] INFO: POST /api/categories 201 16.400 ms - - bytes
+[2026-08-07 23:12:20] INFO: POST /api/services 201 46.633 ms - - bytes
+[2026-08-07 23:12:20] INFO: POST /api/reviews 201 59.073 ms - - bytes
+[2026-08-07 23:12:21] INFO: POST /api/auth/register 201 221.979 ms - - bytes
+[2026-08-07 23:12:21] INFO: POST /api/auth/register 201 195.924 ms - - bytes
+[2026-08-07 23:12:21] INFO: POST /api/auth/login 200 190.646 ms - - bytes
+[2026-08-07 23:12:21] INFO: POST /api/auth/login 200 190.564 ms - - bytes
+[2026-08-07 23:12:21] INFO: POST /api/categories 201 5.899 ms - - bytes
+[2026-08-07 23:12:21] INFO: POST /api/services 201 21.228 ms - - bytes
+[2026-08-07 23:12:21] INFO: POST /api/reviews 401 1.151 ms - - bytes
+[2026-08-07 23:12:22] INFO: POST /api/auth/register 201 192.004 ms - - bytes
+[2026-08-07 23:12:22] INFO: POST /api/auth/register 201 190.774 ms - - bytes
+[2026-08-07 23:12:22] INFO: POST /api/auth/login 200 189.966 ms - - bytes
+[2026-08-07 23:12:22] INFO: POST /api/auth/login 200 187.593 ms - - bytes
+[2026-08-07 23:12:22] INFO: POST /api/categories 201 6.904 ms - - bytes
+[2026-08-07 23:12:22] INFO: POST /api/services 201 14.376 ms - - bytes
+[2026-08-07 23:12:22] INFO: POST /api/reviews 404 6.842 ms - - bytes
+[2026-08-07 23:12:23] INFO: POST /api/auth/register 201 220.348 ms - - bytes
+[2026-08-07 23:12:23] INFO: POST /api/auth/register 201 214.198 ms - - bytes
+[2026-08-07 23:12:23] INFO: POST /api/auth/login 200 209.582 ms - - bytes
+[2026-08-07 23:12:23] INFO: POST /api/auth/login 200 196.773 ms - - bytes
+[2026-08-07 23:12:23] INFO: POST /api/categories 201 6.920 ms - - bytes
+[2026-08-07 23:12:23] INFO: POST /api/services 201 15.282 ms - - bytes
+[2026-08-07 23:12:23] ERROR: CastError: Cast to ObjectId failed for value "invalid-id" (type string) at path "_id" for model "Service"
+    at SchemaObjectId.cast (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\schema\objectId.js:252:11)
+    at SchemaObjectId.SchemaType.applySetters (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\schemaType.js:1373:12)
+    at SchemaObjectId.SchemaType.castForQuery (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\schemaType.js:1793:17)
+    at cast (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\cast.js:386:32)
+    at model.Query.Query.cast (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\query.js:5228:12)
+    at model.Query.Query._castConditions (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\query.js:2411:10)
+    at model.Query._findOne (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\query.js:2758:8)
+    at maybeTracedQueryExec (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\query.js:4801:83)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at createReview (D:\Project Sphere\Project-Sphere\backend\controllers\reviewController.js:7:29)
+[2026-08-07 23:12:23] INFO: POST /api/reviews 400 20.758 ms - - bytes
+[2026-08-07 23:12:24] INFO: POST /api/auth/register 201 197.341 ms - - bytes
+[2026-08-07 23:12:24] INFO: POST /api/auth/register 201 194.926 ms - - bytes
+[2026-08-07 23:12:24] INFO: POST /api/auth/login 200 192.707 ms - - bytes
+[2026-08-07 23:12:24] INFO: POST /api/auth/login 200 191.717 ms - - bytes
+[2026-08-07 23:12:24] INFO: POST /api/categories 201 8.912 ms - - bytes
+[2026-08-07 23:12:24] INFO: POST /api/services 201 12.678 ms - - bytes
+[2026-08-07 23:12:24] INFO: POST /api/reviews 201 25.253 ms - - bytes
+[2026-08-07 23:12:24] INFO: POST /api/reviews 400 11.382 ms - - bytes
+[2026-08-07 23:12:25] INFO: POST /api/auth/register 201 216.864 ms - - bytes
+[2026-08-07 23:12:25] INFO: POST /api/auth/register 201 192.946 ms - - bytes
+[2026-08-07 23:12:25] INFO: POST /api/auth/login 200 191.431 ms - - bytes
+[2026-08-07 23:12:25] INFO: POST /api/auth/login 200 189.409 ms - - bytes
+[2026-08-07 23:12:25] INFO: POST /api/categories 201 6.812 ms - - bytes
+[2026-08-07 23:12:25] INFO: POST /api/services 201 11.383 ms - - bytes
+[2026-08-07 23:12:25] ERROR: ValidationError: Review validation failed: rating: Path `rating` (10) is more than maximum allowed value (5).
+    at model.validate (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\document.js:2864:36)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at model.$__save (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\model.js:398:7)
+    at maybeTracedSave (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\model.js:674:7)
+    at Function.create (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\model.js:2762:5)
+    at createReview (D:\Project Sphere\Project-Sphere\backend\controllers\reviewController.js:31:20)
+[2026-08-07 23:12:25] INFO: POST /api/reviews 400 19.014 ms - - bytes
+[2026-08-07 23:12:25] INFO: POST /api/auth/register 201 190.581 ms - - bytes
+[2026-08-07 23:12:26] INFO: POST /api/auth/register 201 191.978 ms - - bytes
+[2026-08-07 23:12:26] INFO: POST /api/auth/login 200 187.472 ms - - bytes
+[2026-08-07 23:12:26] INFO: POST /api/auth/login 200 188.588 ms - - bytes
+[2026-08-07 23:12:26] INFO: POST /api/categories 201 5.517 ms - - bytes
+[2026-08-07 23:12:26] INFO: POST /api/services 201 9.547 ms - - bytes
+[2026-08-07 23:12:26] ERROR: ValidationError: Review validation failed: comment: Path `comment` is required.
+    at model.validate (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\document.js:2864:36)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at model.$__save (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\model.js:398:7)
+    at maybeTracedSave (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\model.js:674:7)
+    at Function.create (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\model.js:2762:5)
+    at createReview (D:\Project Sphere\Project-Sphere\backend\controllers\reviewController.js:31:20)
+[2026-08-07 23:12:26] INFO: POST /api/reviews 400 12.809 ms - - bytes
+[2026-08-07 23:12:26] INFO: POST /api/auth/register 201 189.952 ms - - bytes
+[2026-08-07 23:12:27] INFO: POST /api/auth/register 201 190.197 ms - - bytes
+[2026-08-07 23:12:27] INFO: POST /api/auth/login 200 191.275 ms - - bytes
+[2026-08-07 23:12:27] INFO: POST /api/auth/login 200 192.246 ms - - bytes
+[2026-08-07 23:12:27] INFO: POST /api/categories 201 6.212 ms - - bytes
+[2026-08-07 23:12:27] INFO: POST /api/services 201 10.272 ms - - bytes
+[2026-08-07 23:12:27] INFO: POST /api/reviews 201 24.009 ms - - bytes
+[2026-08-07 23:12:27] INFO: GET /api/reviews/service/6a761903dc9e81459664ddd3 200 22.064 ms - - bytes
+[2026-08-07 23:12:27] INFO: POST /api/auth/register 201 191.338 ms - - bytes
+[2026-08-07 23:12:27] INFO: POST /api/auth/register 201 189.568 ms - - bytes
+[2026-08-07 23:12:28] INFO: POST /api/auth/login 200 192.411 ms - - bytes
+[2026-08-07 23:12:28] INFO: POST /api/auth/login 200 191.783 ms - - bytes
+[2026-08-07 23:12:28] INFO: POST /api/categories 201 6.971 ms - - bytes
+[2026-08-07 23:12:28] INFO: POST /api/services 201 11.500 ms - - bytes
+[2026-08-07 23:12:28] INFO: GET /api/reviews/service/6a761904dc9e81459664ddd8 200 5.971 ms - - bytes
+[2026-08-07 23:12:28] INFO: POST /api/auth/register 201 189.065 ms - - bytes
+[2026-08-07 23:12:28] INFO: POST /api/auth/register 201 192.934 ms - - bytes
+[2026-08-07 23:12:29] INFO: POST /api/auth/login 200 189.383 ms - - bytes
+[2026-08-07 23:12:29] INFO: POST /api/auth/login 200 193.184 ms - - bytes
+[2026-08-07 23:12:29] INFO: POST /api/categories 201 9.987 ms - - bytes
+[2026-08-07 23:12:29] INFO: POST /api/services 201 11.506 ms - - bytes
+[2026-08-07 23:12:29] ERROR: CastError: Cast to ObjectId failed for value "invalid-id" (type string) at path "service" for model "Review"
+    at SchemaObjectId.cast (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\schema\objectId.js:252:11)
+    at SchemaObjectId.SchemaType.applySetters (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\schemaType.js:1373:12)
+    at SchemaObjectId.SchemaType.castForQuery (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\schemaType.js:1793:17)
+    at cast (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\cast.js:386:32)
+    at model.Query.Query.cast (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\query.js:5228:12)
+    at model.Query.Query._castConditions (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\query.js:2411:10)
+    at model.Query._find (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\query.js:2438:8)
+    at maybeTracedQueryExec (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\query.js:4801:83)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at getServiceReviews (D:\Project Sphere\Project-Sphere\backend\controllers\reviewController.js:56:21)
+[2026-08-07 23:12:29] INFO: GET /api/reviews/service/invalid-id 400 4.369 ms - - bytes
+[2026-08-07 23:12:29] INFO: POST /api/auth/register 201 207.415 ms - - bytes
+[2026-08-07 23:12:29] INFO: POST /api/auth/register 201 222.789 ms - - bytes
+[2026-08-07 23:12:30] INFO: POST /api/auth/login 200 217.014 ms - - bytes
+[2026-08-07 23:12:30] INFO: POST /api/auth/login 200 201.302 ms - - bytes
+[2026-08-07 23:12:30] INFO: POST /api/categories 201 7.481 ms - - bytes
+[2026-08-07 23:12:30] INFO: POST /api/services 201 10.723 ms - - bytes
+[2026-08-07 23:12:30] INFO: GET /api/reviews/service/6a761906dc9e81459664dde1 200 4.008 ms - - bytes
+[2026-08-07 23:12:30] INFO: POST /api/auth/register 201 195.800 ms - - bytes
+[2026-08-07 23:12:30] INFO: POST /api/auth/register 201 200.709 ms - - bytes
+[2026-08-07 23:12:31] INFO: POST /api/auth/login 200 200.680 ms - - bytes
+[2026-08-07 23:12:31] INFO: POST /api/auth/login 200 199.696 ms - - bytes
+[2026-08-07 23:12:31] INFO: POST /api/categories 201 5.789 ms - - bytes
+[2026-08-07 23:12:31] INFO: POST /api/services 201 15.286 ms - - bytes
+[2026-08-07 23:12:31] INFO: POST /api/reviews 201 33.203 ms - - bytes
+[2026-08-07 23:12:31] INFO: PUT /api/reviews/6a761907dc9e81459664dde6 200 22.433 ms - - bytes
+[2026-08-07 23:12:31] INFO: POST /api/auth/register 201 198.381 ms - - bytes
+[2026-08-07 23:12:31] INFO: POST /api/auth/register 201 191.439 ms - - bytes
+[2026-08-07 23:12:32] INFO: POST /api/auth/login 200 194.938 ms - - bytes
+[2026-08-07 23:12:32] INFO: POST /api/auth/login 200 192.712 ms - - bytes
+[2026-08-07 23:12:32] INFO: POST /api/categories 201 5.361 ms - - bytes
+[2026-08-07 23:12:32] INFO: POST /api/services 201 12.646 ms - - bytes
+[2026-08-07 23:12:32] INFO: POST /api/reviews 201 21.892 ms - - bytes
+[2026-08-07 23:12:32] INFO: PUT /api/reviews/6a761908dc9e81459664ddeb 401 0.418 ms - - bytes
+[2026-08-07 23:12:32] INFO: POST /api/auth/register 201 200.297 ms - - bytes
+[2026-08-07 23:12:32] INFO: POST /api/auth/register 201 198.229 ms - - bytes
+[2026-08-07 23:12:32] INFO: POST /api/auth/login 200 192.425 ms - - bytes
+[2026-08-07 23:12:33] INFO: POST /api/auth/login 200 187.848 ms - - bytes
+[2026-08-07 23:12:33] INFO: POST /api/categories 201 5.364 ms - - bytes
+[2026-08-07 23:12:33] INFO: POST /api/services 201 10.786 ms - - bytes
+[2026-08-07 23:12:33] INFO: POST /api/reviews 201 23.210 ms - - bytes
+[2026-08-07 23:12:33] INFO: POST /api/auth/register 201 198.369 ms - - bytes
+[2026-08-07 23:12:33] INFO: POST /api/auth/login 200 191.130 ms - - bytes
+[2026-08-07 23:12:33] INFO: PUT /api/reviews/6a761909dc9e81459664ddf0 403 10.600 ms - - bytes
+[2026-08-07 23:12:33] INFO: POST /api/auth/register 201 188.528 ms - - bytes
+[2026-08-07 23:12:34] INFO: POST /api/auth/register 201 194.762 ms - - bytes
+[2026-08-07 23:12:34] INFO: POST /api/auth/login 200 189.774 ms - - bytes
+[2026-08-07 23:12:34] INFO: POST /api/auth/login 200 195.675 ms - - bytes
+[2026-08-07 23:12:34] INFO: POST /api/categories 201 11.831 ms - - bytes
+[2026-08-07 23:12:34] INFO: POST /api/services 201 20.077 ms - - bytes
+[2026-08-07 23:12:34] INFO: PUT /api/reviews/6a76190adc9e81459664ddf6 404 7.462 ms - - bytes
+[2026-08-07 23:12:34] INFO: POST /api/auth/register 201 193.685 ms - - bytes
+[2026-08-07 23:12:35] INFO: POST /api/auth/register 201 206.324 ms - - bytes
+[2026-08-07 23:12:35] INFO: POST /api/auth/login 200 187.802 ms - - bytes
+[2026-08-07 23:12:35] INFO: POST /api/auth/login 200 190.635 ms - - bytes
+[2026-08-07 23:12:35] INFO: POST /api/categories 201 6.153 ms - - bytes
+[2026-08-07 23:12:35] INFO: POST /api/services 201 10.482 ms - - bytes
+[2026-08-07 23:12:35] ERROR: CastError: Cast to ObjectId failed for value "invalid-id" (type string) at path "_id" for model "Review"
+    at SchemaObjectId.cast (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\schema\objectId.js:252:11)
+    at SchemaObjectId.SchemaType.applySetters (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\schemaType.js:1373:12)
+    at SchemaObjectId.SchemaType.castForQuery (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\schemaType.js:1793:17)
+    at cast (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\cast.js:386:32)
+    at model.Query.Query.cast (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\query.js:5228:12)
+    at model.Query.Query._castConditions (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\query.js:2411:10)
+    at model.Query._findOne (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\query.js:2758:8)
+    at maybeTracedQueryExec (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\query.js:4801:83)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at updateReview (D:\Project Sphere\Project-Sphere\backend\controllers\reviewController.js:76:20)
+[2026-08-07 23:12:35] INFO: PUT /api/reviews/invalid-id 400 4.485 ms - - bytes
+[2026-08-07 23:12:35] INFO: POST /api/auth/register 201 203.564 ms - - bytes
+[2026-08-07 23:12:35] INFO: POST /api/auth/register 201 223.470 ms - - bytes
+[2026-08-07 23:12:36] INFO: POST /api/auth/login 200 187.136 ms - - bytes
+[2026-08-07 23:12:36] INFO: POST /api/auth/login 200 189.129 ms - - bytes
+[2026-08-07 23:12:36] INFO: POST /api/categories 201 5.560 ms - - bytes
+[2026-08-07 23:12:36] INFO: POST /api/services 201 9.384 ms - - bytes
+[2026-08-07 23:12:36] INFO: POST /api/reviews 201 19.700 ms - - bytes
+[2026-08-07 23:12:36] ERROR: ValidationError: Review validation failed: rating: Path `rating` (10) is more than maximum allowed value (5).
+    at model.validate (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\document.js:2864:36)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at model.$__save (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\model.js:398:7)
+    at maybeTracedSave (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\model.js:674:7)
+    at updateReview (D:\Project Sphere\Project-Sphere\backend\controllers\reviewController.js:95:5)
+[2026-08-07 23:12:36] INFO: PUT /api/reviews/6a76190cdc9e81459664ddff 400 7.870 ms - - bytes
+[2026-08-07 23:12:36] INFO: POST /api/auth/register 201 197.232 ms - - bytes
+[2026-08-07 23:12:36] INFO: POST /api/auth/register 201 189.334 ms - - bytes
+[2026-08-07 23:12:37] INFO: POST /api/auth/login 200 189.834 ms - - bytes
+[2026-08-07 23:12:37] INFO: POST /api/auth/login 200 189.871 ms - - bytes
+[2026-08-07 23:12:37] INFO: POST /api/categories 201 6.722 ms - - bytes
+[2026-08-07 23:12:37] INFO: POST /api/services 201 10.540 ms - - bytes
+[2026-08-07 23:12:37] INFO: POST /api/reviews 201 18.878 ms - - bytes
+[2026-08-07 23:12:37] INFO: DELETE /api/reviews/6a76190ddc9e81459664de04 200 18.146 ms - - bytes
+[2026-08-07 23:12:37] INFO: POST /api/auth/register 201 204.444 ms - - bytes
+[2026-08-07 23:12:37] INFO: POST /api/auth/register 201 191.394 ms - - bytes
+[2026-08-07 23:12:38] INFO: POST /api/auth/login 200 188.860 ms - - bytes
+[2026-08-07 23:12:38] INFO: POST /api/auth/login 200 191.822 ms - - bytes
+[2026-08-07 23:12:38] INFO: POST /api/categories 201 6.356 ms - - bytes
+[2026-08-07 23:12:38] INFO: POST /api/services 201 11.588 ms - - bytes
+[2026-08-07 23:12:38] INFO: POST /api/reviews 201 22.224 ms - - bytes
+[2026-08-07 23:12:38] INFO: DELETE /api/reviews/6a76190edc9e81459664de09 200 14.540 ms - - bytes
+[2026-08-07 23:12:38] INFO: POST /api/auth/register 201 191.992 ms - - bytes
+[2026-08-07 23:12:38] INFO: POST /api/auth/register 201 193.702 ms - - bytes
+[2026-08-07 23:12:38] INFO: POST /api/auth/login 200 187.020 ms - - bytes
+[2026-08-07 23:12:39] INFO: POST /api/auth/login 200 189.224 ms - - bytes
+[2026-08-07 23:12:39] INFO: POST /api/categories 201 5.385 ms - - bytes
+[2026-08-07 23:12:39] INFO: POST /api/services 201 12.214 ms - - bytes
+[2026-08-07 23:12:39] INFO: POST /api/reviews 201 35.561 ms - - bytes
+[2026-08-07 23:12:39] INFO: DELETE /api/reviews/6a76190fdc9e81459664de0e 401 1.390 ms - - bytes
+[2026-08-07 23:12:39] INFO: POST /api/auth/register 201 189.311 ms - - bytes
+[2026-08-07 23:12:39] INFO: POST /api/auth/register 201 190.181 ms - - bytes
+[2026-08-07 23:12:39] INFO: POST /api/auth/login 200 189.111 ms - - bytes
+[2026-08-07 23:12:40] INFO: POST /api/auth/login 200 188.132 ms - - bytes
+[2026-08-07 23:12:40] INFO: POST /api/categories 201 4.985 ms - - bytes
+[2026-08-07 23:12:40] INFO: POST /api/services 201 9.472 ms - - bytes
+[2026-08-07 23:12:40] INFO: POST /api/reviews 201 18.504 ms - - bytes
+[2026-08-07 23:12:40] INFO: POST /api/auth/register 201 190.184 ms - - bytes
+[2026-08-07 23:12:40] INFO: POST /api/auth/login 200 188.459 ms - - bytes
+[2026-08-07 23:12:40] INFO: DELETE /api/reviews/6a761910dc9e81459664de13 403 5.825 ms - - bytes
+[2026-08-07 23:12:40] INFO: POST /api/auth/register 201 188.708 ms - - bytes
+[2026-08-07 23:12:40] INFO: POST /api/auth/register 201 191.440 ms - - bytes
+[2026-08-07 23:12:41] INFO: POST /api/auth/login 200 190.510 ms - - bytes
+[2026-08-07 23:12:41] INFO: POST /api/auth/login 200 188.428 ms - - bytes
+[2026-08-07 23:12:41] INFO: POST /api/categories 201 7.204 ms - - bytes
+[2026-08-07 23:12:41] INFO: POST /api/services 201 13.878 ms - - bytes
+[2026-08-07 23:12:41] INFO: DELETE /api/reviews/6a761911dc9e81459664de19 404 5.016 ms - - bytes
+[2026-08-07 23:12:41] INFO: POST /api/auth/register 201 191.943 ms - - bytes
+[2026-08-07 23:12:41] INFO: POST /api/auth/register 201 191.678 ms - - bytes
+[2026-08-07 23:12:42] INFO: POST /api/auth/login 200 189.944 ms - - bytes
+[2026-08-07 23:12:42] INFO: POST /api/auth/login 200 192.096 ms - - bytes
+[2026-08-07 23:12:42] INFO: POST /api/categories 201 5.214 ms - - bytes
+[2026-08-07 23:12:42] INFO: POST /api/services 201 14.339 ms - - bytes
+[2026-08-07 23:12:42] ERROR: CastError: Cast to ObjectId failed for value "invalid-id" (type string) at path "_id" for model "Review"
+    at SchemaObjectId.cast (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\schema\objectId.js:252:11)
+    at SchemaObjectId.SchemaType.applySetters (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\schemaType.js:1373:12)
+    at SchemaObjectId.SchemaType.castForQuery (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\schemaType.js:1793:17)
+    at cast (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\cast.js:386:32)
+    at model.Query.Query.cast (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\query.js:5228:12)
+    at model.Query.Query._castConditions (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\query.js:2411:10)
+    at model.Query._findOne (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\query.js:2758:8)
+    at maybeTracedQueryExec (D:\Project Sphere\Project-Sphere\backend\node_modules\mongoose\lib\query.js:4801:83)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at deleteReview (D:\Project Sphere\Project-Sphere\backend\controllers\reviewController.js:111:20)
+[2026-08-07 23:12:42] INFO: DELETE /api/reviews/invalid-id 400 8.944 ms - - bytes
