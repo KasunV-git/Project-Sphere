@@ -1,32 +1,40 @@
 const UsageHistory = require("../models/usageHistory");
-
+const Service = require("../models/service");
 // Record service usage
 const recordUsage = async (req, res, next) => {
   try {
+    const existingService = await Service.findById(req.body.service)
+      .select("_id")
+      .lean();
 
+    if (!existingService) {
+      return res.status(404).json({
+        success: false,
+        message: "Service not found",
+      });
+    }
+
+    //record usage
     const usage = await UsageHistory.create({
       user: req.user.id,
-      service: req.body.service
+      service: req.body.service,
     });
 
     res.status(201).json({
       success: true,
-      usage
+      usage,
     });
-
+    
   } catch (error) {
-
     next(error);
-
   }
 };
 
 // Get logged in user's history
 const getMyHistory = async (req, res, next) => {
   try {
-
     const history = await UsageHistory.find({
-      user: req.user.id
+      user: req.user.id,
     })
       .populate("service", "name slug icon averageRating")
       .sort({ usedAt: -1 })
@@ -35,20 +43,16 @@ const getMyHistory = async (req, res, next) => {
     res.status(200).json({
       success: true,
       count: history.length,
-      history
+      history,
     });
-
   } catch (error) {
-
     next(error);
-
   }
 };
 
 // Admin - Get all history
 const getAllHistory = async (req, res, next) => {
   try {
-
     const history = await UsageHistory.find()
       .populate("user", "name email role")
       .populate("service", "name slug")
@@ -58,40 +62,31 @@ const getAllHistory = async (req, res, next) => {
     res.status(200).json({
       success: true,
       count: history.length,
-      history
+      history,
     });
-
   } catch (error) {
-
     next(error);
-
   }
 };
 
 // Admin - Delete usage
 const deleteHistory = async (req, res, next) => {
   try {
-
-    const history = await UsageHistory.findByIdAndDelete(
-      req.params.id
-    );
+    const history = await UsageHistory.findByIdAndDelete(req.params.id);
 
     if (!history) {
       return res.status(404).json({
         success: false,
-        message: "History not found"
+        message: "History not found",
       });
     }
 
     res.status(200).json({
       success: true,
-      message: "History deleted"
+      message: "History deleted",
     });
-
   } catch (error) {
-
     next(error);
-
   }
 };
 
@@ -99,5 +94,5 @@ module.exports = {
   recordUsage,
   getMyHistory,
   getAllHistory,
-  deleteHistory
+  deleteHistory,
 };
