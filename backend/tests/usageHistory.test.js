@@ -107,4 +107,60 @@ describe("POST /api/usage", () => {
     expect(response.body.usage.user).toBe(userId);
     expect(response.body.usage.service).toBe(serviceId);
   });
+
+  test("should reject request without token", async () => {
+    const response = await request(app).post("/api/usage").send({
+      service: serviceId,
+    });
+
+    expect(response.statusCode).toBe(401);
+  });
+
+  test("should return 404 for non-existing service", async () => {
+    const response = await request(app)
+      .post("/api/usage")
+      .set("Authorization", `Bearer ${userToken}`)
+      .send({
+        service: new mongoose.Types.ObjectId(),
+      });
+
+    expect(response.statusCode).toBe(404);
+    expect(response.body.success).toBe(false);
+    expect(response.body.message).toBe("Service not found");
+  });
+
+  test("should reject invalid service ObjectId", async () => {
+    const response = await request(app)
+      .post("/api/usage")
+      .set("Authorization", `Bearer ${userToken}`)
+      .send({
+        service: "invalid-id",
+      });
+
+    expect(response.statusCode).toBe(400);
+  });
+});
+
+describe("GET /api/usage/me", () => {
+  test("user should get own usage history", async () => {
+    // Record usage
+    await request(app)
+      .post("/api/usage")
+      .set("Authorization", `Bearer ${userToken}`)
+      .send({
+        service: serviceId,
+      });
+
+    const response = await request(app)
+      .get("/api/usage/me")
+      .set("Authorization", `Bearer ${userToken}`);
+
+    expect(response.statusCode).toBe(200);
+    expect(response.body.success).toBe(true);
+    expect(response.body.count).toBe(1);
+    expect(response.body.history).toHaveLength(1);
+
+    expect(response.body.history[0].service._id).toBe(serviceId);
+    expect(response.body.history[0].service.name).toBe("GPA Calculator");
+  });
 });
