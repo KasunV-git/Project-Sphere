@@ -248,3 +248,62 @@ describe("GET /api/analytics/most-favorited", () => {
     expect(response.body.favorites).toEqual([]);
   });
 });
+
+describe("GET /api/analytics/usage-trends", () => {
+  test("admin should get usage trends", async () => {
+    // Record usage
+    await request(app)
+      .post("/api/usage")
+      .set("Authorization", `Bearer ${userToken}`)
+      .send({
+        service: serviceId,
+      });
+
+    await request(app)
+      .post("/api/usage")
+      .set("Authorization", `Bearer ${userToken}`)
+      .send({
+        service: serviceId,
+      });
+
+    const response = await request(app)
+      .get("/api/analytics/usage-trends")
+      .set("Authorization", `Bearer ${adminToken}`);
+
+    expect(response.statusCode).toBe(200);
+    expect(response.body.success).toBe(true);
+    expect(response.body.trends).toBeDefined();
+    expect(Array.isArray(response.body.trends)).toBe(true);
+    expect(response.body.trends.length).toBe(1);
+
+    expect(response.body.trends[0]).toHaveProperty("_id");
+    expect(response.body.trends[0]).toHaveProperty("totalUsage");
+    expect(response.body.trends[0].totalUsage).toBe(2);
+  });
+
+  test("should reject non-admin user", async () => {
+    const response = await request(app)
+      .get("/api/analytics/usage-trends")
+      .set("Authorization", `Bearer ${userToken}`);
+
+    expect(response.statusCode).toBe(403);
+    expect(response.body.success).toBe(false);
+  });
+
+  test("should reject request without token", async () => {
+    const response = await request(app).get("/api/analytics/usage-trends");
+
+    expect(response.statusCode).toBe(401);
+    expect(response.body.success).toBe(false);
+  });
+
+  test("should return empty trends when there is no usage", async () => {
+    const response = await request(app)
+      .get("/api/analytics/usage-trends")
+      .set("Authorization", `Bearer ${adminToken}`);
+
+    expect(response.statusCode).toBe(200);
+    expect(response.body.success).toBe(true);
+    expect(response.body.trends).toEqual([]);
+  });
+});
