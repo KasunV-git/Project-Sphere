@@ -2,6 +2,7 @@ const request = require("supertest");
 const mongoose = require("mongoose");
 
 const app = require("../app");
+const Favorite = require("../models/favorite");
 
 let userToken;
 let adminToken;
@@ -81,6 +82,13 @@ describe("Favorite API", () => {
       expect(response.statusCode).toBe(201);
       expect(response.body.success).toBe(true);
       expect(response.body.favorite).toBeDefined();
+      expect(response.body.favorite.service).toBe(serviceId);
+
+      const favorite = await Favorite.findOne({
+        service: serviceId,
+      });
+
+      expect(favorite).not.toBeNull();
     });
 
     test("should reject request without token", async () => {
@@ -104,6 +112,7 @@ describe("Favorite API", () => {
 
       expect(response.statusCode).toBe(404);
       expect(response.body.success).toBe(false);
+      expect(response.body.message).toBe("Service not found");
     });
 
     test("should reject invalid ObjectId", async () => {
@@ -161,7 +170,7 @@ describe("Favorite API", () => {
       expect(response.body.favorites[0].service.name).toBe("GPA Calculator");
     });
 
-    test("should return empty favorites", async () => {
+    test("should only return current user's favorites", async () => {
       // Create another user
       await request(app).post("/api/auth/register").send({
         name: "User2",
@@ -174,6 +183,15 @@ describe("Favorite API", () => {
         password: "123456",
       });
 
+      // Original user favorites the service
+      await request(app)
+        .post("/api/favorites")
+        .set("Authorization", `Bearer ${userToken}`)
+        .send({
+          service: serviceId,
+        });
+
+      // User2 should not see User1's favorites
       const response = await request(app)
         .get("/api/favorites")
         .set("Authorization", `Bearer ${login.body.token}`);
@@ -208,6 +226,7 @@ describe("Favorite API", () => {
 
       expect(response.statusCode).toBe(200);
       expect(response.body.success).toBe(true);
+      expect(response.body.message).toBe("Favorite removed");
     });
 
     test("should return 404 when favorite not found", async () => {
@@ -220,6 +239,7 @@ describe("Favorite API", () => {
         .set("Authorization", `Bearer ${userToken}`);
 
       expect(response.statusCode).toBe(404);
+      expect(response.body.message).toBe("Favorite not found");
     });
 
     test("should reject request without token", async () => {

@@ -181,3 +181,107 @@ describe("GET /api/usage/me", () => {
     expect(response.statusCode).toBe(401);
   });
 });
+
+describe("GET /api/usage", () => {
+  test("admin should get all usage history", async () => {
+    await request(app)
+      .post("/api/usage")
+      .set("Authorization", `Bearer ${userToken}`)
+      .send({
+        service: serviceId,
+      });
+
+    const response = await request(app)
+      .get("/api/usage")
+      .set("Authorization", `Bearer ${adminToken}`);
+
+    expect(response.statusCode).toBe(200);
+    expect(response.body.success).toBe(true);
+    expect(response.body.count).toBe(1);
+    expect(response.body.history).toHaveLength(1);
+
+    expect(response.body.history[0].user.email).toBe("user@test.com");
+    expect(response.body.history[0].service.name).toBe("GPA Calculator");
+  });
+
+  test("user should not access all usage history", async () => {
+    const response = await request(app)
+      .get("/api/usage")
+      .set("Authorization", `Bearer ${userToken}`);
+
+    expect(response.statusCode).toBe(403);
+  });
+
+  test("should reject request without token", async () => {
+    const response = await request(app).get("/api/usage");
+
+    expect(response.statusCode).toBe(401);
+  });
+});
+
+describe("DELETE /api/usage/:id", () => {
+  test("admin should delete usage history", async () => {
+    const usage = await request(app)
+      .post("/api/usage")
+      .set("Authorization", `Bearer ${userToken}`)
+      .send({
+        service: serviceId,
+      });
+
+    const response = await request(app)
+      .delete(`/api/usage/${usage.body.usage._id}`)
+      .set("Authorization", `Bearer ${adminToken}`);
+
+    expect(response.statusCode).toBe(200);
+    expect(response.body.success).toBe(true);
+    expect(response.body.message).toBe("History deleted");
+  });
+
+  test("user should not delete usage history", async () => {
+    const usage = await request(app)
+      .post("/api/usage")
+      .set("Authorization", `Bearer ${userToken}`)
+      .send({
+        service: serviceId,
+      });
+
+    const response = await request(app)
+      .delete(`/api/usage/${usage.body.usage._id}`)
+      .set("Authorization", `Bearer ${userToken}`);
+
+    expect(response.statusCode).toBe(403);
+  });
+
+  test("should reject request without token", async () => {
+    const usage = await request(app)
+      .post("/api/usage")
+      .set("Authorization", `Bearer ${userToken}`)
+      .send({
+        service: serviceId,
+      });
+
+    const response = await request(app).delete(
+      `/api/usage/${usage.body.usage._id}`,
+    );
+
+    expect(response.statusCode).toBe(401);
+  });
+
+  test("should return 404 when history not found", async () => {
+    const response = await request(app)
+      .delete(`/api/usage/${new mongoose.Types.ObjectId()}`)
+      .set("Authorization", `Bearer ${adminToken}`);
+
+    expect(response.statusCode).toBe(404);
+    expect(response.body.success).toBe(false);
+    expect(response.body.message).toBe("History not found");
+  });
+
+  test("should reject invalid history ObjectId", async () => {
+    const response = await request(app)
+      .delete("/api/usage/invalid-id")
+      .set("Authorization", `Bearer ${adminToken}`);
+
+    expect(response.statusCode).toBe(400);
+  });
+});
