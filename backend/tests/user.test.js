@@ -101,3 +101,56 @@ describe("GET /api/users", () => {
     });
   });
 });
+
+describe("GET /api/users/:id", () => {
+  test("admin should get user by ID", async () => {
+    const response = await request(app)
+      .get(`/api/users/${userId}`)
+      .set("Authorization", `Bearer ${adminToken}`);
+
+    expect(response.statusCode).toBe(200);
+    expect(response.body.success).toBe(true);
+    expect(response.body.user).toBeDefined();
+    expect(response.body.user._id).toBe(userId);
+    expect(response.body.user.name).toBe("User");
+    expect(response.body.user.email).toBe("user@test.com");
+  });
+
+  test("should return 404 for non-existing user", async () => {
+    const fakeId = new mongoose.Types.ObjectId();
+
+    const response = await request(app)
+      .get(`/api/users/${fakeId}`)
+      .set("Authorization", `Bearer ${adminToken}`);
+
+    expect(response.statusCode).toBe(404);
+    expect(response.body.success).toBe(false);
+    expect(response.body.message).toBe("User not found");
+  });
+
+  test("should reject invalid ObjectId", async () => {
+    const response = await request(app)
+      .get("/api/users/invalid-id")
+      .set("Authorization", `Bearer ${adminToken}`);
+
+    expect(response.statusCode).toBe(400);
+    expect(response.body.success).toBe(false);
+  });
+
+  test("should reject non-admin user", async () => {
+    const response = await request(app)
+      .get(`/api/users/${userId}`)
+      .set("Authorization", `Bearer ${userToken}`);
+
+    expect(response.statusCode).toBe(403);
+    expect(response.body.success).toBe(false);
+  });
+
+  test("should reject request without token", async () => {
+    const response = await request(app)
+      .get(`/api/users/${userId}`);
+
+    expect(response.statusCode).toBe(401);
+    expect(response.body.success).toBe(false);
+  });
+});
