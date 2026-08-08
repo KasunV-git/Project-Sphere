@@ -199,3 +199,52 @@ describe("GET /api/analytics/top-rated", () => {
     expect(response.body.success).toBe(false);
   });
 });
+
+describe("GET /api/analytics/most-favorited", () => {
+  test("admin should get most favorited services", async () => {
+    // Add favorite
+    await request(app)
+      .post("/api/favorites")
+      .set("Authorization", `Bearer ${userToken}`)
+      .send({
+        service: serviceId,
+      });
+
+    const response = await request(app)
+      .get("/api/analytics/most-favorited")
+      .set("Authorization", `Bearer ${adminToken}`);
+
+    expect(response.statusCode).toBe(200);
+    expect(response.body.success).toBe(true);
+    expect(response.body.favorites).toBeDefined();
+    expect(Array.isArray(response.body.favorites)).toBe(true);
+    expect(response.body.favorites.length).toBe(1);
+    expect(response.body.favorites[0].totalFavorites).toBe(1);
+  });
+
+  test("should reject non-admin user", async () => {
+    const response = await request(app)
+      .get("/api/analytics/most-favorited")
+      .set("Authorization", `Bearer ${userToken}`);
+
+    expect(response.statusCode).toBe(403);
+    expect(response.body.success).toBe(false);
+  });
+
+  test("should reject request without token", async () => {
+    const response = await request(app).get("/api/analytics/most-favorited");
+
+    expect(response.statusCode).toBe(401);
+    expect(response.body.success).toBe(false);
+  });
+
+  test("should return empty favorites when there are no favorites", async () => {
+    const response = await request(app)
+      .get("/api/analytics/most-favorited")
+      .set("Authorization", `Bearer ${adminToken}`);
+
+    expect(response.statusCode).toBe(200);
+    expect(response.body.success).toBe(true);
+    expect(response.body.favorites).toEqual([]);
+  });
+});
