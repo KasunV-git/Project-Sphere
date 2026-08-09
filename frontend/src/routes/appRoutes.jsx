@@ -4,12 +4,16 @@ import Register from "../pages/register/Register";
 import MainLayout from "../layouts/MainLayout";
 import ProtectedRoute from "./ProtectedRoute";
 import AdminRoute from "./AdminRoute";
+import Dashboard from "../pages/dashboard/Dashboard";
+import Services from "../pages/services/Services";
+import Landing from "../pages/home/Landing";
 
 function AppRoutes() {
   return (
     <BrowserRouter>
       <Routes>
         {/* Public Routes */}
+        <Route path="/" element={<Landing />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
 
@@ -17,9 +21,8 @@ function AppRoutes() {
         <Route element={<ProtectedRoute />}>
           <Route element={<MainLayout />}>
             {/* Dashboard / Home */}
-            <Route path="/" element={<Navigate to="/dashboard" replace />} />
-            <Route path="/dashboard" element={<div><h1>User Dashboard</h1><p>Welcome to Project Sphere!</p></div>} />
-            <Route path="/services" element={<div><h1>Services</h1><p>Available services will appear here.</p></div>} />
+            <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/services" element={<Services />} />
             
             {/* Admin Routes */}
             <Route element={<AdminRoute />}>

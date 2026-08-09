@@ -1,15 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 :root {
-  --primary-color: #4f46e5; /* Indigo 600 */
-  --primary-hover: #4338ca; /* Indigo 700 */
-  --bg-color: #0f172a; /* Slate 900 for dark mode feel */
-  --surface-color: #1e293b; /* Slate 800 */
-  --text-primary: #f8fafc; /* Slate 50 */
-  --text-secondary: #94a3b8; /* Slate 400 */
-  --border-color: #334155; /* Slate 700 */
-  --error-color: #ef4444; /* Red 500 */
-  --input-bg: #0f172a; 
+  --primary-color: #FFFFFF; /* White */
+  --primary-hover: #D4D4D4; /* Light Gray */
+  --bg-color: #121212; /* Darker than #2B2B2B for depth */
+  --surface-color: #2B2B2B; /* Dark Gray */
+  --text-primary: #FFFFFF; /* White */
+  --text-secondary: #B3B3B3; /* Medium Gray */
+  --border-color: #404040; /* Subtle Dark Gray */
+  --error-color: #ef4444; /* Semantic Red */
+  --input-bg: #1A1A1A; /* Slightly lighter than bg */ 
 }
 
 * {
